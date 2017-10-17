@@ -1,0 +1,20 @@
+//BASE
+@import 'Base/variables.scss';
+@import 'Base/mixins.scss';
+@import 'Base/functions.scss';
+@import 'Base/typography.scss';
+@import 'Base/color.scss';
+@import 'Base/shared.scss';
+@import 'Base/icons.scss';
+
+//COMPONENT
+@import 'Components/buttons.scss';
+@import 'Components/navigation.scss';
+@import 'Components/navbar.scss';
+@import 'Components/slider.scss';
+
+//LAYOUT
+@import 'Layout/Header.scss';
+@import 'Layout/slider.scss';
+@import 'Layout/homepage.scss';
+@import 'Layout/footer.scss';

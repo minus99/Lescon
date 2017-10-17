@@ -1,0 +1,80 @@
+// BUTTON
+.btn{
+    display: inline-block;
+    border-radius: 2px;
+    min-width: 174px;
+    text-align: center;
+    padding-top: 13px;
+    padding-bottom: 12px;
+}
+
+
+// PRIMARY BUTTON
+.btn-primary{
+    background: $secondary;
+    color: $white;
+}
+
+.btn-primary:focus,
+.btn-primary:hover,
+.btn-primary:visited,
+.btn-primary:active{
+    background: $secondary-hover;
+    color: $white;
+}
+
+// SECONDARY BUTTON
+.btn-secondary{
+    border: 2px solid $primary;
+    color: $primary;
+}
+.btn-secondary:focus,
+.btn-secondary:hover,
+.btn-secondary:visited,
+.btn-secondary:active{
+    border: 2px solid $primary-hover;
+    color: $primary-hover;
+}
+
+// ALTERNATIVE BUTTON
+.btn-alternative{
+    background: $primary;
+    color: $white;
+}
+.btn-alternative:focus,
+.btn-alternative:hover,
+.btn-alternative:visited,
+.btn-alternative:active{
+    background: $primary-hover;
+    color: $white;
+}
+
+// SECONDARY WHITE BUTTON
+.btn-secondary-white{
+    border: 2px solid $white;
+    color: $white;
+}
+.btn-secondary-white:focus,
+.btn-secondary-white:hover,
+.btn-secondary-white:visited,
+.btn-secondary-white:active{
+    border: 2px solid $white;
+    color: $white;
+}
+
+
+// LINKS BUTTON
+.btn-links{
+    background: none;
+    color: $primary;
+    min-width: auto;
+    padding: 8px 25px 7px 26px;
+    text-align: center;
+}
+.btn-links:focus,
+.btn-links:hover,
+.btn-links:visited,
+.btn-links:active{
+    background: $linkBg;
+    color: $primary;
+}

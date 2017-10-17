@@ -1,0 +1,159 @@
+.footer-information{
+    background-color: $linkBg;
+    padding: 35px 0 40px;
+    ul{
+        display: flex;
+        justify-content: space-around;
+        li{
+            width: 106px;
+            text-align: center;
+            i{
+                display: inline-block;
+                font-size: 64px;
+                margin-bottom: 11px;
+            }
+            span{
+                display: block;
+                font-family: $AvenirNext-DemiBold;
+                font-size: 14px;
+                font-weight: 600;
+                color: $primary;
+            }
+        }
+    }
+}
+
+.footer-ebulten{
+    display: block;
+    text-align: center;
+    padding: 65px 0;
+    
+    // EBülten form
+    .kutuBulten{
+        .ebulten-title span{ display: inline-block; }
+        .kutuBodyBulten{
+            margin-top: 44px;
+            margin-bottom: 79px;
+            .kutuBulten_email{
+                display: inline-block;
+                position: relative;
+                [id$="txtUYE_EMAIL"]{
+                    height: 50px;
+                    padding: 0 10px;
+                    background: $linkBg;
+                    border-radius: 2px;
+                    width:368px;
+                }
+                .btnBultenGonder{
+                    position: absolute;
+                    right: 12px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    color: $primary;
+                    font-size: 24px;
+                    > span{
+                        display: flex;
+                    }
+                }
+            }
+            .kutuBulten_lbfAciklama, .kutuBulten_btnBultenGonder{ display: none; }
+        }
+    }
+
+    //Sosyal Medya Linkleri
+    .social-links-holder{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        ul.social-links{
+            display: flex;
+            justify-content: space-around;
+            width: 40%;
+            li{
+                a{
+                    display: flex;
+                    color: $primary;
+                    font-size: 22px;
+                }
+            }
+        }
+    }
+}
+
+.footer-navbar{
+    display: block;
+    padding: 74px 0 81px;
+    background: $linkBg;
+    .navbar-title{
+        margin-bottom: 45px;
+    }
+    .navbar-btn-group{
+        margin-bottom: 70px;
+        .btn{
+            display: flex;
+            align-items: center;
+            min-width: 222px;
+            padding-left: 20px;
+            padding-right: 20px;
+            background: $white;
+            color: $primary;
+            text-align: left;
+            font-size: 14px;
+            font-weight: 600;
+            i{
+                font-size: 24px;
+                margin-right: 40px;
+            }
+            + .btn{
+                margin-left: 25px;
+            }
+        }
+    }
+    .navbar-holder{
+        display: flex;
+        justify-content: space-between;
+        .col{
+            display: inline-block;
+            .nav-title{
+                display: block;
+                width: 100%;
+                font-family: $AvenirNext-Bold;
+                font-size: 18px;
+                font-weight: 700;
+                color: $primary;
+                margin-bottom: 7px;
+            }
+            .nav-content{
+                display: flex;
+                flex-wrap: wrap;
+                align-content: flex-start;
+                ul{
+                    li{
+                        a{
+                            font-family: $AvenirNext-Regular;
+                            font-size: 14px;
+                            line-height: 2.43;
+                            color: $text-1;
+                        }
+                    }
+                    + ul { margin-left: 60px; }
+                }
+            }
+        }
+    }
+}
+
+.footer-copyright{
+    background: $text-2;
+    .copyright-holder{
+        height: 85px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .copyR-text{
+            font-family: Arial;
+            font-size: 15px;
+            color: $white;
+        }
+    }
+}

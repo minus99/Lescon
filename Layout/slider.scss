@@ -1,0 +1,39 @@
+.main-showcase{
+    margin-bottom: 79px;
+    .swiper-slide{
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        position: relative;
+    }
+    .showcase-holder{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width:100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+        padding: 45px;
+        z-index: 1;
+        .prdImg{ position: absolute; z-index: -1;}
+        .title{
+            .h1{ color: $white; }
+        }
+        .desc{
+            font-family: $AvenirNext-Bold;
+            font-size: 24px;
+            font-weight: 700;
+            color: $white;
+        }
+        .btn-group{
+            display: inline-block;
+            margin-top: 30px;
+            a{
+                margin: 0 20px;
+            }
+        }
+    }
+}

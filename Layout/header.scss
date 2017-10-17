@@ -1,0 +1,74 @@
+.navbar-container {
+    .navbar-right {
+        > div:not(:last-child) {
+            margin-right: 30px;
+        }
+    }
+}
+
+// LOGO
+.navbar-item-logo{
+    .logo{
+        margin-right: 25px;
+    }
+}
+
+
+// MENU
+.navbar-item-menu{
+    ul.navbar-nav{
+        display: flex;
+        li{
+            margin: 0 25px;
+            a{
+                font-family: $AvenirNext-DemiBold;
+                font-size: 14px;
+                font-weight: 600;
+                color: $primary;
+            }
+        }
+    }
+}
+
+// SEARCH
+.navbar-item-search{
+    .kutuArama{ position: relative; }
+    .kutuHeaderArama{ display: none; }
+    .kutuBodyArama{
+        .kutuArama_aramaText{
+            #txtARM_KEYWORD{
+                border-radius: 2px;
+                background-color: #eef3f8;
+                height: 39px;
+                width: 210px;
+                border: 0;
+                padding: 0 10px 0 43px;
+            }
+        }
+        .kutuArama_lnkHizliUrun{ display: none; }
+        .kutuArama_btnArama{ position: absolute; top: 50%; left:11px; transform: translateY(-50%); 
+            > table { display: flex !important; }
+            [id$="lbfbtnArama"]{ display: flex; align-items: center; font-size: 21px; color: $primary; }
+        }
+    }
+}
+
+// MEMBER
+.navbar-item-mini-member{
+    .kutuUyeGiris{ cursor: pointer; }
+    .kutuBodyUyeGiris{ display: none; }
+    [id$="lbfKUTU_HESABIM"]{
+        .icon-account{ margin-right: 11.2px; font-size: 20px; vertical-align: middle; }
+    }
+
+}
+
+// CART
+.navbar-item-mini-cart {
+    .kutuSepet{ cursor: pointer;
+        .kutuBodySepet{ display: none; }
+        [id$="lbfKUTU_SEPET"]{
+            .icon-basket{ margin-right: 11.2px; font-size: 20px; vertical-align: middle; }
+        }
+    }
+}
