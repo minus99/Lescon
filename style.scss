@@ -1,20 +1,24 @@
 //BASE
-@import 'Base/variables.scss';
-@import 'Base/mixins.scss';
-@import 'Base/functions.scss';
-@import 'Base/typography.scss';
-@import 'Base/color.scss';
-@import 'Base/shared.scss';
-@import 'Base/icons.scss';
+@import 'Base/variables';
+@import 'Base/mixins';
+@import 'Base/functions';
+@import 'Base/typography';
+@import 'Base/color';
+@import 'Base/shared';
+@import 'Base/icons';
+@import 'Base/extends';
 
 //COMPONENT
-@import 'Components/buttons.scss';
-@import 'Components/navigation.scss';
-@import 'Components/navbar.scss';
-@import 'Components/slider.scss';
+@import 'Components/buttons';
+@import 'Components/navigation';
+@import 'Components/navbar';
+@import 'Components/slider';
+@import 'Components/form';
 
 //LAYOUT
-@import 'Layout/Header.scss';
-@import 'Layout/slider.scss';
-@import 'Layout/homepage.scss';
-@import 'Layout/footer.scss';
+@import 'Layout/header';
+@import 'Layout/nav-menu';
+@import 'Layout/slider';
+@import 'Layout/homepage';
+@import 'Layout/footer';
+@import 'Layout/product/z_compile';

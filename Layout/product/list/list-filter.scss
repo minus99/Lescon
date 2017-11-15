@@ -1,0 +1,37 @@
+.ems-prd-list-prop{
+    padding: 30px 50px 26px;
+    .ems-prd-list-prop-inner{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .ems-prd-list-count{
+        font-family: $AvenirNext-Regular;
+        font-size: 14px;
+        color: $text-1;
+    }
+
+    .ems-prd-list-sort-desktop{
+        ul{
+            display: flex;
+            li{
+                margin-right: 40px;
+                a{
+                    font-family: $AvenirNext-Regular;
+                    font-size: 14px;
+                    color: $text-1;
+                }
+                &:last-child{
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+
+    .ems-prd-list-stock,
+    .ems-prd-list-sort,
+    .ems-prd-list-view,
+    .ems-clone-mobile-sort{
+        display: none;
+    }
+}

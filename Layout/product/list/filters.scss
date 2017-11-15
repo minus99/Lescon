@@ -1,0 +1,190 @@
+.kutuDefault{
+    // Kategoriler
+    &.kutuKategori{
+        .kutuHeaderDefault{
+            margin-bottom: 11px;
+            span{
+                font-family: $AvenirNext-Bold;
+                font-size: 18px;
+                font-weight: bold;
+                color: $primary;
+                cursor: pointer;
+            }
+        }
+        .kutuBodyDefault{
+            display: block;
+            margin-bottom: 20px;
+            ul{
+                display: inline-block;
+                width: 100%;
+                li{
+                    display: block;
+                    margin-bottom: 10px;
+                    &.s1{
+                        a{
+                            display: block;
+                            font-family: $AvenirNext-Regular;
+                            font-size: 14px;
+                            color: $text-1;
+                        }
+                    }
+                    &.s2{
+                        margin-left: 10px;
+                        margin-bottom: 0;
+                        &:first-child{
+                            margin-top: 10px;
+                        }
+                    }
+                }
+            }
+        }
+        .kutuFooterDefault{
+            display: none;
+        }
+    }
+
+    // Özellik filtre seti
+    &.kutuOzellikFiltre{
+        .kutuHeaderDefault{
+            display: none;
+        }
+        .kutuBodyDefault{
+            [id$="dtParametre"]{
+                width: 100%;
+            }
+            .urunKiyaslamaOzellik_ozellik{
+                &#dvUrunKiyaslamaOzellik{
+                    display: block;
+                    margin-bottom: 34px;
+                    &.kapali{
+                        margin-bottom: 11px;
+                        .urunKiyaslamaOzellik_ozellikAd{
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+                .urunKiyaslamaOzellik_ozellikAd{
+                    display: block;
+                    margin-bottom: 22px;
+                    font-family: $AvenirNext-Bold;
+                    font-size: 18px;
+                    font-weight: bold;
+                    color: $primary;
+                    cursor: pointer;
+                    .mobile-element-filter-span-select{
+                        display: none;
+                    }
+                }
+
+                // filtre font style
+                .urunKiyaslamaOzellik_ozellikIcerik{
+                    .urunKiyaslamaOzellik_ozellik{
+                        a{
+                            font-family: $AvenirNext-Regular;
+                            font-size: 14px;
+                            color: $text-1;
+                        }
+                    }
+                }
+                // Beden filtre tasarım
+                &.beden{
+                    table{
+                        width: 100%;
+                        tbody{
+                            display: flex;
+                            flex-wrap: wrap;
+                            justify-content: flex-start;
+                            margin-bottom: -19px;
+                            tr{
+                                margin-right: 19px;
+                                margin-bottom: 19px;
+                                &:nth-child(3){
+                                    margin-right: 0;
+                                }
+                            }
+                        }
+                    }
+                    .urunKiyaslamaOzellik_ozellikIcerik{
+                        .urunKiyaslamaOzellik_ozellik{
+                            a{
+                                width: 50px;
+                                height: 30px;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                border: 1px solid #dde2e7;
+
+                                position: relative;
+                                &:after{
+                                    content: "";
+                                    display: inline-block;
+                                    position: absolute;
+                                    z-index: -1;
+                                    top: 0;
+                                    left: 0;
+                                    width: 0;
+                                    height: 100%;
+                                    background: $lightBg;
+                                    transition: all .4s cubic-bezier(0.8,0,0.5,1);
+                                }
+                                &:hover:after{
+                                    width: 100%;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                // Renk filtre tasarım
+                &.renk{
+                    table{
+                        width: 100%;
+                        tbody{
+                            tr{
+                                
+                            }
+                        }
+                    }
+                    .urunKiyaslamaOzellik_ozellikIcerik{
+                        .urunKiyaslamaOzellik_ozellik{
+                            a{
+                                display: flex;
+                                justify-content: flex-start;
+                                align-items: center;
+                                margin-top: 2px;
+                                margin-bottom: 20px;
+
+                                position: relative;
+                                &:before{
+                                    content: "";
+                                    display: inline-block;
+                                    width: 18px; 
+                                    height: 18px;
+                                    background: $white;
+                                    border: 1px solid #dde2e7;
+                                    margin-top: -2px;
+                                    margin-right: 9px;
+                                    transition: all .4s cubic-bezier(0.8,0,0.5,1);
+                                }
+                                &.link_selected{
+                                    &:before{
+                                        background: $lightBg;
+                                        border: 1px solid #d6d6d6;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .urunKiyaslamaOzellik_temizle{
+                        display: none;
+                    }
+                }
+
+
+            }
+        }
+        .kutuFooterDefault{
+            display: none;
+        }
+    }
+}

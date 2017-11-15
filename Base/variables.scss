@@ -3,7 +3,6 @@ $baseHref: '';
 // CANLI URL $baseHref: '';
 
 
-
 // AVENIR FONTS
 $AvenirNext-Bold                : 'AvenirNext-Bold' ;
 $AvenirNext-Regular             : 'AvenirNext-Regular' ;
@@ -18,9 +17,10 @@ $singleOuterMobile: 20px;
 
 
 // BREAKPOINTS
-
 $breakpoint-mini        : 320px ;
 $breakpoint-small       : 480px ;
 $breakpoint-medium      : 768px ;
 $breakpoint-large       : 960px ;
 $breakpoint-xlarge      : 1200px ;
+
+$header-height : 80px;

@@ -1,0 +1,22 @@
+.ems-page.ems-page-list{
+
+}
+
+.ems-container-full{
+    display: flex;
+}
+
+.ems-col-left{
+    width: 249px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 80px;
+    border-right: 1px solid #dde2e7;
+}
+.ems-col-right{
+    width: calc(100% - 250px);
+}
+
+.urunPaging_paging{
+    display: none;
+}

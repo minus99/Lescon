@@ -6,6 +6,7 @@
     text-align: center;
     padding-top: 13px;
     padding-bottom: 12px;
+    transition: all 0.3s cubic-bezier(0.8, 0, 0.5, 1);
 }
 
 
@@ -33,7 +34,8 @@
 .btn-secondary:visited,
 .btn-secondary:active{
     border: 2px solid $primary-hover;
-    color: $primary-hover;
+    background: $primary-hover;
+    color: $white;
 }
 
 // ALTERNATIVE BUTTON
@@ -59,7 +61,8 @@
 .btn-secondary-white:visited,
 .btn-secondary-white:active{
     border: 2px solid $white;
-    color: $white;
+    background: $white;
+    color: $primary;
 }
 
 

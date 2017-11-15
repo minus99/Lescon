@@ -1,0 +1,148 @@
+.ems-prd-list{
+    ul.emosInfinite{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        margin-left: 50px;
+        margin-right: 50px;
+        .ems-prd{
+            width: 20%;
+            margin-bottom: 30px;            
+        }
+
+        .ems-prd-inner{
+            position: relative;
+            overflow: hidden;
+            margin-right: 10px;
+            margin-left: 10px;
+            margin-bottom: 10px;
+        }
+
+        .ems-prd-mask{
+            position: relative;
+        }
+
+        ///
+        .ems-prd-discount .urunListe_pnlIndirimOran,
+        .ems-prd-status .urunListe_yeniUrun{
+            display: flex;
+            align-items: center;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            height: 20px;
+            border-radius: 2px;
+            padding: 0 4px;
+        }
+        .ems-prd-discount{
+            .urunListe_pnlIndirimOran{
+                
+                background-color: $alternative;
+                z-index: 2;
+                display: inline-block !important;
+                font-family: $AvenirNext-DemiBold;
+                font-size: 14px;
+                font-weight: 600;
+                color: $white;
+            }
+        }
+        .ems-prd-status{
+            .urunListe_yeniUrun{
+                display: inline-block !important;
+                font-family: $AvenirNext-DemiBold;
+                font-size: 14px;
+                font-weight: 600;
+                color: $primary;
+            }
+        }
+
+        .ems-prd-image{
+            height: 210px;
+            a{
+                display: block;
+                text-align: center;
+                height: 100%;
+            }
+            img{
+                max-height: 100%;
+            }
+        }
+
+        .ems-prd-name{
+            display: block;
+            a{
+                display: block;
+                font-family: $AvenirNext-Regular;
+                font-size: 14px;
+                text-align: center;
+                color: $text-1;
+                height: 38px;
+                overflow: hidden;
+            }
+            + .ems-prd-price{
+                margin-top: 9px;
+            }
+        }
+
+        .ems-prd-price{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .ems-prd-price-selling{
+                .urunListe_satisFiyat{
+                    font-family: $AvenirNext-DemiBold;
+                    font-size: 18px;
+                    font-weight: 600;
+                    color: $primary;
+                }
+            }
+            .ems-prd-price-first{
+                .urunListe_brutFiyat{
+                    font-family: $AvenirNext-Regular;
+                    font-size: 14px;
+                    color: $text-2;
+                    text-decoration: line-through;
+                }
+            }
+            > span + span{
+                margin-left: 10px;
+            }
+            + .ems-prd-stock{
+                margin-top: 8px;
+            }
+        }
+
+        .ems-prd-stock{
+            display: block;
+            font-family: $AvenirNext-Regular;
+            font-size: 12px;
+            text-align: center;
+            color: $text-2;
+        }
+
+        .ems-prd-content-bottom{
+            padding: 14px 15px 15px;
+            height: 125px;
+            position: relative;
+            &:after{
+                content: "";
+                position: absolute;
+                z-index: -1;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                height: 0;
+                background: $white;
+                transition: all .4s cubic-bezier(0.8,0,0.5,1);
+            }
+        }
+        .ems-prd:hover{
+            .ems-prd-content-bottom{
+                &:after{
+                    height: 100%;
+                    background: $linkBg;
+                }
+            }
+        }
+    }
+}

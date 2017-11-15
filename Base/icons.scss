@@ -1,3 +1,4 @@
+
 [class^="icon-"], [class*=" icon-"] {
   font-family: 'icomoon' !important;
   speak: none;
@@ -11,6 +12,10 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-basket-null:before {
+  content: "\e92b";
+  color: #0d2048;
+}
 .icon-googleplus:before {
   content: "\e926";
 }
@@ -29,8 +34,26 @@
 .icon-arrow-top:before {
   content: "\e900";
 }
+.icon-arrow-bottom:before {
+  content: "\e92c";
+}
+.icon-arrow-left:before {
+  content: "\e918";
+}
+.icon-arrow-right:before {
+  content: "\e92d";
+}
 .icon-tri-bottom:before {
   content: "\e901";
+}
+.icon-tri-top:before {
+  content: "\e92e";
+}
+.icon-tri-left:before {
+  content: "\e92f";
+}
+.icon-tri-right:before {
+  content: "\e930";
 }
 .icon-plus:before {
   content: "\e902";
@@ -108,9 +131,6 @@
 }
 .icon-account:before {
   content: "\e917";
-}
-.icon-arrow-left:before {
-  content: "\e918";
 }
 .icon-card-cut:before {
   content: "\e919";

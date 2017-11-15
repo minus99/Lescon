@@ -1,0 +1,56 @@
+.ems-prd-list-paging-bottom{
+    padding: 67px 60px 55px;
+    table{
+        tbody{
+            tr{
+                > td{
+                    width: 100% !important;
+                    &:nth-child(1),
+                    &:nth-child(3){
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+
+    .urunPaging_pageNavigation{
+        display: flex;
+        justify-content: space-between;
+
+        [id$="ascPagingDataAlt_lblPaging"]{
+            display: flex;
+            align-items: center;
+            span{
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                background: $primary;
+                color: $white;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            a{
+                color: $primary;
+            }
+            > *{
+                font-family: $AvenirNext-DemiBold;
+                font-size: 14px;
+                font-weight: 600;
+                margin-left: 52px;
+                &:first-child{
+                    margin-left: 0;
+                }
+            }
+        }
+
+        .tumunuGoster{
+            display: inline-block !important;
+            font-family: $AvenirNext-DemiBold;
+            font-size: 14px;
+            font-weight: 600;
+            color: $primary;
+        }
+    }
+}

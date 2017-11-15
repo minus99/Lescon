@@ -37,8 +37,11 @@ textarea {
 }
 
 .container{
-    width: $siteContainerWidth;
+    max-width: $siteContainerWidth;
     margin: 0 auto;
+}
+@media screen and (max-width: $breakpoint-large){
+    .container{ margin: 0 20px;}
 }
 
 .ems-hidden{ display: none; }
