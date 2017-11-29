@@ -18,6 +18,7 @@ a:hover,
 a:active,
 a:focus {
     text-decoration: none;
+    color: inherit;
 }
 
 ul, ol {
@@ -36,7 +37,11 @@ textarea {
     resize: vertical !important;
 }
 
-.container{
+img {
+    max-width: 100%;
+}
+
+.ems-container{
     max-width: $siteContainerWidth;
     margin: 0 auto;
 }
@@ -52,14 +57,15 @@ textarea {
 .relative{ position: relative !important; }
 .visibility{ visibility: visible !important; }
 .visibility-hidden{ visibility: hidden !important; }
-.flex{ display: flex !important; }
-.flex-wrap{ flex-wrap: wrap !important; }
-.flex-left{ justify-content: flex-start !important; }
-.flex-center{ justify-content: center !important; }
-.flex-right{ justify-content: flex-end !important; }
-.flex-top{ align-items: flex-start !important; }
-.flex-middle{ align-items: center !important; }
-.flex-bottom{ align-items: flex-end !important; }
+.flex{ display: flex; }
+.flex-wrap{ flex-wrap: wrap; }
+.flex-left{ justify-content: flex-start; }
+.flex-center{ justify-content: center; }
+.flex-right{ justify-content: flex-end; }
+.flex-between{ justify-content: space-between; }
+.flex-top{ align-items: flex-start; }
+.flex-middle{ align-items: center; }
+.flex-bottom{ align-items: flex-end; }
 .flex-column{ flex-direction: column; }
 
 // COLOR CLASS
@@ -109,14 +115,14 @@ h3, .h3{
     font-family: $AvenirNext-Bold;
     font-size: 36px;
     font-weight: 700;
-    line-height: 1.08;
+    line-height: 1.1;
     letter-spacing: -1.2px;
     color: $primary;
     &.cl-white{
         color: $white;
     }
 }
-h4, .h4{
+h4, .h4 {
     font-family: $AvenirNext-Bold;
     font-size: 24px;
     font-weight: 700;
@@ -193,6 +199,11 @@ p{
     &.cl-white{
         color: $white;
     }
+}
+
+.page-top-title {
+    display: block;
+    @extend .h3;
 }
 
 @media screen and (max-width: $breakpoint-large){

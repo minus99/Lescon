@@ -1,0 +1,125 @@
+.ems-grid-default {
+    position: relative;
+    > div {
+        @extend .flex;
+        padding: 20px;
+        > div {
+            flex: 1;
+            font-family: $AvenirNext-Regular;
+            font-size: 14px;
+            color: $text-1;
+            padding: 10px;
+        }
+    }
+    .ems-grid-header {
+        position: relative;
+    }
+    .ems-grid-row {
+        position: relative;
+        background: $white;
+        border-bottom: 1px solid $lines;
+    }
+    
+    //custom grid fields
+    //sepet
+    .ems-grid-img {
+        flex-grow: 0;
+        flex-basis: 120px;
+        img {
+            display: block;
+            margin: 0 auto;
+            width: 100%;
+            max-width: 80px;
+        }
+    }
+    .ems-grid-name {
+        flex: 2.5;
+    }
+    .ems-grid-price {
+        @extend .flex;
+        @extend .flex-column;
+        [id$="INDIRIMLIFIYAT"] {
+            order: 1;
+        }
+        .gridSepetListe_gercekFiyat {
+            order: 2;
+            font-size: 12px;
+            color: $text-2;
+            text-decoration: line-through;
+        }
+    }
+    .ems-grid-piece {
+        .piece-wrapper {
+            @extend .flex;
+            > a {
+                font-size: 10px;
+                padding: 3px 5px;
+            }
+            > input {
+                border: 1px solid $lines;
+                text-align: center;
+            }
+        }
+    }
+    .ems-grid-delete {
+        flex-grow: 0;
+        flex-basis: auto;
+        i {
+            font-size: 16px;
+        }
+    }
+    //teslimat
+    .ems-grid-address-info {
+        padding-right: 50px;
+        .address-title {
+            font-family: $AvenirNext-Bold;
+            font-size: 18px;
+            color: $primary;
+        }
+        .address-type {
+            font-size: 12px;
+            color: $text-2;        
+        }
+        .address-name {
+            font-size: 14px;
+            color: $text-1;
+            margin-top: 12px;
+        }
+    }
+    .ems-grid-address-buttons {
+        flex-grow: 0;
+        flex-basis: 170px;
+        > a {
+            position: relative;
+            display: block;
+            margin-top: 20px;
+            color: $text-1;
+            &:first-child {
+                margin-top: 15px;
+            }
+            > span {
+                @extend .flex;
+                @extend .flex-middle;
+                > i {
+                    display: inline-block;
+                    width: 18px;
+                    height: 18px;
+                    border: 1px solid $lines;
+                    margin-right: 10px;
+                }
+            }
+            &.emos_selected {
+                font-family: $AvenirNext-DemiBold;
+                > span {
+                    i {
+                        background: $secondary;
+                        border-color: $secondary;
+                    }
+                }
+                &:hover {
+                    color: inherit;
+                }
+            }
+        }
+    }
+}

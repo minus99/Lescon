@@ -1,0 +1,192 @@
+//variables
+$leftCol: 780px;
+$rightCol: 380px;
+
+//siparis sayfalar
+.ems-page-cart {
+    background: $linkBg;
+    .page-top-title {
+        margin-bottom: 35px;
+    }
+
+    //sepet sonrasi adimlarda gosterme
+    &-step1 {
+        .obj-step0 {
+            display: none;
+        }
+    }
+}
+.ems-page-cart-wrapper {
+    @extend .flex;
+    @extend .flex-between;
+    padding-top: 35px;
+    > div {
+        width: 100%;
+    }
+    .ems-page-cart-colmn-2 {
+        max-width: $leftCol;
+    }
+    .ems-page-cart-colmn-3 {
+        max-width: $rightCol;
+    }
+    .cart-section-right {
+        display: none;
+    }
+    .cart-section-right-append .cart-section-right {
+        display: block;        
+    }
+    .bottom-step {
+        display: none;
+    }
+}
+
+//siparis adimlar
+.tabloTabBtnAdim {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    background: #fff;
+    width: 100%;
+    td {
+        > span {
+            display: inline-block;
+            > a {
+                display: block;
+                line-height: $header-height;
+                font-family: $AvenirNext-DemiBold;
+                font-size: 14px;
+                color: $secondary;
+                > span {
+                    position: relative;
+                    display: block;
+                    > * {
+                        vertical-align: middle;
+                    }
+                    i {
+                        font-size: 24px;
+                        margin-right: 9px;
+                    }
+                    &:after {
+                        content: "";
+                        display: inline-block;
+                        width: 69px;
+                        border-top: 7px dotted $secondary;
+                        margin: 0 28px;
+                    }
+                }
+            }
+            &:last-child {
+                > a {
+                    > span {
+                        &:after {
+                            display: none;
+                        }
+                    }
+                }
+            }
+            &:not(.btnDisable):not(.tabBtnSelectedDefault) {
+                > a {
+                    > span {
+                        i {
+                            &:before {
+                                @extend .icon-success-cut:before;
+                            }
+                        }
+                    }
+                }
+            }
+            &.tabBtnSelectedDefault {
+                > a {
+                    color: $primary;
+                    > span {
+                        &:after {
+                            border-color: $bg;
+                        }
+                    }
+                }
+            }
+            &.btnDisable {
+                > a {
+                    color: $text-2;
+                    > span {
+                        &:after {
+                            border-color: $bg;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+//sepet grid
+.ems-grid-cart {
+    .ems-grid-header {
+        display: none;
+    }
+}
+.cart-cfg {
+    margin-top: 3px;
+    background: $white;
+    > a {
+        padding: 15px;
+    }
+}
+
+//sepet ozet
+.ems-cart-summary {
+    position: relative !important;
+    background: $white;
+    margin-top: 74px;
+    padding: 25px 30px;
+    width: 100%;
+    max-width: $rightCol;
+    .h4 {
+        display: block;
+        margin-bottom: 15px;
+    }
+    .bottom-step {
+        display: block;
+    }
+}
+.pnlDipToplamTable {
+    font-family: $AvenirNext-Regular;
+    font-size: 14px;
+    th {
+        text-align: left;
+        font-weight: normal;
+        line-height: 40px;
+    }
+    td {
+        text-align: right;
+        font-family: $AvenirNext-Bold;
+        .pageSepetToplam_lblSip_NetToplam {
+            font-size: 18px;
+        }
+    }
+}
+//hediye ceki
+.ems-cart-summary-coupon {
+    margin-top: 25px;
+    padding: 15px;
+    border-top: 1px solid $lines;
+    .code-title {
+        display: block;
+        margin-bottom: 15px;
+        text-align: center;
+        font-family: $AvenirNext-Regular;
+        font-size: 14px;
+        color: $text-2;
+        text-decoration: underline;
+        cursor: pointer;
+    }
+    .ems-cart-summary-coupon-body {
+        display: none;
+    }
+    &.opened {
+        background: red;
+        .ems-cart-summary-coupon-body {
+            display: block;
+        }
+    }
+}
