@@ -48,3 +48,38 @@
         }
     }   
 }
+
+
+//custom dropdown
+.ddWrapper {
+    .ddTitle {
+        position: relative;
+        display: block;
+        background: $white;
+        padding: 22px;
+        color: $primary;
+        cursor: pointer;
+        i {
+            $size: 16px;
+            font-size: $size;
+            position: absolute;
+            top: 50%;
+            right: 20px;
+            margin-top: -$size / 2;
+            transition: transform .4s cubic-bezier(0.8, 0, 0.5, 1);
+        }
+    }
+    .ddContent {
+        display: none;
+    }
+    &.opened {
+        .ddTitle {
+            i {
+                transform: rotate(180deg);
+            }
+        }
+        .ddContent {
+            display: block;
+        }
+    }
+}

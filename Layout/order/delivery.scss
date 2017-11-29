@@ -1,0 +1,62 @@
+.ems-page-order-delivery {
+    position: relative;
+}
+
+//yeni adres & fatura adresi
+.address-bottom {
+    margin-top: 20px;
+}
+a.btnAdresEkle {
+    i {
+        font-size: 8px;
+        margin-right: 3px;
+        vertical-align: 2px;
+    }
+}
+
+//teslimat tab
+.ems-delivery-tabs {
+    margin: 30px 0;
+    border-top: 1px solid $lines;
+    padding-bottom: 30px;
+    border-bottom: 1px solid $lines;
+    .ems-delivery-tab-header {
+        margin: 15px 0;
+    }
+}
+//kargo
+.divTeslimatKargo {
+    ul {
+        @extend .flex;
+        > li {
+            position: relative;
+            @extend .flex;
+            @extend .flex-column;
+            @extend .flex-middle;
+            background: $white;
+            border: 1px solid $lines;
+            flex-basis: 140px;
+            margin-left: 30px;
+            text-align: center;
+            padding: 10px;
+            font-size: 12px;
+            &:first-child {
+                margin-left: 0;
+            }
+            input {
+                @include setAbsolute;
+                opacity: 0;
+                cursor: pointer;
+            }
+            &.selected {
+                border-color: $secondary;
+            }
+            .kargoAdi {
+                margin-bottom: 5px;
+            }
+            .kargoBilgi {
+                display: none;
+            }
+        }
+    }
+}
