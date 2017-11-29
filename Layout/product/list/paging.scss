@@ -17,6 +17,7 @@
     .urunPaging_pageNavigation{
         display: flex;
         justify-content: space-between;
+        align-items: center;
 
         [id$="ascPagingDataAlt_lblPaging"]{
             display: flex;
@@ -32,7 +33,7 @@
                 align-items: center;
             }
             a{
-                color: $primary;
+                color: $primary;                
             }
             > *{
                 font-family: $AvenirNext-DemiBold;
@@ -43,6 +44,11 @@
                     margin-left: 0;
                 }
             }
+        }
+
+        
+        [id$="lnkNext"]{
+            display: none;
         }
 
         .tumunuGoster{

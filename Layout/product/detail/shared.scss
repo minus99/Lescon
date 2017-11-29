@@ -1,0 +1,72 @@
+.ems-container-small {
+    width: 100%;
+    max-width: 1220px;
+    padding: 0 10px;
+    margin: 0 auto;
+}
+.ems-product-detail{
+    background-image: linear-gradient(251deg, #e1e3e8, #f6f9fb);
+}
+
+.ems-page-detail{
+    
+    //Navigasyon
+    .ems-prd-navigation{
+        display: flex;
+        align-items: center;
+        height: 43px;
+        .urunNavigasyon{
+            >span{
+                display: flex;
+                align-items: center;
+            }
+            a{
+                font-family: AvenirNext-Regular;
+                font-size: 14px;
+                text-align: left;
+                color: #8d9098;
+            }
+            i{
+                display: inline-block;
+                margin: 0 9px 0 4px;
+                font-size: 0;
+                &:before{
+                    font-size:7px;
+                    color: #e1e3e8;
+                }
+            }
+        }
+    }
+    
+    .ems-prd-detail-inner {
+        max-width: 1220px;
+        padding: 10px;
+        width: 100%;
+        margin: 0 auto;
+        position: relative;
+        .inner-row-1 {
+            width: calc(100% - 450px);
+            padding-top: 44px;
+            padding-right: 60px;
+            padding-left: 85px;
+            margin-bottom: 93px;
+            position: relative;
+        }
+        .inner-row-2 {
+            width: 450px;
+            padding: 40px;
+            background: $white;
+            box-shadow: 0 20px 30px 0 rgba(0, 0, 0, 0.1);
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+    }
+
+    .ems-prd-detail-bottom{
+        background: #fff;
+    }
+
+}
+
+

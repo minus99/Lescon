@@ -1,0 +1,155 @@
+
+
+/* wizard */
+//.wizard{background: #0c2048;overflow:hidden;}
+//.wizard .levels > li{min-height: 800px;}
+//.wizard .navigation .lvl-2{display:flex;justify-content:space-around;}
+//.wizard .navigation li.selected a{background: #26df2e;border: 2px solid #26df2e;}
+//.wizard .item-prc .first-price{display:none;}
+//.wizard .item-controller{max-width: 400px;} 
+//.wizard .item-controller ul{display:flex;justify-content:space-around;}
+//.wizard #scene > .item{position:absolute;z-index:1;}
+//.wizard #scene > .item.activeItem{z-index:2;}
+//.wizard #scene > .item.ayakkabi{order: 3;}
+//.wizard #scene > .item.ustGiyim{order: 1;}
+//.wizard #scene > .item.altGiyim{order: 4;}
+//.wizard #scene > .item.aksesuar{order: 2;}
+
+//.wizard #scene > .item .item-inner{position:relative;}
+//.wizard #scene > .item .item-inner .item-info{position:absolute;left:0;bottom:0;}
+//.wizard .levels > li{display:none;width:100%;}
+//.wizard .levels > li.active{display:block;}
+//.wizard .controller .selections{display:none;}
+//.wizard .controller.opened .selections{display:block;}
+.wizard-add-to-cart .ems-prd-add{display:inline-block;}
+
+
+///////// SAASSSSS
+
+.wizard{        
+    overflow: hidden;
+    background: $primary;
+    position: relative;
+    // effect
+    .background{
+        background-image: url('/images/frontend/wizard/start-background.jpg');
+        background-size: cover;
+        @include setAbsolute;
+        overflow: hidden;
+        .image{
+            display: inline-block;
+            background-image: url('/images/frontend/wizard/start-background.jpg');
+            background-size: cover;
+
+            @include setAbsolute;
+            z-index: 1;
+            transition: all .4s cubic-bezier(0.8,0,0.5,1);
+        }
+        .scale{
+            display: inline-block;
+            background: rgba(13, 32, 72, 0.72);
+            
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+            width: 120%;
+            height: 120%;
+            
+        }
+        .kto-title{
+            font-family: AvenirNext-Bold;
+            font-size: 24px;
+            font-weight: bold;
+            letter-spacing: -0.5px;
+            text-align: center;
+            color: #ffffff;
+
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            visibility: hidden;
+            transition: all .4s cubic-bezier(0.8,0,0.5,1);
+            position: relative;
+            z-index: -1;
+        }
+    }
+    &.add-blur{
+        .background{
+            .image{
+                filter: blur(10px);
+            }
+        }
+    }
+
+    .levels{
+        position: relative;
+        z-index: 10;
+        > li{
+            display:none;
+            width:100%;
+        }
+    }
+
+    .level{
+        display: none;
+        width: 100%;
+        height: calc(100vh - 81px);
+        min-height: 800px;
+        overflow: hidden;
+
+        justify-content: center;
+        align-items: center;
+
+        &.active{
+            display: block;
+        }
+
+        // Content
+        .content{
+            position: relative;
+            z-index: 1;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        //Contune Btn
+        .continue-btn{
+            cursor: pointer;
+            width: 250px;
+            font-size: 18px;
+            font-weight: 600;
+
+            padding-top: 18px;
+            padding-bottom: 17px;
+            margin-top: 44px;
+        }        
+    }
+}
+
+@media screen and (max-width: $breakpoint-large){
+    .wizard{
+        .background{
+            .image{
+                background-position: center;
+            }
+        }
+        .level{
+            min-height: calc(100vh - 50px);
+            .continue-btn{
+                width: 174px;
+                padding-top: 8.9px;
+                padding-bottom: 8.1px;
+                
+                font-size: 14px;
+                font-weight: 600;
+            }
+        }
+    }
+}

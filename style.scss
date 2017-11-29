@@ -8,6 +8,9 @@
 @import 'Base/icons';
 @import 'Base/extends';
 
+//PLUGINS
+@import 'Plugins/z_compile';
+
 //COMPONENT
 @import 'Components/buttons';
 @import 'Components/navigation';
@@ -22,3 +25,4 @@
 @import 'Layout/homepage';
 @import 'Layout/footer';
 @import 'Layout/product/z_compile';
+@import 'Layout/createStyle/z_compile';

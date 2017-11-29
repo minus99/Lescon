@@ -1,4 +1,6 @@
 .swiper-container{
     width: 100%;
-    overflow: hidden;
+    .swiper-inner{
+        overflow: hidden;
+    }
 }

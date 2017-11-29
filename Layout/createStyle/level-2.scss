@@ -1,0 +1,114 @@
+.wizard{
+    .level-2{
+        &.active{
+            display: flex;
+        }
+        ul.lvl-2{
+            display:flex;
+            justify-content:space-around;
+            margin: 88px 0;
+            li{
+                margin-left: 44px;
+                &:first-child{
+                    margin-left: 0;
+                }
+                a{
+                    display: inline-block;
+                    i{
+                        display: inline-block;
+                        text-align: center;
+                        font-size: 0;
+                        color: $primary;
+                        background: $white;
+                        padding: 25.7px;
+
+                        border-radius: 5px;
+                        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+                        transition: all .4s cubic-bezier(0.8,0,0.5,1);
+
+                        &:before{
+                            font-size: 68.6px;
+                        }
+                    }
+                    .name{
+                        display: block;
+                        font-family: $AvenirNext-DemiBold;
+                        font-size: 18px;
+                        font-weight: 600;
+                        text-align: center;
+                        color: $white;
+                        margin-top: 24px;
+                        margin-bottom: 24px;
+                    }
+                    &:hover{
+                        i{
+                            background: $secondary;
+                            color: $white;
+                        }
+                    }
+                }
+                &.selected{
+                    a{
+                        i{
+                            background: $secondary;
+                            color: $white;
+                        }
+                    }
+                }
+            }
+        }
+        &.active{
+            @extend .flex;
+            .content{
+                @extend .flex;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: $breakpoint-large){
+    .wizard{
+        .level-2{
+
+            .content{
+                position: initial;
+            }
+
+            .continue-btn{
+
+                position: absolute;
+                bottom: 40px;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+            &.active{
+                display: flex;
+            }
+            ul.lvl-2{
+                margin: 27px 20px 0;
+                li{
+                    margin-left: 20px;
+                    &:first-child{
+                        margin-left: 0;
+                    }
+                    a{
+                        i{
+                            padding: 25.7px;
+    
+                            &:before{
+                                font-size: 46px;
+                            }
+                        }
+                        .name{
+                            font-size: 14px;
+                            margin-top: 8px;
+                            margin-bottom: 0px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

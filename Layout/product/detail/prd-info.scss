@@ -1,0 +1,461 @@
+.ems-prd-detail-inner {
+    .ems-prd{
+        .ems-prd-product-code{
+            height: 43px;
+            position: absolute;
+            top: -43px;
+            right: 0;
+
+            display: flex;
+            align-items: center;
+            font-family: AvenirNext-Regular;
+            font-weight: 400;
+            font-size: 12px;
+            text-align: right;
+            color: #3f444d;
+            > span:first-child{
+                margin-right: 3px;
+            }
+        }
+
+        .ems-prd-info{
+            margin-bottom: 14px;
+            > div{
+                margin-right: 10px;
+                &:last-child{
+                    margin-right: 0;
+                }
+            }
+            .ems-prm-cargo-info,
+            .ems-prm-stock-info{
+                > span:not(empty){
+                    display: inline-block;
+                    border-radius: 2px;
+                    background-color: #26d5df;
+                    padding: 0 8px 0 9px;
+                    font-family: AvenirNext-DemiBold;
+                    font-size: 14px;
+                    font-weight: 600;
+                    text-align: center;
+                    color: #ffffff;
+                }
+            }
+        }
+
+        .ems-prd-name-wrapper{
+            font-family: AvenirNext-Bold;
+            font-size: 36px;
+            font-weight: bold;
+            line-height: 1.08;
+            letter-spacing: -1.2px;
+            color: #0c2048;
+            margin-bottom: 25px;
+        }
+
+        .ems-prd-price{
+            margin-bottom: 35px;
+            .ems-prd-price-left{
+                display: flex;
+                align-items: center;
+                
+            }
+
+            
+            .ems-prd-price-selling{
+                font-family: AvenirNext-Bold;
+                font-size: 24px;
+                font-weight: bold;
+                text-align: center;
+                color: #0d2048;
+                [id$="lbfURN_KDVDAHILSATIS"]{
+                    display: none;
+                }
+            }
+
+            .ems-prd-price-first{
+                font-family: AvenirNext-Regular;
+                font-size: 18px;
+                color: #8d9098;
+                position: relative;
+                &:before{
+                    content: "";
+                    display: inline-block;
+                    width: 100%;
+                    height: 1px;
+                    background: #8d9098;
+                    position: absolute;
+                    left: 0;
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+                [id$="lbfURN_KDVDAHILSATISILK"]{
+                    display: none;
+                }
+            }
+
+            .ems-prd-price-taksit{
+                font-family: AvenirNext-Regular;
+                font-size: 12px;
+                color: #8d9098;
+                text-decoration: underline;
+                text-decoration-skip: ink;
+            }
+
+            .ems-prd-discount-percent{
+                display: inline-block;
+                margin-left: auto;
+                span{
+                    font-family: AvenirNext-DemiBold;
+                    font-size: 14px;
+                    font-weight: 600;
+                    text-align: center;
+                    color: #ffffff;
+                    border-radius: 2px;
+                    background-color: #2fa3ff;
+                    padding: 0 5px;
+                }
+            }
+        }
+
+        .ems-prd-group{
+            margin-bottom: 30px;
+            .sStylerMainWrp,
+            .dropdown{
+                display: none;
+            }
+            ul{
+                position: relative;
+                width: 100%;
+                height: 100%;
+                z-index: 1;
+                display: flex;
+                transition-property: transform;
+                box-sizing: content-box;
+                li{
+                    flex-shrink: 0;
+                    .URN_RESIM{
+                        cursor: pointer;
+                        margin: 0 10px 0 0;
+                        position: relative;
+                        overflow: hidden;
+
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        
+                        width: 60px;
+                        height: 60px;
+                        border-radius: 2px;
+                        border: 1px solid #dcdcdc;
+                        &:after{
+                            content: '';
+                            position: absolute;
+                            bottom: 0;
+                            width: 100%;
+                            left: 0;
+                            height: 3px;
+                            display: inline-block;
+                            background: $secondary;
+                            transform: translateY(5px);
+                            transition: transform 0.2s ease-in-out;
+                        }
+                    }
+                    .URN_AD,
+                    .prdName,
+                    .salesPrice,
+                    .urunGrup_urunTipi,
+                    .BRM_SPR_AD{
+                        display: none;
+                    }
+                    &:hover{
+                        .URN_RESIM{
+                            &:after{
+                                transform: translateY(0);
+                            }
+                        }
+                    }
+                    &.selected{
+                        .URN_RESIM{
+                            border: 1px solid #979797;
+                        }
+                    }
+                } 
+            }
+        }
+
+        .ems-prd-body-and-cart{
+            display: flex;
+            align-items: flex-start;
+            position: relative;
+        }
+
+        .ems-prd-flex-controller{
+            .ems-prd-size-chart{
+                display: none;
+            }
+            .ems-prd-size{
+                .sStylerMainWrp{
+                    display: none;
+                }
+                .urunDetay_urunSecenek1{
+                    .urunSecenek_baslik1{
+                        display: none;
+                    }
+                    
+                    .select-txt{
+                        .desktop{
+                            display: inline-block;
+                        }
+                        .mobi{
+                            display: none;
+                        }
+                    }
+                    .dropdown-trigger{
+                        > span{
+                            display: inline-block;
+                            border-radius: 2px;
+                            background-color: #eef3f8;
+                            width: 55px;
+                            height: 55px;
+                            padding: 5px;
+                            font-family: AvenirNext-DemiBold;
+                            font-size: 18px;
+                            font-weight: 600;
+                            text-align: center;
+                            color: #0c2048;
+                            position: relative;
+                            cursor: pointer;
+                            &:before{
+                                content: "Beden";
+                                display: block;
+                                font-family: AvenirNext-Regular;
+                                font-size: 14px;
+                                font-weight: 400;
+                                color: #3f444d;
+                                line-height: 19px;
+                            }
+                            &:after{
+                                content: "";
+                                display: none;
+                                width: 100%;
+                                height: 10px;
+                                background: #eef3f8;
+                                position: absolute;
+                                top: 100%;
+                                left: 0;
+                            }
+                        }
+                    }
+                    .dropdown-options{
+                        position: absolute;
+                        //top: calc(100% + 10px);
+                        left: 0;
+                        z-index: 1;
+                        margin-top: 10px;
+                        width: 370px;
+                        background-color: #eef3f8;
+                        padding: 13px 15px 15px;
+                        display: none;
+                        justify-content: flex-start;
+                        flex-wrap: wrap;
+                        a{
+                            display: inline-block;
+                            background: $white;
+                            border-radius: 2px;
+                            border: 1px solid $white;
+                            padding: 0 5px;
+                            margin: 5px;
+                            min-width: 58px;
+                            line-height: 35px;
+
+                            font-family: AvenirNext-DemiBold;
+                            font-size: 14px;
+                            font-weight: 600;
+                            text-align: center;
+                            color: $primary;
+
+                            float: left;
+
+                            &:hover{
+                                border: 1px solid $primary;
+                            }
+                            &.selectedOption{
+                                background: $primary;
+                                border: 1px solid $primary;
+                                color: $white;
+                            }
+                            &.stokYok{
+                                background: #dde2e7;
+                                color: #8d9098;
+                                font-family: AvenirNext-Regular;
+                                font-weight: 400;
+                            }
+                        }
+                    }
+                    &.opened{
+                        .dropdown-trigger{
+                            > span{
+                                border-radius: 2px 2px 0 0;
+                                &:after{
+                                    display: inline-block;
+                                }
+                            }
+                        }
+                        .dropdown-options{
+                            display: flex;
+                        }
+                    }
+                }
+                
+            }
+        }
+
+        .ems-prd-add-to-cart{
+            flex: 1;
+            .urunDetay_urunAdet{
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 55px;
+                height: 55px;
+                padding: 6px;
+                border-radius: 2px;
+                background: #eef3f8;
+                text-align: center;
+                @include user-select(none);
+                .counter-drp{
+                    display: none;
+                }
+                [id$="lblURN_ADET"]{
+                    order: 1;
+                    font-family: AvenirNext-Regular;
+                    font-size: 14px;
+                    text-align: left;
+                    color: #3f444d;
+                }
+                input{
+                    order: 2;
+                    width: 100%;
+                    text-align: center;
+                    background: #eef3f8;
+                    font-family: AvenirNext-DemiBold;
+                    font-size: 18px;
+                    font-weight: 600;
+                    text-align: center;
+                    color: #0c2048;
+                }
+                .counter-btn{
+                    font-size: 0;
+                    position: absolute;
+                    bottom:12px;
+                        &:before{
+                            @extend [class^="icon-"];
+                            font-size: 9px;
+                            color: #8d9098;
+                        }
+                    &.bottom-btn{
+                        left: 5px;
+                        &:before{
+                            @extend .icon-hyphen:before;
+                        }
+                    }
+                    &.top-btn{
+                        right: 5px;
+                        &:before{
+                            @extend .icon-plus:before;
+                        }
+                    }
+                }
+            }
+            .pnlSepetGrup{
+                width: 100%;
+                clear: both;
+                div{
+                    margin-left: 10px;
+                    float: left;
+                }
+                .urunDetay_btnSepeteAt{
+                    width: calc(100% - 75px) !important;
+                    *{
+                        width: 100%;
+                        display: block;
+                    }
+                }
+                .btnsepeteAt{
+                    height: 55px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-family: AvenirNext-DemiBold;
+                    font-size: 18px;
+                    font-weight: 600;
+                    color: #ffffff;
+                    @extend .btn;
+                    @extend .btn-primary;
+                }
+            }
+            .ems-prd-stock-notice{
+                width: 100%;
+                margin-left: 10px;
+                *{
+                    width: 100%;
+                    display: block;
+                }
+                .btnStokHaberci{
+                    height: 55px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-family: AvenirNext-DemiBold;
+                    font-size: 18px;
+                    font-weight: 600;
+                    color: #ffffff;
+                    @extend .btn;
+                    @extend .btn-alternative;
+                }
+            }
+        }
+
+        .ems-prd-price-and-fav{
+            margin-top: 24px;
+            display: flex;
+            justify-content: space-evenly;
+            .ems-prd-give-me-discount,
+            .ems-prd-add-to-cart-favorites{
+                > a{
+                    display: inline-block;
+                    max-width: 94px;
+                    text-align: center;
+                    > span{
+                        i{
+                            color: $primary;
+                            display: block;
+                            text-align: center;
+                            margin-bottom: 4px;
+                            font-size: 0;
+                            &:before{
+                                font-size: 24px;
+                            }
+                        }
+                        span{
+                            font-family: AvenirNext-Regular;
+                            font-size: 14px;
+                            color: #3f444d;
+                        }
+                    }
+                }
+            }
+            .ems-prd-give-me-discount{
+                .btnFiyatDus{
+                    
+                }
+            }
+            .ems-prd-add-to-cart-favorites{
+                .btnFavoriEkle{
+
+                }
+            }
+        }
+    }
+}

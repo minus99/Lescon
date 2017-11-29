@@ -52,14 +52,14 @@ textarea {
 .relative{ position: relative !important; }
 .visibility{ visibility: visible !important; }
 .visibility-hidden{ visibility: hidden !important; }
-.flex{ display: flex !important; }
-.flex-wrap{ flex-wrap: wrap !important; }
-.flex-left{ justify-content: flex-start !important; }
-.flex-center{ justify-content: center !important; }
-.flex-right{ justify-content: flex-end !important; }
-.flex-top{ align-items: flex-start !important; }
-.flex-middle{ align-items: center !important; }
-.flex-bottom{ align-items: flex-end !important; }
+.flex{ display: flex; }
+.flex-wrap{ flex-wrap: wrap; }
+.flex-left{ justify-content: flex-start; }
+.flex-center{ justify-content: center; }
+.flex-right{ justify-content: flex-end; }
+.flex-top{ align-items: flex-start; }
+.flex-middle{ align-items: center; }
+.flex-bottom{ align-items: flex-end; }
 .flex-column{ flex-direction: column; }
 
 // COLOR CLASS
