@@ -4377,7 +4377,7 @@ button.swiper-pagination-bullet {
 .zoom-gallery .swiper-button-prev span:before {
   color: #fff; }
 
-.btn, .ems-prd-detail-inner .ems-prd .ems-prd-add-to-cart .pnlSepetGrup .btnsepeteAt, .ems-prd-detail-inner .ems-prd .ems-prd-add-to-cart .ems-prd-stock-notice .btnStokHaberci {
+.btn, a.btnDefault, .ems-prd-detail-inner .ems-prd .ems-prd-add-to-cart .pnlSepetGrup .btnsepeteAt, .ems-prd-detail-inner .ems-prd .ems-prd-add-to-cart .ems-prd-stock-notice .btnStokHaberci {
   display: inline-block;
   border-radius: 2px;
   min-width: 174px;
@@ -4388,16 +4388,19 @@ button.swiper-pagination-bullet {
   -o-transition: all 0.3s cubic-bezier(0.8, 0, 0.5, 1);
   transition: all 0.3s cubic-bezier(0.8, 0, 0.5, 1); }
 
-.btn-primary, .ems-prd-detail-inner .ems-prd .ems-prd-add-to-cart .pnlSepetGrup .btnsepeteAt {
+.btn-primary, a.btnDefault, .ems-prd-detail-inner .ems-prd .ems-prd-add-to-cart .pnlSepetGrup .btnsepeteAt {
   background: #26df2e;
   color: #fff; }
 
-.btn-primary:focus, .ems-prd-detail-inner .ems-prd .ems-prd-add-to-cart .pnlSepetGrup .btnsepeteAt:focus,
+.btn-primary:focus, a.btnDefault:focus, .ems-prd-detail-inner .ems-prd .ems-prd-add-to-cart .pnlSepetGrup .btnsepeteAt:focus,
 .btn-primary:hover,
+a.btnDefault:hover,
 .ems-prd-detail-inner .ems-prd .ems-prd-add-to-cart .pnlSepetGrup .btnsepeteAt:hover,
 .btn-primary:visited,
+a.btnDefault:visited,
 .ems-prd-detail-inner .ems-prd .ems-prd-add-to-cart .pnlSepetGrup .btnsepeteAt:visited,
 .btn-primary:active,
+a.btnDefault:active,
 .ems-prd-detail-inner .ems-prd .ems-prd-add-to-cart .pnlSepetGrup .btnsepeteAt:active {
   background: #24ce2b;
   color: #fff; }
@@ -4781,6 +4784,7 @@ button.swiper-pagination-bullet {
       min-width: 240px; }
     .navbar-item-mini-member .mod-mini-login .mod-mini-login-body .sub.logoff .ems-form .ems-form-inner .btnDefault,
     .navbar-item-mini-member .mod-mini-login .mod-mini-login-body .sub.logoff .ems-form .ems-form-inner .btn,
+    .navbar-item-mini-member .mod-mini-login .mod-mini-login-body .sub.logoff .ems-form .ems-form-inner a.btnDefault,
     .navbar-item-mini-member .mod-mini-login .mod-mini-login-body .sub.logoff .ems-form .ems-form-inner .ems-prd-detail-inner .ems-prd .ems-prd-add-to-cart .pnlSepetGrup .btnsepeteAt, .ems-prd-detail-inner .ems-prd .ems-prd-add-to-cart .pnlSepetGrup
     .navbar-item-mini-member .mod-mini-login .mod-mini-login-body .sub.logoff .ems-form .ems-form-inner .btnsepeteAt,
     .navbar-item-mini-member .mod-mini-login .mod-mini-login-body .sub.logoff .ems-form .ems-form-inner .ems-prd-detail-inner .ems-prd .ems-prd-add-to-cart .ems-prd-stock-notice .btnStokHaberci, .ems-prd-detail-inner .ems-prd .ems-prd-add-to-cart .ems-prd-stock-notice
@@ -4875,7 +4879,7 @@ button.swiper-pagination-bullet {
         -webkit-align-items: center;
         -ms-flex-align: center;
         align-items: center;
-        font-family: AvenirNext-Bold;
+        font-family: "AvenirNext-Bold";
         font-size: 11px;
         font-weight: 600;
         color: #ffffff; }
@@ -5061,7 +5065,7 @@ button.swiper-pagination-bullet {
             -webkit-align-items: center;
             -ms-flex-align: center;
             align-items: center;
-            font-family: AvenirNext-Bold;
+            font-family: "AvenirNext-Bold";
             font-size: 11px;
             font-weight: 600;
             color: #ffffff; }
@@ -5333,7 +5337,7 @@ button.swiper-pagination-bullet {
         justify-content: space-around; }
         .main-showcase .showcase-holder .btn-group a {
           margin: 0 10px; }
-          .main-showcase .showcase-holder .btn-group a.btn, .main-showcase .showcase-holder .btn-group .ems-prd-detail-inner .ems-prd .ems-prd-add-to-cart .pnlSepetGrup a.btnsepeteAt, .ems-prd-detail-inner .ems-prd .ems-prd-add-to-cart .pnlSepetGrup .main-showcase .showcase-holder .btn-group a.btnsepeteAt, .main-showcase .showcase-holder .btn-group .ems-prd-detail-inner .ems-prd .ems-prd-add-to-cart .ems-prd-stock-notice a.btnStokHaberci, .ems-prd-detail-inner .ems-prd .ems-prd-add-to-cart .ems-prd-stock-notice .main-showcase .showcase-holder .btn-group a.btnStokHaberci {
+          .main-showcase .showcase-holder .btn-group a.btn, .main-showcase .showcase-holder .btn-group a.btnDefault, .main-showcase .showcase-holder .btn-group .ems-prd-detail-inner .ems-prd .ems-prd-add-to-cart .pnlSepetGrup a.btnsepeteAt, .ems-prd-detail-inner .ems-prd .ems-prd-add-to-cart .pnlSepetGrup .main-showcase .showcase-holder .btn-group a.btnsepeteAt, .main-showcase .showcase-holder .btn-group .ems-prd-detail-inner .ems-prd .ems-prd-add-to-cart .ems-prd-stock-notice a.btnStokHaberci, .ems-prd-detail-inner .ems-prd .ems-prd-add-to-cart .ems-prd-stock-notice .main-showcase .showcase-holder .btn-group a.btnStokHaberci {
             padding-left: 30px;
             padding-right: 30px;
             min-width: 100px; } }
@@ -5452,7 +5456,7 @@ button.swiper-pagination-bullet {
     margin-bottom: 45px; }
   .footer-navbar .navbar-btn-group {
     margin-bottom: 70px; }
-    .footer-navbar .navbar-btn-group .btn, .footer-navbar .navbar-btn-group .ems-prd-detail-inner .ems-prd .ems-prd-add-to-cart .pnlSepetGrup .btnsepeteAt, .ems-prd-detail-inner .ems-prd .ems-prd-add-to-cart .pnlSepetGrup .footer-navbar .navbar-btn-group .btnsepeteAt, .footer-navbar .navbar-btn-group .ems-prd-detail-inner .ems-prd .ems-prd-add-to-cart .ems-prd-stock-notice .btnStokHaberci, .ems-prd-detail-inner .ems-prd .ems-prd-add-to-cart .ems-prd-stock-notice .footer-navbar .navbar-btn-group .btnStokHaberci {
+    .footer-navbar .navbar-btn-group .btn, .footer-navbar .navbar-btn-group a.btnDefault, .footer-navbar .navbar-btn-group .ems-prd-detail-inner .ems-prd .ems-prd-add-to-cart .pnlSepetGrup .btnsepeteAt, .ems-prd-detail-inner .ems-prd .ems-prd-add-to-cart .pnlSepetGrup .footer-navbar .navbar-btn-group .btnsepeteAt, .footer-navbar .navbar-btn-group .ems-prd-detail-inner .ems-prd .ems-prd-add-to-cart .ems-prd-stock-notice .btnStokHaberci, .ems-prd-detail-inner .ems-prd .ems-prd-add-to-cart .ems-prd-stock-notice .footer-navbar .navbar-btn-group .btnStokHaberci {
       display: -webkit-box;
       display: -webkit-flex;
       display: -ms-flexbox;
@@ -5469,10 +5473,10 @@ button.swiper-pagination-bullet {
       text-align: left;
       font-size: 14px;
       font-weight: 600; }
-      .footer-navbar .navbar-btn-group .btn i, .footer-navbar .navbar-btn-group .ems-prd-detail-inner .ems-prd .ems-prd-add-to-cart .pnlSepetGrup .btnsepeteAt i, .ems-prd-detail-inner .ems-prd .ems-prd-add-to-cart .pnlSepetGrup .footer-navbar .navbar-btn-group .btnsepeteAt i, .footer-navbar .navbar-btn-group .ems-prd-detail-inner .ems-prd .ems-prd-add-to-cart .ems-prd-stock-notice .btnStokHaberci i, .ems-prd-detail-inner .ems-prd .ems-prd-add-to-cart .ems-prd-stock-notice .footer-navbar .navbar-btn-group .btnStokHaberci i {
+      .footer-navbar .navbar-btn-group .btn i, .footer-navbar .navbar-btn-group a.btnDefault i, .footer-navbar .navbar-btn-group .ems-prd-detail-inner .ems-prd .ems-prd-add-to-cart .pnlSepetGrup .btnsepeteAt i, .ems-prd-detail-inner .ems-prd .ems-prd-add-to-cart .pnlSepetGrup .footer-navbar .navbar-btn-group .btnsepeteAt i, .footer-navbar .navbar-btn-group .ems-prd-detail-inner .ems-prd .ems-prd-add-to-cart .ems-prd-stock-notice .btnStokHaberci i, .ems-prd-detail-inner .ems-prd .ems-prd-add-to-cart .ems-prd-stock-notice .footer-navbar .navbar-btn-group .btnStokHaberci i {
         font-size: 24px;
         margin-right: 40px; }
-      .footer-navbar .navbar-btn-group .btn + .btn, .footer-navbar .navbar-btn-group .ems-prd-detail-inner .ems-prd .ems-prd-add-to-cart .pnlSepetGrup .btnsepeteAt + .btn, .ems-prd-detail-inner .ems-prd .ems-prd-add-to-cart .pnlSepetGrup .footer-navbar .navbar-btn-group .btnsepeteAt + .btn, .footer-navbar .navbar-btn-group .ems-prd-detail-inner .ems-prd .ems-prd-add-to-cart .ems-prd-stock-notice .btnStokHaberci + .btn, .ems-prd-detail-inner .ems-prd .ems-prd-add-to-cart .ems-prd-stock-notice .footer-navbar .navbar-btn-group .btnStokHaberci + .btn, .footer-navbar .navbar-btn-group .ems-prd-detail-inner .ems-prd .ems-prd-add-to-cart .pnlSepetGrup .btn + .btnsepeteAt, .ems-prd-detail-inner .ems-prd .ems-prd-add-to-cart .pnlSepetGrup .footer-navbar .navbar-btn-group .btn + .btnsepeteAt, .footer-navbar .navbar-btn-group .ems-prd-detail-inner .ems-prd .ems-prd-add-to-cart .pnlSepetGrup .btnsepeteAt + .btnsepeteAt, .ems-prd-detail-inner .ems-prd .ems-prd-add-to-cart .pnlSepetGrup .footer-navbar .navbar-btn-group .btnsepeteAt + .btnsepeteAt, .footer-navbar .navbar-btn-group .ems-prd-detail-inner .ems-prd .ems-prd-add-to-cart .ems-prd-stock-notice .pnlSepetGrup .btnStokHaberci + .btnsepeteAt, .footer-navbar .navbar-btn-group .ems-prd-detail-inner .ems-prd .ems-prd-add-to-cart .pnlSepetGrup .ems-prd-stock-notice .btnStokHaberci + .btnsepeteAt, .ems-prd-detail-inner .ems-prd .ems-prd-add-to-cart .ems-prd-stock-notice .footer-navbar .navbar-btn-group .pnlSepetGrup .btnStokHaberci + .btnsepeteAt, .ems-prd-detail-inner .ems-prd .ems-prd-add-to-cart .pnlSepetGrup .ems-prd-stock-notice .footer-navbar .navbar-btn-group .btnStokHaberci + .btnsepeteAt, .footer-navbar .navbar-btn-group .ems-prd-detail-inner .ems-prd .ems-prd-add-to-cart .ems-prd-stock-notice .btn + .btnStokHaberci, .ems-prd-detail-inner .ems-prd .ems-prd-add-to-cart .ems-prd-stock-notice .footer-navbar .navbar-btn-group .btn + .btnStokHaberci, .footer-navbar .navbar-btn-group .ems-prd-detail-inner .ems-prd .ems-prd-add-to-cart .pnlSepetGrup .ems-prd-stock-notice .btnsepeteAt + .btnStokHaberci, .footer-navbar .navbar-btn-group .ems-prd-detail-inner .ems-prd .ems-prd-add-to-cart .ems-prd-stock-notice .pnlSepetGrup .btnsepeteAt + .btnStokHaberci, .ems-prd-detail-inner .ems-prd .ems-prd-add-to-cart .pnlSepetGrup .footer-navbar .navbar-btn-group .ems-prd-stock-notice .btnsepeteAt + .btnStokHaberci, .ems-prd-detail-inner .ems-prd .ems-prd-add-to-cart .ems-prd-stock-notice .pnlSepetGrup .footer-navbar .navbar-btn-group .btnsepeteAt + .btnStokHaberci, .footer-navbar .navbar-btn-group .ems-prd-detail-inner .ems-prd .ems-prd-add-to-cart .ems-prd-stock-notice .btnStokHaberci + .btnStokHaberci, .ems-prd-detail-inner .ems-prd .ems-prd-add-to-cart .ems-prd-stock-notice .footer-navbar .navbar-btn-group .btnStokHaberci + .btnStokHaberci {
+      .footer-navbar .navbar-btn-group .btn + .btn, .footer-navbar .navbar-btn-group a.btnDefault + .btn, .footer-navbar .navbar-btn-group .ems-prd-detail-inner .ems-prd .ems-prd-add-to-cart .pnlSepetGrup .btnsepeteAt + .btn, .ems-prd-detail-inner .ems-prd .ems-prd-add-to-cart .pnlSepetGrup .footer-navbar .navbar-btn-group .btnsepeteAt + .btn, .footer-navbar .navbar-btn-group .ems-prd-detail-inner .ems-prd .ems-prd-add-to-cart .ems-prd-stock-notice .btnStokHaberci + .btn, .ems-prd-detail-inner .ems-prd .ems-prd-add-to-cart .ems-prd-stock-notice .footer-navbar .navbar-btn-group .btnStokHaberci + .btn, .footer-navbar .navbar-btn-group .btn + a.btnDefault, .footer-navbar .navbar-btn-group a.btnDefault + a.btnDefault, .footer-navbar .navbar-btn-group .ems-prd-detail-inner .ems-prd .ems-prd-add-to-cart .pnlSepetGrup .btnsepeteAt + a.btnDefault, .ems-prd-detail-inner .ems-prd .ems-prd-add-to-cart .pnlSepetGrup .footer-navbar .navbar-btn-group .btnsepeteAt + a.btnDefault, .footer-navbar .navbar-btn-group .ems-prd-detail-inner .ems-prd .ems-prd-add-to-cart .ems-prd-stock-notice .btnStokHaberci + a.btnDefault, .ems-prd-detail-inner .ems-prd .ems-prd-add-to-cart .ems-prd-stock-notice .footer-navbar .navbar-btn-group .btnStokHaberci + a.btnDefault, .footer-navbar .navbar-btn-group .ems-prd-detail-inner .ems-prd .ems-prd-add-to-cart .pnlSepetGrup .btn + .btnsepeteAt, .ems-prd-detail-inner .ems-prd .ems-prd-add-to-cart .pnlSepetGrup .footer-navbar .navbar-btn-group .btn + .btnsepeteAt, .footer-navbar .navbar-btn-group .ems-prd-detail-inner .ems-prd .ems-prd-add-to-cart .pnlSepetGrup a.btnDefault + .btnsepeteAt, .ems-prd-detail-inner .ems-prd .ems-prd-add-to-cart .pnlSepetGrup .footer-navbar .navbar-btn-group a.btnDefault + .btnsepeteAt, .footer-navbar .navbar-btn-group .ems-prd-detail-inner .ems-prd .ems-prd-add-to-cart .pnlSepetGrup .btnsepeteAt + .btnsepeteAt, .ems-prd-detail-inner .ems-prd .ems-prd-add-to-cart .pnlSepetGrup .footer-navbar .navbar-btn-group .btnsepeteAt + .btnsepeteAt, .footer-navbar .navbar-btn-group .ems-prd-detail-inner .ems-prd .ems-prd-add-to-cart .ems-prd-stock-notice .pnlSepetGrup .btnStokHaberci + .btnsepeteAt, .footer-navbar .navbar-btn-group .ems-prd-detail-inner .ems-prd .ems-prd-add-to-cart .pnlSepetGrup .ems-prd-stock-notice .btnStokHaberci + .btnsepeteAt, .ems-prd-detail-inner .ems-prd .ems-prd-add-to-cart .ems-prd-stock-notice .footer-navbar .navbar-btn-group .pnlSepetGrup .btnStokHaberci + .btnsepeteAt, .ems-prd-detail-inner .ems-prd .ems-prd-add-to-cart .pnlSepetGrup .ems-prd-stock-notice .footer-navbar .navbar-btn-group .btnStokHaberci + .btnsepeteAt, .footer-navbar .navbar-btn-group .ems-prd-detail-inner .ems-prd .ems-prd-add-to-cart .ems-prd-stock-notice .btn + .btnStokHaberci, .ems-prd-detail-inner .ems-prd .ems-prd-add-to-cart .ems-prd-stock-notice .footer-navbar .navbar-btn-group .btn + .btnStokHaberci, .footer-navbar .navbar-btn-group .ems-prd-detail-inner .ems-prd .ems-prd-add-to-cart .ems-prd-stock-notice a.btnDefault + .btnStokHaberci, .ems-prd-detail-inner .ems-prd .ems-prd-add-to-cart .ems-prd-stock-notice .footer-navbar .navbar-btn-group a.btnDefault + .btnStokHaberci, .footer-navbar .navbar-btn-group .ems-prd-detail-inner .ems-prd .ems-prd-add-to-cart .pnlSepetGrup .ems-prd-stock-notice .btnsepeteAt + .btnStokHaberci, .footer-navbar .navbar-btn-group .ems-prd-detail-inner .ems-prd .ems-prd-add-to-cart .ems-prd-stock-notice .pnlSepetGrup .btnsepeteAt + .btnStokHaberci, .ems-prd-detail-inner .ems-prd .ems-prd-add-to-cart .pnlSepetGrup .footer-navbar .navbar-btn-group .ems-prd-stock-notice .btnsepeteAt + .btnStokHaberci, .ems-prd-detail-inner .ems-prd .ems-prd-add-to-cart .ems-prd-stock-notice .pnlSepetGrup .footer-navbar .navbar-btn-group .btnsepeteAt + .btnStokHaberci, .footer-navbar .navbar-btn-group .ems-prd-detail-inner .ems-prd .ems-prd-add-to-cart .ems-prd-stock-notice .btnStokHaberci + .btnStokHaberci, .ems-prd-detail-inner .ems-prd .ems-prd-add-to-cart .ems-prd-stock-notice .footer-navbar .navbar-btn-group .btnStokHaberci + .btnStokHaberci {
         margin-left: 25px; }
   .footer-navbar .navbar-holder {
     display: -webkit-box;
@@ -6100,7 +6104,7 @@ button.swiper-pagination-bullet {
     -ms-flex-align: center;
     align-items: center; }
   .ems-page-detail .ems-prd-navigation .urunNavigasyon a {
-    font-family: AvenirNext-Regular;
+    font-family: "AvenirNext-Regular";
     font-size: 14px;
     text-align: left;
     color: #8d9098; }
@@ -6151,7 +6155,7 @@ button.swiper-pagination-bullet {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
-  font-family: AvenirNext-Regular;
+  font-family: "AvenirNext-Regular";
   font-weight: 400;
   font-size: 12px;
   text-align: right;
@@ -6171,14 +6175,14 @@ button.swiper-pagination-bullet {
     border-radius: 2px;
     background-color: #26d5df;
     padding: 0 8px 0 9px;
-    font-family: AvenirNext-DemiBold;
+    font-family: "AvenirNext-DemiBold";
     font-size: 14px;
     font-weight: 600;
     text-align: center;
     color: #ffffff; }
 
 .ems-prd-detail-inner .ems-prd .ems-prd-name-wrapper {
-  font-family: AvenirNext-Bold;
+  font-family: "AvenirNext-Bold";
   font-size: 36px;
   font-weight: bold;
   line-height: 1.08;
@@ -6198,7 +6202,7 @@ button.swiper-pagination-bullet {
     -ms-flex-align: center;
     align-items: center; }
   .ems-prd-detail-inner .ems-prd .ems-prd-price .ems-prd-price-selling {
-    font-family: AvenirNext-Bold;
+    font-family: "AvenirNext-Bold";
     font-size: 24px;
     font-weight: bold;
     text-align: center;
@@ -6206,7 +6210,7 @@ button.swiper-pagination-bullet {
     .ems-prd-detail-inner .ems-prd .ems-prd-price .ems-prd-price-selling [id$="lbfURN_KDVDAHILSATIS"] {
       display: none; }
   .ems-prd-detail-inner .ems-prd .ems-prd-price .ems-prd-price-first {
-    font-family: AvenirNext-Regular;
+    font-family: "AvenirNext-Regular";
     font-size: 18px;
     color: #8d9098;
     position: relative; }
@@ -6225,7 +6229,7 @@ button.swiper-pagination-bullet {
     .ems-prd-detail-inner .ems-prd .ems-prd-price .ems-prd-price-first [id$="lbfURN_KDVDAHILSATISILK"] {
       display: none; }
   .ems-prd-detail-inner .ems-prd .ems-prd-price .ems-prd-price-taksit {
-    font-family: AvenirNext-Regular;
+    font-family: "AvenirNext-Regular";
     font-size: 12px;
     color: #8d9098;
     text-decoration: underline;
@@ -6235,7 +6239,7 @@ button.swiper-pagination-bullet {
     display: inline-block;
     margin-left: auto; }
     .ems-prd-detail-inner .ems-prd .ems-prd-price .ems-prd-discount-percent span {
-      font-family: AvenirNext-DemiBold;
+      font-family: "AvenirNext-DemiBold";
       font-size: 14px;
       font-weight: 600;
       text-align: center;
@@ -6353,7 +6357,7 @@ button.swiper-pagination-bullet {
   width: 55px;
   height: 55px;
   padding: 5px;
-  font-family: AvenirNext-DemiBold;
+  font-family: "AvenirNext-DemiBold";
   font-size: 18px;
   font-weight: 600;
   text-align: center;
@@ -6363,7 +6367,7 @@ button.swiper-pagination-bullet {
   .ems-prd-detail-inner .ems-prd .ems-prd-flex-controller .ems-prd-size .urunDetay_urunSecenek1 .dropdown-trigger > span:before {
     content: "Beden";
     display: block;
-    font-family: AvenirNext-Regular;
+    font-family: "AvenirNext-Regular";
     font-size: 14px;
     font-weight: 400;
     color: #3f444d;
@@ -6403,7 +6407,7 @@ button.swiper-pagination-bullet {
     margin: 5px;
     min-width: 58px;
     line-height: 35px;
-    font-family: AvenirNext-DemiBold;
+    font-family: "AvenirNext-DemiBold";
     font-size: 14px;
     font-weight: 600;
     text-align: center;
@@ -6418,7 +6422,7 @@ button.swiper-pagination-bullet {
     .ems-prd-detail-inner .ems-prd .ems-prd-flex-controller .ems-prd-size .urunDetay_urunSecenek1 .dropdown-options a.stokYok {
       background: #dde2e7;
       color: #8d9098;
-      font-family: AvenirNext-Regular;
+      font-family: "AvenirNext-Regular";
       font-weight: 400; }
 
 .ems-prd-detail-inner .ems-prd .ems-prd-flex-controller .ems-prd-size .urunDetay_urunSecenek1.opened .dropdown-trigger > span {
@@ -6462,6 +6466,14 @@ button.swiper-pagination-bullet {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none; }
+    .ems-prd-detail-inner .ems-prd .ems-prd-add-to-cart .urunDetay_urunAdet:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1; }
     .ems-prd-detail-inner .ems-prd .ems-prd-add-to-cart .urunDetay_urunAdet .counter-drp {
       display: none; }
     .ems-prd-detail-inner .ems-prd .ems-prd-add-to-cart .urunDetay_urunAdet [id$="lblURN_ADET"] {
@@ -6469,7 +6481,7 @@ button.swiper-pagination-bullet {
       -webkit-order: 1;
       -ms-flex-order: 1;
       order: 1;
-      font-family: AvenirNext-Regular;
+      font-family: "AvenirNext-Regular";
       font-size: 14px;
       text-align: left;
       color: #3f444d; }
@@ -6481,7 +6493,7 @@ button.swiper-pagination-bullet {
       width: 100%;
       text-align: center;
       background: #eef3f8;
-      font-family: AvenirNext-DemiBold;
+      font-family: "AvenirNext-DemiBold";
       font-size: 18px;
       font-weight: 600;
       text-align: center;
@@ -6489,7 +6501,8 @@ button.swiper-pagination-bullet {
     .ems-prd-detail-inner .ems-prd .ems-prd-add-to-cart .urunDetay_urunAdet .counter-btn {
       font-size: 0;
       position: absolute;
-      bottom: 12px; }
+      bottom: 12px;
+      z-index: 5; }
       .ems-prd-detail-inner .ems-prd .ems-prd-add-to-cart .urunDetay_urunAdet .counter-btn:before {
         font-size: 9px;
         color: #8d9098; }
@@ -6522,7 +6535,7 @@ button.swiper-pagination-bullet {
       -webkit-align-items: center;
       -ms-flex-align: center;
       align-items: center;
-      font-family: AvenirNext-DemiBold;
+      font-family: "AvenirNext-DemiBold";
       font-size: 18px;
       font-weight: 600;
       color: #ffffff; }
@@ -6546,7 +6559,7 @@ button.swiper-pagination-bullet {
       -webkit-align-items: center;
       -ms-flex-align: center;
       align-items: center;
-      font-family: AvenirNext-DemiBold;
+      font-family: "AvenirNext-DemiBold";
       font-size: 18px;
       font-weight: 600;
       color: #ffffff; }
@@ -6578,16 +6591,22 @@ button.swiper-pagination-bullet {
         font-size: 24px; }
     .ems-prd-detail-inner .ems-prd .ems-prd-price-and-fav .ems-prd-give-me-discount > a > span span,
     .ems-prd-detail-inner .ems-prd .ems-prd-price-and-fav .ems-prd-add-to-cart-favorites > a > span span {
-      font-family: AvenirNext-Regular;
+      font-family: "AvenirNext-Regular";
       font-size: 14px;
       color: #3f444d; }
 
 .ems-prd-zoom {
   position: relative; }
-  .ems-prd-zoom > span .swiper-container .swiper-inner {
-    margin: 0 auto;
-    width: 454px;
-    height: 360px; }
+  .ems-prd-zoom > span .swiper-container > .swiper-inner {
+    margin: 0 auto; }
+  .ems-prd-zoom > span .swiper-container .slide-wrp .swiper-slide {
+    display: none; }
+    .ems-prd-zoom > span .swiper-container .slide-wrp .swiper-slide:first-child {
+      display: inline-block; }
+  .ems-prd-zoom > span .swiper-container > .swiper-button-prev,
+  .ems-prd-zoom > span .swiper-container > .swiper-button-next,
+  .ems-prd-zoom > span .swiper-container > .swiper-pagination {
+    display: none; }
   .ems-prd-zoom > span .swiper-container .swiper-left-column {
     position: absolute;
     top: 0;
@@ -6623,7 +6642,7 @@ button.swiper-pagination-bullet {
           -webkit-justify-content: center;
           -ms-flex-pack: center;
           justify-content: center;
-          border: 1px solid  #dde2e7;
+          border: 1px solid #dde2e7;
           -webkit-transition: all .2s;
           -o-transition: all .2s;
           transition: all .2s; }
@@ -6649,6 +6668,248 @@ button.swiper-pagination-bullet {
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column; }
+
+.ems-prd-detail-bottom {
+  padding-top: 54px; }
+
+.ems-tab-detail {
+  max-width: 1220px;
+  padding: 0 10px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative; }
+  .ems-tab-detail .ems-tab-inner {
+    width: calc(100% - 511px); }
+    .ems-tab-detail .ems-tab-inner .navigation-js {
+      border: 2px solid #0d2048;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex; }
+      .ems-tab-detail .ems-tab-inner .navigation-js li {
+        -webkit-box-flex: 1;
+        -webkit-flex: 1;
+        -ms-flex: 1;
+        flex: 1;
+        text-align: center;
+        border-left: 2px solid #0d2048; }
+        .ems-tab-detail .ems-tab-inner .navigation-js li:first-child {
+          border-left: none; }
+          .ems-tab-detail .ems-tab-inner .navigation-js li:first-child.selected {
+            border-left: 2px solid #0d2048; }
+        .ems-tab-detail .ems-tab-inner .navigation-js li a {
+          display: block;
+          font-family: "AvenirNext-DemiBold";
+          font-size: 18px;
+          font-weight: 600;
+          text-align: center;
+          color: #0c2048;
+          padding: 16px 0 14px; }
+        .ems-tab-detail .ems-tab-inner .navigation-js li.selected {
+          background: #0d2048; }
+          .ems-tab-detail .ems-tab-inner .navigation-js li.selected a {
+            color: #fff; }
+    .ems-tab-detail .ems-tab-inner .content-js .title {
+      display: none; }
+    .ems-tab-detail .ems-tab-inner .content-js > li {
+      display: none; }
+      .ems-tab-detail .ems-tab-inner .content-js > li.selected {
+        display: block; }
+    .ems-tab-detail .ems-tab-inner .content-js li[rel="tab-product-info"] .content-detail {
+      margin-top: 54px;
+      margin-bottom: 20px; }
+    .ems-tab-detail .ems-tab-inner .content-js li[rel="tab-payment"] .content-detail {
+      margin-top: 54px;
+      margin-bottom: 20px; }
+    .ems-tab-detail .ems-tab-inner .content-js .type-1 .images {
+      display: none; }
+    .ems-tab-detail .ems-tab-inner .content-js .type-1 .text > h2 {
+      display: none; }
+    .ems-tab-detail .ems-tab-inner .content-js .type-1 .text .mt-tittle {
+      display: block;
+      font-family: "AvenirNext-Bold";
+      font-size: 18px;
+      font-weight: bold;
+      color: #0c2048;
+      margin-bottom: 7px; }
+    .ems-tab-detail .ems-tab-inner .content-js .type-1 .text .mt-text {
+      font-family: "AvenirNext-Regular";
+      font-size: 16px;
+      color: #3f444d; }
+    .ems-tab-detail .ems-tab-inner .content-js .ems-prd-delivery-desc {
+      margin-top: 36px;
+      margin-bottom: 30px;
+      font-family: "AvenirNext-Regular";
+      font-size: 16px;
+      line-height: 1.81;
+      color: #3f444d; }
+    .ems-tab-detail .ems-tab-inner .content-js .popupTitleTaksit {
+      font-family: "AvenirNext-Bold";
+      font-size: 18px;
+      font-weight: bold;
+      color: #0c2048;
+      margin-bottom: 18px; }
+    .ems-tab-detail .ems-tab-inner .content-js .popupTaksit_lbfAciklama {
+      margin-bottom: 50px; }
+      .ems-tab-detail .ems-tab-inner .content-js .popupTaksit_lbfAciklama * {
+        font-family: "AvenirNext-Regular";
+        font-size: 16px;
+        line-height: 1.81;
+        color: #3f444d; }
+    .ems-tab-detail .ems-tab-inner .content-js .gridTaksitBanka {
+      width: 100%; }
+      .ems-tab-detail .ems-tab-inner .content-js .gridTaksitBanka > tbody {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        width: 100%;
+        margin-left: -15px;
+        margin-right: -15px; }
+        .ems-tab-detail .ems-tab-inner .content-js .gridTaksitBanka > tbody > tr {
+          width: calc(50% - 30px);
+          margin-right: 15px;
+          margin-left: 15px; }
+    .ems-tab-detail .ems-tab-inner .content-js .gridRowTaksitBanka {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      width: 100%; }
+      .ems-tab-detail .ems-tab-inner .content-js .gridRowTaksitBanka .taksit_banka {
+        display: block;
+        height: 45px;
+        font-size: 0;
+        text-align: left; }
+    .ems-tab-detail .ems-tab-inner .content-js .gridTaksitSecenek {
+      margin-bottom: 43px;
+      border: 1px solid #dde2e7; }
+      .ems-tab-detail .ems-tab-inner .content-js .gridTaksitSecenek .gridHeaderTaksitSecenek {
+        background: #eef3f8;
+        height: 49px;
+        font-family: "AvenirNext-DemiBold";
+        font-size: 12px;
+        font-weight: 600;
+        text-align: center;
+        color: #0c2048; }
+      .ems-tab-detail .ems-tab-inner .content-js .gridTaksitSecenek .gridRowTaksitSecenek,
+      .ems-tab-detail .ems-tab-inner .content-js .gridTaksitSecenek .gridAlternateTaksitSecenek {
+        border-top: 1px solid #dde2e7;
+        font-family: "AvenirNext-Regular";
+        font-size: 14px;
+        text-align: center;
+        color: #3f444d; }
+        .ems-tab-detail .ems-tab-inner .content-js .gridTaksitSecenek .gridRowTaksitSecenek > td,
+        .ems-tab-detail .ems-tab-inner .content-js .gridTaksitSecenek .gridAlternateTaksitSecenek > td {
+          width: 33.333% !important;
+          line-height: 1;
+          padding: 11px 0 10px;
+          border-left: 1px solid #dde2e7; }
+          .ems-tab-detail .ems-tab-inner .content-js .gridTaksitSecenek .gridRowTaksitSecenek > td:first-child,
+          .ems-tab-detail .ems-tab-inner .content-js .gridTaksitSecenek .gridAlternateTaksitSecenek > td:first-child {
+            border-left: 0; }
+
+.widget-complete-style-wrp {
+  margin-top: 41px; }
+  .widget-complete-style-wrp .swiper-inner {
+    padding-top: 20px; }
+  .widget-complete-style-wrp .swiper-title {
+    font-family: "AvenirNext-Bold";
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    color: #0d2048;
+    margin-bottom: 22px; }
+  .widget-complete-style-wrp .ems-prd-discount {
+    width: 200px;
+    margin: 0 auto;
+    position: relative; }
+    .widget-complete-style-wrp .ems-prd-discount .urunListe_pnlIndirimOran {
+      display: inline-block !important;
+      position: absolute;
+      left: 0;
+      top: 0;
+      -webkit-transform: translate(-20%, -50%);
+      -ms-transform: translate(-20%, -50%);
+      transform: translate(-20%, -50%);
+      background: #2fa3ff;
+      padding: 0 5px;
+      font-family: "AvenirNext-DemiBold";
+      font-size: 14px;
+      font-weight: 600;
+      color: #ffffff; }
+  .widget-complete-style-wrp .ems-prd-image {
+    margin-bottom: 15px; }
+    .widget-complete-style-wrp .ems-prd-image > a {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center;
+      height: 100%;
+      overflow: hidden;
+      font-size: 0; }
+  .widget-complete-style-wrp .ems-prd-name {
+    margin-bottom: 9px;
+    font-family: "AvenirNext-Regular";
+    font-size: 14px;
+    text-align: center;
+    color: #3f444d; }
+  .widget-complete-style-wrp .ems-prd-price {
+    text-align: center; }
+    .widget-complete-style-wrp .ems-prd-price span {
+      display: inline-block; }
+    .widget-complete-style-wrp .ems-prd-price .urunListe_satisFiyat {
+      font-family: "AvenirNext-DemiBold";
+      font-size: 18px;
+      font-weight: 600;
+      color: #0c2048;
+      margin-right: 10px; }
+    .widget-complete-style-wrp .ems-prd-price .urunListe_brutFiyat {
+      font-family: "AvenirNext-Regular";
+      font-size: 14px;
+      color: #8d9098;
+      position: relative; }
+      .widget-complete-style-wrp .ems-prd-price .urunListe_brutFiyat::before {
+        content: "";
+        display: inline-block;
+        width: 100%;
+        height: 1px;
+        background: #8d9098;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%); }
+  .widget-complete-style-wrp .ems-prd-stock {
+    display: none; }
+  .widget-complete-style-wrp .swiper-button-prev,
+  .widget-complete-style-wrp .swiper-button-next {
+    background: none;
+    width: auto;
+    height: auto;
+    margin-top: -10px; }
+  .widget-complete-style-wrp .swiper-button-prev {
+    left: -10px; }
+  .widget-complete-style-wrp .swiper-button-next {
+    right: -10px; }
+  .widget-complete-style-wrp .swiper-pagination {
+    bottom: 2px; }
+    .widget-complete-style-wrp .swiper-pagination > span {
+      background-color: #8d9098; }
+    .widget-complete-style-wrp .swiper-pagination .swiper-pagination-bullet-active {
+      background-color: #0d2048; }
 
 /* wizard */
 .wizard-add-to-cart .ems-prd-add {
@@ -6693,7 +6954,7 @@ button.swiper-pagination-bullet {
       width: 120%;
       height: 120%; }
     .wizard .background .kto-title {
-      font-family: AvenirNext-Bold;
+      font-family: "AvenirNext-Bold";
       font-size: 24px;
       font-weight: bold;
       letter-spacing: -0.5px;
@@ -6801,14 +7062,14 @@ button.swiper-pagination-bullet {
 
 @media screen and (max-width: 960px) {
   .wizard .level.level-1 .h2 {
-    font-family: AvenirNext-Bold;
+    font-family: "AvenirNext-Bold";
     font-size: 24px;
     font-weight: bold;
     letter-spacing: -0.5px;
     text-align: center;
     color: #ffffff; }
   .wizard .level.level-1 .h4 {
-    font-family: AvenirNext-DemiBold;
+    font-family: "AvenirNext-DemiBold";
     font-size: 16px;
     font-weight: 600;
     text-align: center;
@@ -6999,14 +7260,14 @@ button.swiper-pagination-bullet {
     #scene .item .item-info .item-content-left {
       margin-right: 20px; }
       #scene .item .item-info .item-content-left .item-name {
-        font-family: AvenirNext-DemiBold;
+        font-family: "AvenirNext-DemiBold";
         font-size: 14px;
         font-weight: 600;
         color: #ffffff;
         height: 19px;
         overflow: hidden; }
       #scene .item .item-info .item-content-left .item-prc {
-        font-family: AvenirNext-Bold;
+        font-family: "AvenirNext-Bold";
         font-size: 18px;
         font-weight: bold;
         color: #ffffff; }
@@ -7114,7 +7375,7 @@ button.swiper-pagination-bullet {
         font-size: 24px; }
     .bottom-bar .btn-all-add-to-cart span,
     .bottom-bar .btn-change-items span {
-      font-family: AvenirNext-DemiBold;
+      font-family: "AvenirNext-DemiBold";
       font-size: 18px;
       font-weight: 600;
       text-align: center;
@@ -7163,14 +7424,14 @@ button.swiper-pagination-bullet {
         -webkit-align-items: center;
         -ms-flex-align: center;
         align-items: center;
-        font-family: AvenirNext-Bold;
+        font-family: "AvenirNext-Bold";
         font-size: 18px;
         font-weight: bold;
         color: #0c2048; }
         .bottom-bar .bottom-nav-left .navigation .cat-nav > a .name:before {
           content: "Kategori";
           display: block;
-          font-family: AvenirNext-Regular;
+          font-family: "AvenirNext-Regular";
           font-weight: 400;
           font-size: 12px;
           color: #8d9098; }
@@ -7255,11 +7516,11 @@ button.swiper-pagination-bullet {
           .bottom-bar .bottom-nav-left .navigation .lvl-2 li i:before {
             font-size: 21px; }
         .bottom-bar .bottom-nav-left .navigation .lvl-2 li .name {
-          font-family: AvenirNext-Regular;
+          font-family: "AvenirNext-Regular";
           font-size: 14px;
           color: #3f444d; }
         .bottom-bar .bottom-nav-left .navigation .lvl-2 li .drm {
-          font-family: AvenirNext-DemiBold;
+          font-family: "AvenirNext-DemiBold";
           font-size: 14px;
           font-weight: 600;
           text-align: left;
@@ -7274,7 +7535,7 @@ button.swiper-pagination-bullet {
           border-right-width: 6px;
           border-right-color: #26df2e; }
           .bottom-bar .bottom-nav-left .navigation .lvl-2 li.selected .name {
-            font-family: AvenirNext-DemiBold;
+            font-family: "AvenirNext-DemiBold";
             font-size: 14px;
             font-weight: 600;
             color: #0d2048; }
@@ -7320,11 +7581,11 @@ button.swiper-pagination-bullet {
           -o-transition: all 0.4s cubic-bezier(0.8, 0, 0.5, 1);
           transition: all 0.4s cubic-bezier(0.8, 0, 0.5, 1); }
       .bottom-bar .bottom-nav-right .controller .total-text {
-        font-family: AvenirNext-Regular;
+        font-family: "AvenirNext-Regular";
         font-size: 14px;
         color: #3f444d; }
       .bottom-bar .bottom-nav-right .controller .total-price {
-        font-family: AvenirNext-Bold;
+        font-family: "AvenirNext-Bold";
         font-size: 30px;
         font-weight: bold;
         color: #0d2048;
@@ -7385,7 +7646,7 @@ button.swiper-pagination-bullet {
             margin-left: 17px; }
             .bottom-bar .bottom-nav-right .controller .selections .item-inner .item-content-left .item-name {
               width: 133px;
-              font-family: AvenirNext-Regular;
+              font-family: "AvenirNext-Regular";
               font-size: 14px;
               font-weight: 400;
               color: #3f444d;
@@ -7393,7 +7654,7 @@ button.swiper-pagination-bullet {
               overflow: hidden; }
             .bottom-bar .bottom-nav-right .controller .selections .item-inner .item-content-left .item-prc {
               width: 70px;
-              font-family: AvenirNext-DemiBold;
+              font-family: "AvenirNext-DemiBold";
               font-size: 14px;
               font-weight: 600;
               color: #0d2048;
@@ -7491,7 +7752,7 @@ button.swiper-pagination-bullet {
       #scene .item .item-info .item-content-left {
         margin-right: 0; }
         #scene .item .item-info .item-content-left .item-name {
-          font-family: AvenirNext-Regular;
+          font-family: "AvenirNext-Regular";
           font-weight: 400;
           color: #3f444d;
           margin-bottom: 4px; }
@@ -7505,14 +7766,14 @@ button.swiper-pagination-bullet {
           -ms-flex-align: center;
           align-items: center; }
           #scene .item .item-info .item-content-left .item-prc .last-price {
-            font-family: AvenirNext-DemiBold;
+            font-family: "AvenirNext-DemiBold";
             font-size: 14px;
             font-weight: 600;
             color: #0d2048;
             margin-right: 5px; }
           #scene .item .item-info .item-content-left .item-prc .first-price {
             display: inline-block;
-            font-family: AvenirNext-Regular;
+            font-family: "AvenirNext-Regular";
             font-size: 12px;
             font-weight: 400;
             color: #8d9098;
@@ -7539,7 +7800,7 @@ button.swiper-pagination-bullet {
           #scene .item .item-info .item-content-right .item-controller ul li a {
             width: auto;
             height: auto;
-            font-family: AvenirNext-DemiBold;
+            font-family: "AvenirNext-DemiBold";
             font-weight: 600; }
             #scene .item .item-info .item-content-right .item-controller ul li a i {
               display: none; }
@@ -7603,7 +7864,7 @@ button.swiper-pagination-bullet {
             .bottom-bar .bottom-nav-left .navigation .lvl-2 li i {
               display: none; }
             .bottom-bar .bottom-nav-left .navigation .lvl-2 li .name {
-              font-family: AvenirNext-DemiBold; }
+              font-family: "AvenirNext-DemiBold"; }
             .bottom-bar .bottom-nav-left .navigation .lvl-2 li .drm {
               display: none; }
             .bottom-bar .bottom-nav-left .navigation .lvl-2 li.selected {
@@ -7617,7 +7878,7 @@ button.swiper-pagination-bullet {
         background-color: #eef3f8;
         color: #0d2048; }
         .bottom-bar .bottom-nav-left .btn-change-items span {
-          font-family: AvenirNext-DemiBold;
+          font-family: "AvenirNext-DemiBold";
           font-size: 14px;
           font-weight: 600;
           text-align: center;
@@ -7661,7 +7922,7 @@ button.swiper-pagination-bullet {
           .bottom-bar .bottom-nav-right .controller > span .total-text {
             display: none; }
           .bottom-bar .bottom-nav-right .controller > span .total-price {
-            font-family: AvenirNext-Bold;
+            font-family: "AvenirNext-Bold";
             font-size: 18px;
             font-weight: bold;
             text-align: center;
@@ -7706,7 +7967,7 @@ button.swiper-pagination-bullet {
     border-bottom: 1px solid #dde2e7; }
     .wizard-add-to-cart.jconfirm .jconfirm-box .jconfirm-title-c .jconfirm-title {
       padding-bottom: 0;
-      font-family: AvenirNext-Bold;
+      font-family: "AvenirNext-Bold";
       font-size: 24px;
       font-weight: bold;
       color: #0c2048; }
@@ -7784,7 +8045,7 @@ button.swiper-pagination-bullet {
       -ms-flex-align: center;
       align-items: center; }
     .wizard-add-to-cart .emosInfinite li .ems-prd-content-bottom .ems-prd-name {
-      font-family: AvenirNext-Regular;
+      font-family: "AvenirNext-Regular";
       font-size: 14px;
       color: #3f444d; }
     .wizard-add-to-cart .emosInfinite li .ems-prd-content-bottom .ems-prd-price {
@@ -7800,13 +8061,13 @@ button.swiper-pagination-bullet {
       .wizard-add-to-cart .emosInfinite li .ems-prd-content-bottom .ems-prd-price > span {
         text-align: center; }
       .wizard-add-to-cart .emosInfinite li .ems-prd-content-bottom .ems-prd-price .urunListe_satisFiyat {
-        font-family: AvenirNext-DemiBold;
+        font-family: "AvenirNext-DemiBold";
         font-size: 14px;
         font-weight: 600;
         color: #0d2048; }
       .wizard-add-to-cart .emosInfinite li .ems-prd-content-bottom .ems-prd-price .urunListe_brutFiyat {
         display: inline-block;
-        font-family: AvenirNext-Regular;
+        font-family: "AvenirNext-Regular";
         font-size: 12px;
         text-align: center;
         color: #8d9098;
@@ -7845,13 +8106,13 @@ button.swiper-pagination-bullet {
           -moz-user-select: none;
           -ms-user-select: none;
           user-select: none;
-          font-family: AvenirNext-DemiBold;
+          font-family: "AvenirNext-DemiBold";
           font-size: 14px;
           color: #0c2048; }
           .wizard-add-to-cart .emosInfinite li .ems-prd-content-bottom .ems-prd-add .urunListe_secenek .sStylerWrp_select .sStylerWrp:before {
             content: "Beden";
             display: inline-block;
-            font-family: AvenirNext-Regular;
+            font-family: "AvenirNext-Regular";
             font-size: 14px;
             font-weight: 400;
             color: #3f444d; }
@@ -7894,7 +8155,7 @@ button.swiper-pagination-bullet {
       .wizard-add-to-cart .emosInfinite li .ems-prd-content-bottom .ems-prd-add .urunListe_sepetGrup .urunListe_adet:before {
         content: "Adet";
         display: inline-block;
-        font-family: AvenirNext-Regular;
+        font-family: "AvenirNext-Regular";
         font-size: 14px;
         font-weight: 400;
         color: #3f444d; }
@@ -7911,7 +8172,7 @@ button.swiper-pagination-bullet {
       .wizard-add-to-cart .emosInfinite li .ems-prd-content-bottom .ems-prd-add .urunListe_sepetGrup .urunListe_adet input {
         background-color: #eef3f8;
         width: 20px;
-        font-family: AvenirNext-DemiBold;
+        font-family: "AvenirNext-DemiBold";
         font-size: 14px;
         color: #0c2048;
         text-align: right; }
@@ -7954,7 +8215,7 @@ button.swiper-pagination-bullet {
   border-top: 1px solid #dde2e7;
   max-height: 79px; }
   .wizard-add-to-cart .popup-bottom-bar .price-wrp .h4 {
-    font-family: AvenirNext-Regular;
+    font-family: "AvenirNext-Regular";
     font-weight: 400;
     font-size: 14px;
     color: #3f444d; }

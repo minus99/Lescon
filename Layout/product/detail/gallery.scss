@@ -5,11 +5,25 @@
             
         }
         .swiper-container{
-            //overflow: hidden;
-            .swiper-inner{
+            > .swiper-inner{
+                //width: 450px;
+                //height: 360px;
                 margin: 0 auto;
-                width: 454px;
-                height: 360px;
+                
+            }
+            .slide-wrp{
+                .swiper-slide{
+                    display: none;
+                    &:first-child{
+                        display: inline-block;   
+                    }
+                }
+                
+            }
+            > .swiper-button-prev,
+            > .swiper-button-next,
+            > .swiper-pagination{
+                display: none;
             }
 
             .swiper-left-column {
@@ -43,8 +57,7 @@
                                 align-items: center;
                                 justify-content: center;
                                 
-                                border: 1px solid 
-                                #dde2e7;
+                                border: 1px solid #dde2e7;
                                 transition: all .2s;
                                 img{
                                     width: 100%;

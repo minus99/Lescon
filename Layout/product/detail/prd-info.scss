@@ -8,7 +8,7 @@
 
             display: flex;
             align-items: center;
-            font-family: AvenirNext-Regular;
+            font-family: $regular;
             font-weight: 400;
             font-size: 12px;
             text-align: right;
@@ -33,7 +33,7 @@
                     border-radius: 2px;
                     background-color: #26d5df;
                     padding: 0 8px 0 9px;
-                    font-family: AvenirNext-DemiBold;
+                    font-family: $demiBold;
                     font-size: 14px;
                     font-weight: 600;
                     text-align: center;
@@ -43,7 +43,7 @@
         }
 
         .ems-prd-name-wrapper{
-            font-family: AvenirNext-Bold;
+            font-family: $bold;
             font-size: 36px;
             font-weight: bold;
             line-height: 1.08;
@@ -62,7 +62,7 @@
 
             
             .ems-prd-price-selling{
-                font-family: AvenirNext-Bold;
+                font-family: $bold;
                 font-size: 24px;
                 font-weight: bold;
                 text-align: center;
@@ -73,7 +73,7 @@
             }
 
             .ems-prd-price-first{
-                font-family: AvenirNext-Regular;
+                font-family: $regular;
                 font-size: 18px;
                 color: #8d9098;
                 position: relative;
@@ -94,7 +94,7 @@
             }
 
             .ems-prd-price-taksit{
-                font-family: AvenirNext-Regular;
+                font-family: $regular;
                 font-size: 12px;
                 color: #8d9098;
                 text-decoration: underline;
@@ -105,7 +105,7 @@
                 display: inline-block;
                 margin-left: auto;
                 span{
-                    font-family: AvenirNext-DemiBold;
+                    font-family: $demiBold;
                     font-size: 14px;
                     font-weight: 600;
                     text-align: center;
@@ -218,7 +218,7 @@
                             width: 55px;
                             height: 55px;
                             padding: 5px;
-                            font-family: AvenirNext-DemiBold;
+                            font-family: $demiBold;
                             font-size: 18px;
                             font-weight: 600;
                             text-align: center;
@@ -228,7 +228,7 @@
                             &:before{
                                 content: "Beden";
                                 display: block;
-                                font-family: AvenirNext-Regular;
+                                font-family: $regular;
                                 font-size: 14px;
                                 font-weight: 400;
                                 color: #3f444d;
@@ -268,7 +268,7 @@
                             min-width: 58px;
                             line-height: 35px;
 
-                            font-family: AvenirNext-DemiBold;
+                            font-family: $demiBold;
                             font-size: 14px;
                             font-weight: 600;
                             text-align: center;
@@ -287,7 +287,7 @@
                             &.stokYok{
                                 background: #dde2e7;
                                 color: #8d9098;
-                                font-family: AvenirNext-Regular;
+                                font-family: $regular;
                                 font-weight: 400;
                             }
                         }
@@ -324,12 +324,21 @@
                 background: #eef3f8;
                 text-align: center;
                 @include user-select(none);
+                &:before{
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    z-index: 1;
+                }
                 .counter-drp{
                     display: none;
                 }
                 [id$="lblURN_ADET"]{
                     order: 1;
-                    font-family: AvenirNext-Regular;
+                    font-family: $regular;
                     font-size: 14px;
                     text-align: left;
                     color: #3f444d;
@@ -339,7 +348,7 @@
                     width: 100%;
                     text-align: center;
                     background: #eef3f8;
-                    font-family: AvenirNext-DemiBold;
+                    font-family: $demiBold;
                     font-size: 18px;
                     font-weight: 600;
                     text-align: center;
@@ -349,6 +358,7 @@
                     font-size: 0;
                     position: absolute;
                     bottom:12px;
+                    z-index: 5;         
                         &:before{
                             @extend [class^="icon-"];
                             font-size: 9px;
@@ -387,7 +397,7 @@
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    font-family: AvenirNext-DemiBold;
+                    font-family: $demiBold;
                     font-size: 18px;
                     font-weight: 600;
                     color: #ffffff;
@@ -407,7 +417,7 @@
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    font-family: AvenirNext-DemiBold;
+                    font-family: $demiBold;
                     font-size: 18px;
                     font-weight: 600;
                     color: #ffffff;
@@ -439,7 +449,7 @@
                             }
                         }
                         span{
-                            font-family: AvenirNext-Regular;
+                            font-family: $regular;
                             font-size: 14px;
                             color: #3f444d;
                         }

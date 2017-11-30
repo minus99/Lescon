@@ -14,7 +14,7 @@
             }
             span{
                 display: block;
-                font-family: $AvenirNext-DemiBold;
+                font-family: $demiBold;
                 font-size: 14px;
                 font-weight: 600;
                 color: $primary;
@@ -117,7 +117,7 @@
             .nav-title{
                 display: block;
                 width: 100%;
-                font-family: $AvenirNext-Bold;
+                font-family: $bold;
                 font-size: 18px;
                 font-weight: 700;
                 color: $primary;
@@ -130,7 +130,7 @@
                 ul{
                     li{
                         a{
-                            font-family: $AvenirNext-Regular;
+                            font-family: $regular;
                             font-size: 14px;
                             line-height: 2.43;
                             color: $text-1;
