@@ -4,7 +4,7 @@
         .kutuHeaderDefault{
             margin-bottom: 11px;
             span{
-                font-family: $AvenirNext-Bold;
+                font-family: $bold;
                 font-size: 18px;
                 font-weight: bold;
                 color: $primary;
@@ -23,7 +23,7 @@
                     &.s1{
                         a{
                             display: block;
-                            font-family: $AvenirNext-Regular;
+                            font-family: $regular;
                             font-size: 14px;
                             color: $text-1;
                         }
@@ -66,7 +66,7 @@
                 .urunKiyaslamaOzellik_ozellikAd{
                     display: block;
                     margin-bottom: 22px;
-                    font-family: $AvenirNext-Bold;
+                    font-family: $bold;
                     font-size: 18px;
                     font-weight: bold;
                     color: $primary;
@@ -80,7 +80,7 @@
                 .urunKiyaslamaOzellik_ozellikIcerik{
                     .urunKiyaslamaOzellik_ozellik{
                         a{
-                            font-family: $AvenirNext-Regular;
+                            font-family: $regular;
                             font-size: 14px;
                             color: $text-1;
                         }

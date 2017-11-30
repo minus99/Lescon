@@ -49,7 +49,7 @@
                 border-bottom: 1px solid #dde2e7;
                 .jconfirm-title{
                     padding-bottom: 0;
-                    font-family: AvenirNext-Bold;
+                    font-family: $bold;
                     font-size: 24px;
                     font-weight: bold;
                     color: $primary;
@@ -115,7 +115,7 @@
             .ems-prd-content-bottom{
 
                 .ems-prd-name{
-                    font-family: AvenirNext-Regular;
+                    font-family: $regular;
                     font-size: 14px;
                     color: #3f444d;
                 }
@@ -127,14 +127,14 @@
                         text-align: center;
                     }
                     .urunListe_satisFiyat{
-                        font-family: AvenirNext-DemiBold;
+                        font-family: $demiBold;
                         font-size: 14px;
                         font-weight: 600;
                         color: #0d2048;
                     }
                     .urunListe_brutFiyat{
                         display: inline-block;
-                        font-family: AvenirNext-Regular;
+                        font-family: $regular;
                         font-size: 12px;
                         text-align: center;
                         color: #8d9098;
@@ -171,14 +171,14 @@
                                 padding: 6px 24px 5px 10px;
                                 @include user-select(none);
 
-                                font-family: AvenirNext-DemiBold;
+                                font-family: $demiBold;
                                 font-size: 14px;
                                 color: #0c2048;
                                 
                                 &:before{
                                     content:"Beden";
                                     display: inline-block;
-                                    font-family: AvenirNext-Regular;
+                                    font-family: $regular;
                                     font-size: 14px;
                                     font-weight: 400;
                                     color: #3f444d;
@@ -218,7 +218,7 @@
                             &:before{
                                 content:"Adet";
                                 display: inline-block;
-                                font-family: AvenirNext-Regular;
+                                font-family: $regular;
                                 font-size: 14px;
                                 font-weight: 400;
                                 color: #3f444d;
@@ -237,7 +237,7 @@
                             input{
                                 background-color: #eef3f8;
                                 width: 20px;
-                                font-family: AvenirNext-DemiBold;
+                                font-family: $demiBold;
                                 font-size: 14px;
                                 color: #0c2048;
                                 text-align: right;
@@ -294,7 +294,7 @@
         
         .price-wrp{
             .h4{
-                font-family: AvenirNext-Regular;
+                font-family: $regular;
                 font-weight: 400;
                 font-size: 14px;
                 color: #3f444d;

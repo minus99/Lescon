@@ -40,7 +40,7 @@
                 background-color: $alternative;
                 z-index: 2;
                 display: inline-block !important;
-                font-family: $AvenirNext-DemiBold;
+                font-family: $demiBold;
                 font-size: 14px;
                 font-weight: 600;
                 color: $white;
@@ -49,7 +49,7 @@
         .ems-prd-status{
             .urunListe_yeniUrun{
                 display: inline-block !important;
-                font-family: $AvenirNext-DemiBold;
+                font-family: $demiBold;
                 font-size: 14px;
                 font-weight: 600;
                 color: $primary;
@@ -72,7 +72,7 @@
             display: block;
             a{
                 display: block;
-                font-family: $AvenirNext-Regular;
+                font-family: $regular;
                 font-size: 14px;
                 text-align: center;
                 color: $text-1;
@@ -90,7 +90,7 @@
             align-items: center;
             .ems-prd-price-selling{
                 .urunListe_satisFiyat{
-                    font-family: $AvenirNext-DemiBold;
+                    font-family: $demiBold;
                     font-size: 18px;
                     font-weight: 600;
                     color: $primary;
@@ -98,7 +98,7 @@
             }
             .ems-prd-price-first{
                 .urunListe_brutFiyat{
-                    font-family: $AvenirNext-Regular;
+                    font-family: $regular;
                     font-size: 14px;
                     color: $text-2;
                     text-decoration: line-through;
@@ -114,7 +114,7 @@
 
         .ems-prd-stock{
             display: block;
-            font-family: $AvenirNext-Regular;
+            font-family: $regular;
             font-size: 12px;
             text-align: center;
             color: $text-2;

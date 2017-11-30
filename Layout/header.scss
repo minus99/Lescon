@@ -36,7 +36,7 @@
             }
         }
         .mbLogin{
-            font-family: $AvenirNext-DemiBold;
+            font-family: $demiBold;
             font-size: 14px;
             font-weight: 600;
             color: $primary;
@@ -49,7 +49,7 @@
             display: flex;
             justify-content: space-between;
             width: 100%;
-            font-family: $AvenirNext-DemiBold;
+            font-family: $demiBold;
             font-size: 16px;
             font-weight: 600;
             color: $primary;
@@ -65,7 +65,7 @@
         .navbar-nav{
             // BÜTÜN A TAGLARI
             a{
-                font-family: $AvenirNext-DemiBold;
+                font-family: $demiBold;
                 display: flex;
                 justify-content: space-between;
                 color: $primary !important;
@@ -135,7 +135,7 @@
                         display: none;
                         > a {
                             padding: 17.5px 20px 17.5px 60px;
-                            font-family: $AvenirNext-Regular;
+                            font-family: $regular;
                             font-size: 14px;
                             color: $text-1;
                         }
@@ -157,7 +157,7 @@
                 > li{
                     > a{
                         padding: 17.5px 20px 17.5px 60px;
-                        font-family: $AvenirNext-Regular;
+                        font-family: $regular;
                         font-size: 14px;
                         color: $text-1;
                     }
@@ -170,7 +170,7 @@
             a{
                 display: flex;
                 justify-content: space-between;
-                font-family: $AvenirNext-DemiBold;
+                font-family: $demiBold;
                 color: $white;
             }
             li{
@@ -318,7 +318,7 @@
             .sub.logoff{
                 .sub-title{
                     margin-bottom: 23px;
-                    font-family: $AvenirNext-DemiBold;
+                    font-family: $demiBold;
                     font-size: 18px;
                     font-weight: 600;
                     text-align: center;
@@ -327,7 +327,7 @@
                 .ems-form{
                     .ems-form-inner{
                         #lnkSifremiUnuttum{
-                            font-family: $AvenirNext-Regular;
+                            font-family: $regular;
                             font-size: 12px;
                             color: $text-2;
                             text-decoration: underline;
@@ -361,7 +361,7 @@
                         a{
                             display: block;
                             padding: 7.5px 20px;
-                            font-family: $AvenirNext-DemiBold;
+                            font-family: $demiBold;
                             font-size: 14px;
                             font-weight: 600;
                             color: $primary;
@@ -451,7 +451,7 @@
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    font-family: AvenirNext-Bold;
+                    font-family: $bold;
                     font-size: 11px;
                     font-weight: 600;
                     color: #ffffff;
@@ -496,7 +496,7 @@
                     }
                     .title{
                         display: block;
-                        font-family: $AvenirNext-Bold;
+                        font-family: $bold;
                         font-size: 18px;
                         font-weight: bold;
                         text-align: center;
@@ -505,7 +505,7 @@
                     }
                     .desc{
                         display: block;
-                        font-family: $AvenirNext-Regular;
+                        font-family: $regular;
                         font-size: 14px;
                         text-align: center;
                         color: $text-1;
@@ -528,7 +528,7 @@
                                 display: block;
                                 width: 100%;
                                 margin-top: 13px;
-                                font-family: $AvenirNext-DemiBold;
+                                font-family: $demiBold;
                                 font-size: 12px;
                                 font-weight: 600;
                                 color: $primary;
@@ -625,7 +625,7 @@
                         display: flex;
                         justify-content: center;
                         align-items: center;
-                        font-family: AvenirNext-Bold;
+                        font-family: $bold;
                         font-size: 11px;
                         font-weight: 600;
                         color: #ffffff;
