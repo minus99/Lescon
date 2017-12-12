@@ -1,0 +1,68 @@
+.ems-error{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.ems-page-404{
+    min-height: calc(100vh - 269.4px);   
+}
+
+.ems-file-not-found{
+    display: inline-block;
+    text-align: center;
+    > div{
+        margin-bottom: 20px;
+    }
+    .err-img{
+        max-width: 231px;
+        margin: 0 auto;
+    }
+
+    .err-desc{
+        font-family: $bold;
+        font-size: 18px;
+        font-weight: bold;
+        color: $primary;
+        margin-bottom: 32px;
+    }
+
+    .err-btn{
+        .btn{
+            color: $primary;
+            &:hover,
+            &:active{
+                color: $white;
+            }
+        }
+    }
+
+}
+
+@media screen and (max-width: $breakpoint-large){
+    .ems-page-404{
+        min-height: calc(100vh - 269.4px);   
+    }
+    
+    .ems-file-not-found{
+        width: 100%;
+        > div{
+            margin-bottom: 5px;
+        }
+        .err-img{
+            max-width: 144px;
+        }
+    
+        .err-desc{
+            font-family: $demiBold;
+            font-size: 12px;
+            margin-top: 13px;
+            margin-bottom: 26px;
+        }
+
+        .err-btn{
+            margin-bottom: 48px;
+        }
+    
+    }
+}

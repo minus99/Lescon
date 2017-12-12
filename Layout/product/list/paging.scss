@@ -1,5 +1,5 @@
 .ems-prd-list-paging-bottom{
-    padding: 67px 60px 55px;
+    padding: 30px 60px 55px;
     table{
         tbody{
             tr{
@@ -16,7 +16,6 @@
 
     .urunPaging_pageNavigation{
         display: flex;
-        justify-content: space-between;
         align-items: center;
 
         [id$="ascPagingDataAlt_lblPaging"]{
@@ -46,9 +45,11 @@
             }
         }
 
-        
+        [id$="lnkPrev"]{
+            margin-right: 40px;
+        }
         [id$="lnkNext"]{
-            display: none;
+            margin-left: 40px;
         }
 
         .tumunuGoster{
@@ -57,6 +58,7 @@
             font-size: 14px;
             font-weight: 600;
             color: $primary;
+            margin-left: auto;
         }
     }
 }

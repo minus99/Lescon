@@ -1,5 +1,4 @@
 [class^="icon-"], [class*=" icon-"] {
-  
   font-family: 'icomoon' !important;
   speak: none;
   font-style: normal;
@@ -7,20 +6,31 @@
   font-variant: normal;
   text-transform: none;
   line-height: 1;
-  
+
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-basket-null:before {
+  content: "\e930";
+}
+.icon-filter:before {
+  content: "\e92e";
+}
+.icon-cargo-bus:before {
+  content: "\e92f";
+}
+.icon-trash:before {
+  content: "\e902";
+}
+.icon-home:before {
+  content: "\e91e";
+}
 .icon-gunluk:before {
   content: "\e900";
 }
 .icon-heart:before {
   content: "\e901";
-}
-.icon-home:before {
-  content: "\e902";
-  color: #000;
 }
 .icon-hyphen:before {
   content: "\e903";
@@ -103,10 +113,6 @@
 .icon-success-cut:before {
   content: "\e91d";
 }
-.icon-trash:before {
-  content: "\e91e";
-  color: #000;
-}
 .icon-trash-cut:before {
   content: "\e91f";
 }
@@ -152,30 +158,6 @@
 .icon-cargo:before {
   content: "\e92d";
 }
-.icon-cargo-bus .path1:before {
-  content: "\e92e";
-  color: rgb(0, 0, 0);
-}
-.icon-cargo-bus .path2:before {
-  content: "\e92f";
-  margin-left: -1em;
-  color: rgb(0, 0, 0);
-}
-.icon-cargo-bus .path3:before {
-  content: "\e930";
-  margin-left: -1em;
-  color: rgb(255, 255, 255);
-}
-.icon-cargo-bus .path4:before {
-  content: "\e931";
-  margin-left: -1em;
-  color: rgb(0, 0, 0);
-}
-.icon-cargo-bus .path5:before {
-  content: "\e932";
-  margin-left: -1em;
-  color: rgb(255, 255, 255);
-}
 .icon-check:before {
   content: "\e933";
 }
@@ -184,30 +166,6 @@
 }
 .icon-facebook:before {
   content: "\e935";
-}
-.icon-filter .path1:before {
-  content: "\e936";
-  color: rgb(0, 0, 0);
-}
-.icon-filter .path2:before {
-  content: "\e937";
-  margin-left: -1em;
-  color: rgb(0, 0, 0);
-}
-.icon-filter .path3:before {
-  content: "\e938";
-  margin-left: -1em;
-  color: rgb(255, 255, 255);
-}
-.icon-filter .path4:before {
-  content: "\e939";
-  margin-left: -1em;
-  color: rgb(255, 255, 255);
-}
-.icon-filter .path5:before {
-  content: "\e93a";
-  margin-left: -1em;
-  color: rgb(255, 255, 255);
 }
 .icon-googleplus:before {
   content: "\e93b";

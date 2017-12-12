@@ -16,12 +16,12 @@
                 pointer-events: none;
             }
             .ems-form-obj{
-                input{
+                input:not([type="checkbox"]):not([type="radio"]){
                     width: 100%;
                     height: 50px;
                     padding: 25px 10px 6px;
                     background: $linkBg;
-                    border:0;
+                    border: 1px solid $linkBg;
                     border-radius: 2px;
                     outline: 0 !important;
                     box-shadow: 0 !important;
@@ -29,6 +29,35 @@
                     font-family: $regular;
                     font-size: 14px;
                     color: $text-1;
+                }
+                .checkbox{
+                    display: inline-block;
+                    font-size: 0;
+                    float: left;
+                    margin-top: -1px;
+                    margin-right: 10px;
+                    + span{
+                        font-family: $regular;
+                        font-size: 13px;
+                        color: $text-1;
+                        a{
+                            font-family: $regular;
+                            font-size: 13px;
+                            color: $text-1;
+                            text-decoration: underline;
+                            text-decoration-skip: ink;
+                        }
+                    }
+                }
+            }
+            &.ems-form-err{
+                .ems-form-label{
+                    color: $error;
+                }
+                .ems-form-obj{
+                    input:not([type="checkbox"]):not([type="radio"]){
+                        border: 1px solid $error;
+                    }
                 }
             }
             a{
@@ -47,6 +76,18 @@
             }
         }
     }   
+}
+
+//Checkbox
+input[type="checkbox"]{
+    -webkit-appearance: none;
+    width: 18px;
+    height: 18px;
+    border: 1px solid #dde2e7;
+}
+input[type="checkbox"]:checked{
+    background: $secondary;
+    border-color: $secondary-hover;
 }
 
 
@@ -81,5 +122,25 @@
         .ddContent {
             display: block;
         }
+    }
+}
+
+
+//Errorr class
+.ems-message{
+    padding: 6px 0;
+    width: 100%;
+    border-radius: 2px;
+
+    font-family: $demiBold;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+    color: $white;
+    &.ems-message-error{
+        background: $error;
+    }
+    &.ems-message-success{
+        background: $secondary;
     }
 }

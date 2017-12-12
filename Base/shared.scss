@@ -42,11 +42,12 @@ img {
 }
 
 .ems-container{
+    width: 100%;
     max-width: $siteContainerWidth;
     margin: 0 auto;
 }
 @media screen and (max-width: $breakpoint-large){
-    .container{ margin: 0 20px;}
+    .ems-container{ margin: 0 20px;}
 }
 
 .ems-hidden{ display: none; }
@@ -206,6 +207,14 @@ p{
     @extend .h3;
 }
 
+
+@media screen and (min-width: $breakpoint-large){
+    //mobile item
+    .mobile-element{
+        display: none !important;
+    }
+}
+
 @media screen and (max-width: $breakpoint-large){
     // H TAG DESKTOP
     h1, .h1{
@@ -249,5 +258,10 @@ p{
     .p-secondary{
         font-size: 12px;
         color: $text-2;
+    }
+
+    //mobile item
+    .mobile-element{
+        display: block;
     }
 }

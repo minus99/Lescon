@@ -1,0 +1,156 @@
+.ems-page-login{
+    width: 100%;
+    display: flex;
+    position: relative;
+    min-height: calc(100vh - 269px);
+    background-color: $lightBg;
+    &:before{
+        content: "";
+        display: inline-block;
+        background: url(/images/frontend/login-cover.jpg) no-repeat;
+        background-position: center;
+        background-size: cover;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        width: 50%;
+    }
+}
+
+.ems-page-login-content{
+    display: flex;
+    .ems-left,
+    .ems-right{
+        width: 50%;
+    }
+    .ems-left{
+    }
+    .ems-right{
+    }
+
+    .ems-login-page-title{
+        font-family: $bold;
+        font-size: 36px;
+        font-weight: bold;
+        color: $primary;
+        margin-top: 34px;
+        margin-bottom: 34px;
+    }
+
+    .ems-login,
+    .ems-signup{
+        width: 100%;
+        max-width: 362px;
+        margin-bottom: 80px;
+    }
+
+    .ems-login-tab,
+    .ems-login-tab{
+        display: flex;
+        > *{
+            width: 50%;
+            padding-top: 16px;
+            padding-bottom: 17px;
+            
+            font-family: $demiBold;
+            font-size: 14px;
+            font-weight: 600;
+            text-align: center;
+            color: $primary;
+            @include user-select(none);
+        }
+        > span{
+            color: $secondary;
+            background: $white;
+            cursor: default;
+            
+        }
+    }
+
+    .ems-login-body,
+    .ems-signup-body{
+        min-height: 408px;
+        padding: 40px;
+        background: $white;
+    }
+
+    .btnYeniUyeKaydet,
+    .btnLogin{
+        width: 100%;
+        @extend .btn-alternative;
+    }
+
+    .ems-login-body{
+        .ems-field.submit{
+            margin-top: 7px;
+            #lnkSifremiUnuttum{
+                font-family: $regular;
+                font-size: 12px;
+                color: $text-2;
+                text-decoration: underline;
+                text-decoration-skip: ink;
+                margin-bottom: 28px;
+            }
+            
+        }
+    }
+
+    .control-code{
+        [id$="divCaptcha"]{
+            display: flex;
+            position: relative;
+            #imgCaptcha,
+            [id$="txtUYE_KONTROLKODU"]{
+                width: 50%;
+            }
+
+            [id$="lbfUYE_KONTROLKODU"]{
+                position: absolute;
+                left: calc(50% + 10px);
+                top: 50%;
+                transform: translateY(-50%);
+
+                font-family: $regular;
+                font-size: 12px;
+                color: $text-2;
+
+                transition: all .2s ease-in-out;
+                pointer-events: none;
+            }
+            
+            .captchaYenile,
+            br{
+                display: none;
+            }
+        }
+        &.is-active{
+            [id$="divCaptcha"]{
+                [id$="lbfUYE_KONTROLKODU"]{
+                    top: 6px;
+                    transform: translateY(0);
+                }
+            }
+        }
+    }
+}
+
+.ems-page-login-content{
+    .ems-login{
+        display: inline-block;
+    }
+    .ems-signup{
+        display: none;
+    }
+}
+
+.ems-signup-body{
+    .ems-page-login-content{
+        .ems-login{
+            display: none;
+        }
+        .ems-signup{
+            display: inline-block;
+        }
+    }
+}

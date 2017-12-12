@@ -53,7 +53,7 @@ $rightCol: 380px;
             > a {
                 display: block;
                 line-height: $header-height;
-                font-family: $AvenirNext-DemiBold;
+                font-family: $demiBold;
                 font-size: 14px;
                 color: $secondary;
                 > span {
@@ -150,7 +150,7 @@ $rightCol: 380px;
     }
 }
 .pnlDipToplamTable {
-    font-family: $AvenirNext-Regular;
+    font-family: $regular;
     font-size: 14px;
     th {
         text-align: left;
@@ -159,7 +159,7 @@ $rightCol: 380px;
     }
     td {
         text-align: right;
-        font-family: $AvenirNext-Bold;
+        font-family: $bold;
         .pageSepetToplam_lblSip_NetToplam {
             font-size: 18px;
         }
@@ -174,7 +174,7 @@ $rightCol: 380px;
         display: block;
         margin-bottom: 15px;
         text-align: center;
-        font-family: $AvenirNext-Regular;
+        font-family: $regular;
         font-size: 14px;
         color: $text-2;
         text-decoration: underline;

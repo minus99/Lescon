@@ -19,7 +19,7 @@
         }
 
         .ems-prd-info{
-            margin-bottom: 14px;
+            display: inline-block;
             > div{
                 margin-right: 10px;
                 &:last-child{
@@ -38,6 +38,7 @@
                     font-weight: 600;
                     text-align: center;
                     color: #ffffff;
+                    margin-bottom: 14px;
                 }
             }
         }
@@ -118,7 +119,7 @@
         }
 
         .ems-prd-group{
-            margin-bottom: 30px;
+            margin-bottom: 20px;
             .sStylerMainWrp,
             .dropdown{
                 display: none;
@@ -129,13 +130,14 @@
                 height: 100%;
                 z-index: 1;
                 display: flex;
+                flex-wrap: wrap;
                 transition-property: transform;
                 box-sizing: content-box;
                 li{
                     flex-shrink: 0;
                     .URN_RESIM{
                         cursor: pointer;
-                        margin: 0 10px 0 0;
+                        margin: 0 10px 10px 0;
                         position: relative;
                         overflow: hidden;
 
@@ -226,7 +228,7 @@
                             position: relative;
                             cursor: pointer;
                             &:before{
-                                content: "Beden";
+                                content: $lbf_BedenTxt;
                                 display: block;
                                 font-family: $regular;
                                 font-size: 14px;
@@ -435,7 +437,7 @@
             .ems-prd-add-to-cart-favorites{
                 > a{
                     display: inline-block;
-                    max-width: 94px;
+                    max-width: 100px;
                     text-align: center;
                     > span{
                         i{
@@ -463,9 +465,283 @@
             }
             .ems-prd-add-to-cart-favorites{
                 .btnFavoriEkle{
-
+                    &.selected{
+                        i{
+                            color: $secondary;
+                            + span{
+                                font-size: 0;
+                                &:before{
+                                    content: $lbf_ListeyeEklendiTxt;
+                                    font-family: $demiBold;
+                                    font-size: 14px;
+                                    font-weight: 600;
+                                    color: $primary;
+                                }
+                            }
+                        }
+                    }
                 }
             }
         }
     }
+}
+
+@media screen and (max-width: $breakpoint-large){
+
+    .ems-prd-detail-inner {
+        .ems-prd{
+            .ems-prd-product-code{
+                display: none;
+            }
+    
+            .ems-prd-info{
+                > div{
+                    margin-right: 10px;
+                    &:last-child{
+                        margin-right: 0;
+                    }
+                }
+                .ems-prm-cargo-info,
+                .ems-prm-stock-info{
+                    > span:not(empty){
+                        display: inline-block;
+                        border-radius: 2px;
+                        background-color: #26d5df;
+                        padding: 0 8px 0 9px;
+                        font-family: $demiBold;
+                        font-size: 14px;
+                        font-weight: 600;
+                        text-align: center;
+                        color: #ffffff;
+                    }
+                }
+            }
+    
+            .ems-prd-name-wrapper{
+                line-height: 1;
+                letter-spacing: 1px;
+                margin-bottom: 20px;
+
+                font-size: 18px;
+                text-align: center;
+            }
+    
+            .ems-prd-price{
+                margin-bottom: 0;
+                .ems-prd-price-left{
+                    position: fixed;
+                    bottom: 0;
+                    left: 0;
+                    width: 35%;
+                    height: 50px;
+                    background: $white;
+                    z-index: 10;
+                    justify-content: center;
+                    align-items: center;
+                    flex-wrap: wrap;
+                    padding: 6px 3px;
+                }
+                .ems-prd-price-right{
+                    display: none;
+                }
+                
+                .ems-prd-price-selling{
+                    font-size: 18px;
+                    order: 2;
+                }
+    
+                .ems-prd-price-first{
+                    font-size: 12px;
+                    order: 1;
+                }
+    
+                .ems-prd-discount-percent{
+                    display: none;
+                }
+            }
+
+            .ems-prd-add-to-cart{
+                width: 50%;
+                padding-left: 5px;
+                .urunDetay_urunAdet{
+                    width: 100%;
+                    
+                    &:before{
+                        content: none;
+                    }
+                    .counter-drp{
+                        display: inline-block;
+                        width: 100%;
+                        height: 100%;
+                        > span{
+                            display: flex;
+                            flex-wrap: wrap;
+                            justify-content: center;
+                            align-items: center;
+                            height: 100%;
+                            padding: 6px;
+                            line-height: 1;
+
+                            font-family: $demiBold;
+                            font-size: 16px;
+                            font-weight: 600;
+                            color: $primary;
+                            &:before{
+                                content: $lbf_Adet;
+                                display: block;
+                                width: 100%;
+                                text-align: center;
+
+                                font-family: $regular;
+                                font-weight: 400;
+                                font-size: 14px;
+                                color: #3f444d;
+                            }
+                        }
+                        ul{
+                            position: fixed;
+                            background: $white;
+                            border-top: 1px solid #dde2e7;
+                            box-shadow: 0px 0px 40px 5px #828282;
+                            z-index: 9;
+                            width: 100%;
+                            bottom: 50px;
+                            left: 0;
+                            max-height: 0;
+                            visibility: hidden;
+                            overflow: auto;
+                            transition: all 0.4s cubic-bezier(0.8, 0, 0.5, 1);
+                            li{
+                                padding: 10px 0;
+                                border-top: 1px solid #dde2e7;
+                                a{
+                                    font-family: $demiBold;
+                                    font-size: 16px;
+                                    font-weight: 600;
+                                    color: $primary;
+                                }
+                                &:first-child{
+                                    border-width: 0;
+                                }
+                            }
+                        }
+                        &.opened{
+                            ul{
+                                max-height: 49vh;
+                                visibility: visible;
+                            }
+                        }
+                    }
+                    [id$="lblURN_ADET"],
+                    input,
+                    .counter-btn{
+                        display: none;
+                    }
+                }
+                .pnlSepetGrup{
+                    width: 100%;
+                    clear: both;
+                    div{
+                        margin-left: 0;
+                        float: left;
+                    }
+                    .urunDetay_btnSepeteAt{
+                        position: fixed;
+                        right: 0;
+                        bottom: 0;
+                        width: 65% !important;
+                        height: 50px;
+                        z-index: 10;
+                        background: $white;
+                        *{
+                            width: 100%;
+                            
+                        }
+                    }
+                    .btnsepeteAt{
+                        min-width: auto;
+                        border-radius: 0;
+                        font-size: 16px;
+                        height: 50px;
+                    }
+                }
+                .ems-prd-stock-notice{
+                    margin-left: 0;
+                    .btnStokHaberci{
+                        position: fixed;
+                        right: 0;
+                        bottom: 0;
+                        width: 65% !important;
+                        height: 50px;
+                        z-index: 10;
+
+                        font-size: 16px;
+                        border-radius: 0;
+                    }
+                }
+            }
+    
+
+            .ems-prd-group{
+                text-align: left;
+                .listeUrunDetayGrup_listeBaslik{
+                    display: inline-block;
+                    margin-bottom: 7px;
+                    font-family: $regular;
+                    font-weight: 400;
+                    font-size: 14px;
+                    text-align: center;
+                    color: #3f444d;
+                }
+            }
+    
+            .ems-prd-body-and-cart{
+                display: flex;
+                align-items: flex-start;
+                position: relative;
+            }
+    
+            .ems-prd-flex-controller{
+                width: 50%;
+                padding-right: 5px;
+                .ems-prd-size-chart{
+                    display: none;
+                }
+                .ems-prd-size{
+                    .urunDetay_urunSecenek1{    
+                        .select-txt{
+                            .desktop{
+                                display: none;
+                            }
+                            .mobi{
+                                display: inline-block;
+                            }
+                        }
+                        .dropdown-trigger{
+                            > span{
+                                width: 100%;
+                                font-size: 16px;
+                                padding: 7px;
+                            }
+                        }
+                        .dropdown-options{
+                            left: -20px;
+                            width: calc(100% + 40px);
+                            padding: 13px 15px 15px;
+                            a{
+                                min-width: 47px;
+                            }
+                        }
+                    }
+                    
+                }
+            }
+    
+            .ems-prd-price-and-fav{
+                margin-top: 29px;
+            }
+        }
+    }
+    
+
 }

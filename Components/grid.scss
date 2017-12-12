@@ -5,7 +5,7 @@
         padding: 20px;
         > div {
             flex: 1;
-            font-family: $AvenirNext-Regular;
+            font-family: $regular;
             font-size: 14px;
             color: $text-1;
             padding: 10px;
@@ -72,7 +72,7 @@
     .ems-grid-address-info {
         padding-right: 50px;
         .address-title {
-            font-family: $AvenirNext-Bold;
+            font-family: $bold;
             font-size: 18px;
             color: $primary;
         }
@@ -109,7 +109,7 @@
                 }
             }
             &.emos_selected {
-                font-family: $AvenirNext-DemiBold;
+                font-family: $demiBold;
                 > span {
                     i {
                         background: $secondary;

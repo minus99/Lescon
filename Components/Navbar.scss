@@ -1,11 +1,6 @@
 .navbar-container{
     display: flex;
 
-    &.navbar{
-        padding: 0 30px;
-        background: $white;
-    }
-
     .navbar-left,
     .navbar-right {
         display: flex;

@@ -1,0 +1,48 @@
+//Navigasyon
+.ems-prd-navigation{
+    display: flex;
+    align-items: center;
+    height: 43px;
+}
+
+.urunNavigasyon{
+    >span{
+        display: flex;
+        align-items: center;
+    }
+    a{
+        font-family: $regular;
+        font-size: 14px;
+        text-align: left;
+        color: #3f444d;
+    }
+    i{
+        display: inline-block;
+        margin: 0 9px 0 5px;
+        font-size: 0;
+        vertical-align: middle;
+        &:before{
+            font-size:7px;
+            color: #8d9098;
+        }
+    }
+    .nav-home{
+        i{
+            &:before{
+                font-size: 15px;
+                font-weight: 900;
+                color: $primary;
+            }
+        }
+        &:after{
+            @extend [class^="icon-"];
+            @extend .icon-tri-right2:before;
+
+            display: inline-block;
+            margin: 0 8px 0 5px;
+            font-size:7px;
+            color: #8d9098;
+            vertical-align: middle;
+        }
+    }
+}

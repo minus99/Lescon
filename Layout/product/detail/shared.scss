@@ -4,39 +4,12 @@
     padding: 0 10px;
     margin: 0 auto;
 }
+
 .ems-product-detail{
     background-image: linear-gradient(251deg, #e1e3e8, #f6f9fb);
 }
 
 .ems-page-detail{
-    
-    //Navigasyon
-    .ems-prd-navigation{
-        display: flex;
-        align-items: center;
-        height: 43px;
-        .urunNavigasyon{
-            >span{
-                display: flex;
-                align-items: center;
-            }
-            a{
-                font-family: $regular;
-                font-size: 14px;
-                text-align: left;
-                color: #8d9098;
-            }
-            i{
-                display: inline-block;
-                margin: 0 9px 0 4px;
-                font-size: 0;
-                &:before{
-                    font-size:7px;
-                    color: #e1e3e8;
-                }
-            }
-        }
-    }
     
     .ems-prd-detail-inner {
         max-width: 1220px;
@@ -69,4 +42,52 @@
 
 }
 
+
+@media screen and (max-width: $breakpoint-large){
+
+    .ems-page-detail{
+        .ems-prd-navigation{
+            display: none;
+        }
+
+        .ems-prd-detail-inner {
+            padding: 0px;
+            .inner-row-1 {
+                width: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            .inner-row-2 {
+                width: 100%;
+                position: initial;
+                padding: 0 20px;
+                box-shadow: none;
+                .inner-row-2-holder{
+                    padding-top: 20px;
+                    text-align: center;
+                    max-width: 400px;
+                    margin: 0 auto;
+                }
+            }
+        }
+
+    }
+
+
+    .ems-page-product-detail{
+        .footer-information,
+        .footer-ebulten{
+            display: none;
+        }
+        .footer-copyright{
+            margin-bottom: 50px;
+            .page-top-scroll{
+                height: 50px;
+            }
+        }
+    }
+
+    
+
+}
 

@@ -1,9 +1,28 @@
 .swiper-container{
     width: 100%;
-<<<<<<< HEAD
     .swiper-inner{
         overflow: hidden;
     }
-=======
->>>>>>> origin/kerim
+
+
+
+    .swiper-button-prev,
+    .swiper-button-next{
+        background: none;
+        display: flex;
+        align-items: center;
+    }
+    
+    .swiper-button-disabled{
+        visibility: hidden;
+    }
+
+    .swiper-pagination{
+        > span{
+            background-color: #8d9098;
+            &.swiper-pagination-bullet-active{
+                background-color: #0d2048;
+            }
+        }
+    }
 }
