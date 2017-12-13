@@ -40,6 +40,24 @@ $rightCol: 380px;
     }
 }
 
+//sag tarafi gizlemek
+.basket-empty,
+.order-single-col-body {
+    .ems-page-cart-colmn-2 {
+        max-width: none;
+    }
+    .ems-page-cart-colmn-3 {
+        display: none !important;
+    }
+}
+
+//bos sepet
+.basket-empty {
+    .cart-section-left {
+        display: none !important;
+    }
+}
+
 //siparis adimlar
 .tabloTabBtnAdim {
     position: relative;
@@ -53,7 +71,7 @@ $rightCol: 380px;
             > a {
                 display: block;
                 line-height: $header-height;
-                font-family: $AvenirNext-DemiBold;
+                font-family: $demiBold;
                 font-size: 14px;
                 color: $secondary;
                 > span {
@@ -128,7 +146,7 @@ $rightCol: 380px;
 .cart-cfg {
     margin-top: 3px;
     background: $white;
-    > a {
+    > a.btnDefault {
         padding: 15px;
     }
 }
@@ -150,8 +168,9 @@ $rightCol: 380px;
     }
 }
 .pnlDipToplamTable {
-    font-family: $AvenirNext-Regular;
+    font-family: $regular;
     font-size: 14px;
+    margin: 20px 0;
     th {
         text-align: left;
         font-weight: normal;
@@ -159,7 +178,7 @@ $rightCol: 380px;
     }
     td {
         text-align: right;
-        font-family: $AvenirNext-Bold;
+        font-family: $bold;
         .pageSepetToplam_lblSip_NetToplam {
             font-size: 18px;
         }
@@ -167,14 +186,13 @@ $rightCol: 380px;
 }
 //hediye ceki
 .ems-cart-summary-coupon {
-    margin-top: 25px;
     padding: 15px;
     border-top: 1px solid $lines;
     .code-title {
         display: block;
         margin-bottom: 15px;
         text-align: center;
-        font-family: $AvenirNext-Regular;
+        font-family: $regular;
         font-size: 14px;
         color: $text-2;
         text-decoration: underline;
@@ -185,8 +203,22 @@ $rightCol: 380px;
     }
     &.opened {
         background: red;
+        margin-bottom: 20px;
         .ems-cart-summary-coupon-body {
             display: block;
         }
+    }
+}
+//step ozet alt
+.ems-cart-summary-bottom, .bottom-step {
+    > div:not(.ems-none) + div {
+        margin-top: 15px;
+    }
+    a.btnDefault {
+        display: block;
+        font-size: 18px;
+        line-height: 1.25;
+        padding-top: 19px;
+        padding-bottom: 19px;
     }
 }

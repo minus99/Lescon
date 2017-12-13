@@ -42,6 +42,7 @@
         }
 
         .content-js{
+            min-height: 180px;
             .title{
                 display: none;
             }
@@ -56,12 +57,16 @@
             li{
                 &[rel="tab-product-info"]{
                     .content-detail{
+                        display: inline-block;
+                        width: 100%;
                         margin-top: 54px;
                         margin-bottom: 20px;
                     }
                 }
                 &[rel="tab-payment"]{
                     .content-detail{
+                        display: inline-block;
+                        width: 100%;
                         margin-top: 54px;
                         margin-bottom: 20px;
                     }
@@ -94,7 +99,7 @@
 
             .ems-prd-delivery-desc{
                 margin-top: 36px;
-                margin-bottom: 30px;
+                padding-bottom: 30px;
                 font-family: $regular;
                 font-size: 16px;
                 line-height: 1.81;
@@ -180,4 +185,213 @@
         }
 
     }
+}
+
+
+
+.ems-prd-additional-info{
+    background-color: $white;
+    padding-top: 110px;
+    padding-bottom: 87px;
+}
+
+
+.ems-prd-detail-cover-wrp{
+    font-size: 0;
+}
+
+
+.thecnology-holder{
+    display: none;
+    &:not(:empty){
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0 90px;
+        margin: 70px -10px 60px;
+    }
+    .thecnology-item{
+        width: calc(50% - 20px);
+        max-width: 437px;
+        margin: 35px 41.5px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .img{
+            width: 100px;
+            img{
+                width: 100%;
+            }
+        }
+        .info{
+            width: calc(100% - 120px);
+            .title{
+                display: block;
+                margin-bottom: 6px;
+                font-family: $bold;
+                font-size: 18px;
+                font-weight: bold;
+                color: $primary;
+            }
+            .desc{
+                font-family: $regular;
+                font-size: 16px;
+                line-height: 1.81;
+                color: #3f444d;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: $breakpoint-large){
+
+    .ems-prd-detail-bottom{
+        padding-top: 25px;
+    }
+    
+    .ems-tab-detail{
+        padding: 0;
+        background: $white;
+        display: inline-block;
+        .ems-tab-inner{
+            width: 100%;
+            .navigation-js{
+                margin: 0 -2px;
+                li{
+                    &:first-child{
+                        &.selected{
+                            border-left: none;
+                        }
+                    }
+                    a{
+                        font-size: 14px;
+                        padding: 19px 0 17px;
+                    }
+                }
+            }
+    
+            .content-js{
+                min-height: auto;
+                padding: 30px 20px;
+                .title{
+                    display: none;
+                }
+                
+                > li{
+                    display: none;
+                    &.selected{
+                        display: block;
+                    }
+                }
+    
+                li{
+                    &[rel="tab-product-info"],
+                    &[rel="tab-payment"]{
+                        .content-detail{
+                            margin-top: 0;
+                            margin-bottom: 0px;
+                        }
+                    }
+                }
+    
+                .type-1{
+                    .images{
+                        display: none;
+                    }
+                    .text{
+                        > h2{
+                            display: none;
+                        }
+                        .mt-tittle{
+                            font-size: 18px;
+                            margin-bottom: 7px;
+                        }
+                        .mt-text{
+                            font-size: 14px;
+                        }
+                    }
+                }
+    
+                .ems-prd-delivery-desc{
+                    margin-top: 0;
+                    padding-bottom: 0;
+                    font-size: 14px;
+                }
+    
+                
+                .popupTitleTaksit{
+                    font-size: 18px;
+                    margin-bottom: 6px;
+                }
+                .popupTaksit_lbfAciklama{
+                    margin-bottom: 40px;
+                    *{
+                        font-size: 14px;
+                        line-height: 2;
+                    }
+                }
+    
+                //Table
+                .gridTaksitBanka{
+                    width: 100%;
+                    > tbody{
+                        width: 100%;
+                        margin-left: 0;
+                        margin-right: 0;
+                        > tr{
+                            width: 100%;
+                            margin-right: 0;
+                            margin-left: 0;
+                        }
+                    }
+                }
+                // Table End
+            }
+    
+        }
+    }
+
+    .ems-prd-additional-info{
+        padding-top: 0px;
+        padding-bottom: 0;
+    }    
+    
+    .ems-prd-detail-cover-wrp{
+        margin: 0 -20px;
+    }
+
+    .ems-technology-wrp{
+        //display: none
+    }
+
+    .thecnology-holder{
+        &:not(:empty){
+            padding: 0;
+            margin: 0;
+        }
+        .thecnology-item{
+            width: 100%;
+            margin: 32px auto;
+            flex-wrap: wrap;
+            text-align: center;
+            .img{
+                width: 100%;
+                margin-bottom: 10px;
+                img{
+                    width: auto;
+                }
+            }
+            .info{
+                width: 100%;
+                .title{
+                    margin-bottom: 6px;
+                }
+                .desc{
+                    font-size: 14px;
+                    line-height: 1;
+                }
+            }
+        }
+    }
+    
 }

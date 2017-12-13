@@ -1,17 +1,12 @@
-.widget-complete-style-wrp{
-    margin-top: 41px;
+.widget-complete-style-wrp,
+.widget-appreciate{
+
     .swiper-inner{
         padding-top: 20px;
     }
-    .swiper-title{
-        font-family: $bold;
-        font-size: 24px;
-        font-weight: bold;
-        text-align: center;
-        color: #0d2048;
-        margin-bottom: 22px;
+    .ems-prd-mask{
+        position: relative;
     }
-    
     .ems-prd-discount{
         width: 200px;
         margin: 0 auto;
@@ -23,6 +18,7 @@
             left: 0;
             top: 0;
             transform: translate(-20%,-50%);
+            z-index: 2;
 
             background: #2fa3ff;
             padding: 0 5px;
@@ -33,15 +29,31 @@
         }
     }
 
+    .ems-prd-status{
+        width: 200px;
+        margin: 0 auto;
+        position: relative;
+        .urunListe_yeniUrun{
+            display: inline-block !important;
+
+            font-family: $demiBold;
+            font-size: 14px;
+            font-weight: 600;
+            color: $primary;
+
+            position: absolute;
+            left: 0;
+            top: 0;
+            transform: translate(-20%,-50%);
+            z-index: 1;
+        }
+    }
+
     .ems-prd-image{
         margin-bottom: 15px;
         > a{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            
-            height: 100%;
-            overflow: hidden;
+            display: block;
+            text-align: center;
             font-size: 0;
         }
     }
@@ -57,6 +69,7 @@
 
     .ems-prd-price{
         text-align: center;
+        margin-bottom: 9px !important; 
         span{
             display: inline-block;
         }
@@ -87,16 +100,62 @@
     }
     
     .ems-prd-stock{
+        margin-bottom: 25px;
+        height: 16px;
+        .urunListe_urunStokUyari{
+            text-align: center;
+
+            font-family: $regular;
+            font-size: 12px;
+            text-align: center;
+            color: #8d9098;
+        }
+    }
+
+    .ems-prd-add{
+        display: block !important;
+        margin-bottom: 28px;
+        .ems-prd-price-cartOption,
+        .ems-prd-price-stockBtn,
+        .urunListe_adet{
+            display: none;
+        }
+        .urunListe_sepet{
+            text-align: center;
+            .btnSepeteAt{
+                @extend .btn-alternative;
+                span{
+                    font-size: 0;
+                }
+                &:before{
+                    content: $lbf_EkleBtn;
+                }
+            }
+        }
+    }
+
+}
+
+
+.widget-complete-style-wrp{
+    margin-top: 41px;
+    .swiper-title{
+        font-family: $bold;
+        font-size: 24px;
+        font-weight: bold;
+        text-align: center;
+        color: #0d2048;
+        margin-bottom: 22px;
+    }
+
+    .ems-prd-price{
+        margin-bottom: 21px !important; 
+    }
+    
+    .ems-prd-stock{
         display: none;
     }
 
-    .swiper-button-prev,
-    .swiper-button-next{
-        background: none;
-        width: auto;
-        height: auto;
-        margin-top: -10px;
-    }
     .swiper-button-prev{
         left: -10px;
     }
@@ -106,11 +165,82 @@
 
     .swiper-pagination{
         bottom: 2px;
-        > span{
-            background-color: #8d9098;
+    }
+}
+
+//bunları da beğenebilrisiniz
+.widget-appreciate{
+    display: none;
+    width: 100%;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    
+    &.results-found{
+        display: inline-block;
+    }
+    
+    .swiper-title{
+        text-align: center;
+    }
+
+    .ems-prd-add{
+        display: none !important;
+    }
+
+
+
+    .swiper-pagination{
+        display: none;
+    }
+}
+
+@media screen and (max-width: $breakpoint-large){
+
+
+    .widget-complete-style-wrp{
+        display: none;
+    }
+
+    //bunları da beğenebilrisiniz
+    .widget-appreciate{
+        display: none;
+        width: 100%;
+        padding-top: 0;
+        margin-top: 0;
+        margin-bottom: 20px;
+
+        &:not(.no-result){
+            display: inline-block;
+            width: calc(100% + 40px);
+            padding: 35px 20px 0;
+            margin: 0 -20px -5px;
+            border-top: 1px solid #dde2e7;
         }
-        .swiper-pagination-bullet-active{
-            background-color: #0d2048;
+        
+        &.results-found{
+            display: inline-block;
+        }
+        
+        .swiper-title{
+            text-align: center;
+            margin-bottom: 10px;
+            > h4{
+            
+                font-family: $bold;
+                font-size: 20px;
+                font-weight: bold;
+                color: $primary;
+            }
+        }
+
+        .ems-prd-add{
+            display: none !important;
+        }
+
+
+
+        .swiper-pagination{
+            display: none;
         }
     }
 }

@@ -13,6 +13,13 @@ a.btnAdresEkle {
         vertical-align: 2px;
     }
 }
+.dvFarkliFatAdrSec {
+    @extend .flex;
+    @extend .flex-middle;
+    > input {
+        margin-right: 10px;
+    }
+}
 
 //teslimat tab
 .ems-delivery-tabs {
