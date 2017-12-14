@@ -68,6 +68,7 @@ $rightCol: 380px;
     td {
         > span {
             display: inline-block;
+            vertical-align: top;
             > a {
                 display: block;
                 line-height: $header-height;
@@ -165,6 +166,7 @@ $rightCol: 380px;
     }
     .bottom-step {
         display: block;
+        position: relative;
     }
 }
 .pnlDipToplamTable {
@@ -209,8 +211,9 @@ $rightCol: 380px;
         }
     }
 }
-//step ozet alt
-.ems-cart-summary-bottom, .bottom-step {
+//siparis ozet alt
+.ems-cart-summary-bottom,
+.bottom-step {
     > div:not(.ems-none) + div {
         margin-top: 15px;
     }
@@ -220,5 +223,93 @@ $rightCol: 380px;
         line-height: 1.25;
         padding-top: 19px;
         padding-bottom: 19px;
+        margin-top: 10px;
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+    [id$="lbfSIP_ONAYLA_DEC"] {
+        display: block;
+        padding: 15px;
+        margin-top: 20px;
+        border: 1px dashed $lines;
+        font-family: $regular;
+        font-size: 14px;
+        line-height: 1.4;
+        color: $secondary;
+    }
+}
+
+//yetersiz stok
+.pageErrorStokKontrol {
+    margin-bottom: 10px;
+}
+.gridSepetStok {
+    table-layout: fixed;
+    width: 100%;
+    background: $white;
+    margin-bottom: 50px;
+    th, td {
+        padding: 5px;
+        border: 1px solid $lines;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: $breakpoint-large) {
+    //variables mobile-large
+    $leftCol: none;
+    $rightCol: none;
+    $singleCol: auto;
+    $singleColFix: -20px;
+    $gap1: 20px;
+
+    %singleColFix {//.ems-container fix
+        margin-left: $singleColFix;
+        margin-right: $singleColFix;
+    }
+
+    //siparis sayfalar mobile-large
+    .ems-page-cart {
+        .page-top-title {
+            margin-bottom: 15px;
+            padding: 0 $gap1;
+        }
+    }
+    .ems-page-cart-wrapper {
+        flex-direction: column;
+        > div {
+            width: $singleCol;
+            @extend %singleColFix;
+        }
+        .ems-page-cart-colmn-2 {
+            max-width: $leftCol;
+        }
+        .ems-page-cart-colmn-3 {
+            max-width: $rightCol;
+        }
+    }
+
+    //siparis adimlar
+    .tabloTabBtnAdim {
+        td {
+            > span {
+                > a {
+                    > span {
+                        > * {
+                            display: block;
+                        }
+                        > i {
+                            margin-right: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    //sepet ozet mobile-large
+    .ems-cart-summary {
+        max-width: $rightCol;
+        margin-top: 30px;
     }
 }

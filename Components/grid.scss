@@ -53,9 +53,12 @@
             @extend .flex;
             > a {
                 font-size: 10px;
-                padding: 3px 5px;
+                line-height: 30px;
+                padding: 0 10px;
             }
             > input {
+                padding-top: 6px;
+                height: 30px;
                 border: 1px solid $lines;
                 text-align: center;
             }

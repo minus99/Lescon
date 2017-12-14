@@ -59,7 +59,7 @@ input {
   box-shadow: none; }
 
 textarea {
-  resize: vertical !important; }
+  resize: vertical; }
 
 img {
   max-width: 100%; }
@@ -91,7 +91,7 @@ img {
 .visibility-hidden {
   visibility: hidden !important; }
 
-.flex, .ems-grid-default > div, .ems-grid-default .ems-grid-price, .ems-grid-default .ems-grid-piece .piece-wrapper, .ems-grid-default .ems-grid-address-buttons > a > span, .ems-page-cart-wrapper, .dvFarkliFatAdrSec, .divTeslimatKargo ul, .divTeslimatKargo ul > li, .ems-cart-pay-tab > ul, .cvc-info:hover .desc, .pageSiparisOnay_chkOnBilgilendirmeForm,
+.flex, .ems-grid-default > div, .ems-grid-default .ems-grid-price, .ems-grid-default .ems-grid-piece .piece-wrapper, .ems-grid-default .ems-grid-address-buttons > a > span, .ems-page-cart-wrapper, .dvFarkliFatAdrSec, .divTeslimatKargo ul, .divTeslimatKargo ul > li, .ems-cart-pay-tab > ul, .tableOdemeBilgiKrediKarti .cvc-info:hover .desc, .pageSiparisOnay_chkOnBilgilendirmeForm,
 .pageSiparisOnay_chkSatisSozlesme {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -121,7 +121,7 @@ img {
   -ms-flex-pack: justify;
   justify-content: space-between; }
 
-.flex-top, .cvc-info .desc {
+.flex-top, .tableOdemeBilgiKrediKarti .cvc-info .desc {
   -webkit-box-align: start;
   -ms-flex-align: start;
   align-items: flex-start; }
@@ -137,7 +137,7 @@ img {
   -ms-flex-align: end;
   align-items: flex-end; }
 
-.flex-column, .ems-grid-default .ems-grid-price, .divTeslimatKargo ul > li, .cvc-info .desc {
+.flex-column, .ems-grid-default .ems-grid-price, .divTeslimatKargo ul > li, .tableOdemeBilgiKrediKarti .cvc-info .desc {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
@@ -497,6 +497,30 @@ p {
     transition: all 0.4s cubic-bezier(0.8, 0, 0.5, 1); }
   .bottom-border-hover:hover:after {
     background: #0c2048; }
+
+.onBilgilendirmeFormMetin > span::-webkit-scrollbar,
+.siparisOnaySozlesmeMetin > span::-webkit-scrollbar {
+  width: 6px; }
+
+.onBilgilendirmeFormMetin > span::-webkit-scrollbar-track,
+.siparisOnaySozlesmeMetin > span::-webkit-scrollbar-track {
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  background: #f2f2ff;
+  -webkit-box-shadow: inset 0 0 6px rgba(242, 242, 255, 0.9);
+  box-shadow: inset 0 0 6px rgba(242, 242, 255, 0.9); }
+
+.onBilgilendirmeFormMetin > span::-webkit-scrollbar-thumb,
+.siparisOnaySozlesmeMetin > span::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  background: #26df2e;
+  -webkit-box-shadow: inset 0 0 6px #26df2e;
+  box-shadow: inset 0 0 6px #26df2e; }
+
+.onBilgilendirmeFormMetin > span::-webkit-scrollbar-thumb:window-inactive,
+.siparisOnaySozlesmeMetin > span::-webkit-scrollbar-thumb:window-inactive {
+  background: #f2f2ff; }
 
 .toast-title {
   font-weight: 700; }
@@ -1153,8 +1177,11 @@ input[type="checkbox"]:checked {
     text-decoration: line-through; }
   .ems-grid-default .ems-grid-piece .piece-wrapper > a {
     font-size: 10px;
-    padding: 3px 5px; }
+    line-height: 30px;
+    padding: 0 10px; }
   .ems-grid-default .ems-grid-piece .piece-wrapper > input {
+    padding-top: 6px;
+    height: 30px;
     border: 1px solid #e2e8ef;
     text-align: center; }
   .ems-grid-default .ems-grid-delete {
@@ -1245,7 +1272,8 @@ input[type="checkbox"]:checked {
   background: #fff;
   width: 100%; }
   .tabloTabBtnAdim td > span {
-    display: inline-block; }
+    display: inline-block;
+    vertical-align: top; }
     .tabloTabBtnAdim td > span > a {
       display: block;
       line-height: 80px;
@@ -1297,7 +1325,8 @@ input[type="checkbox"]:checked {
     display: block;
     margin-bottom: 15px; }
   .ems-cart-summary .bottom-step {
-    display: block; }
+    display: block;
+    position: relative; }
 
 .pnlDipToplamTable {
   font-family: "AvenirNext-Regular";
@@ -1333,15 +1362,71 @@ input[type="checkbox"]:checked {
     .ems-cart-summary-coupon.opened .ems-cart-summary-coupon-body {
       display: block; }
 
-.ems-cart-summary-bottom > div:not(.ems-none) + div, .bottom-step > div:not(.ems-none) + div {
+.ems-cart-summary-bottom > div:not(.ems-none) + div,
+.bottom-step > div:not(.ems-none) + div {
   margin-top: 15px; }
 
-.ems-cart-summary-bottom a.btnDefault, .bottom-step a.btnDefault {
+.ems-cart-summary-bottom a.btnDefault,
+.bottom-step a.btnDefault {
   display: block;
   font-size: 18px;
   line-height: 1.25;
   padding-top: 19px;
-  padding-bottom: 19px; }
+  padding-bottom: 19px;
+  margin-top: 10px; }
+  .ems-cart-summary-bottom a.btnDefault:first-child,
+  .bottom-step a.btnDefault:first-child {
+    margin-top: 0; }
+
+.ems-cart-summary-bottom [id$="lbfSIP_ONAYLA_DEC"],
+.bottom-step [id$="lbfSIP_ONAYLA_DEC"] {
+  display: block;
+  padding: 15px;
+  margin-top: 20px;
+  border: 1px dashed #e2e8ef;
+  font-family: "AvenirNext-Regular";
+  font-size: 14px;
+  line-height: 1.4;
+  color: #26df2e; }
+
+.pageErrorStokKontrol {
+  margin-bottom: 10px; }
+
+.gridSepetStok {
+  table-layout: fixed;
+  width: 100%;
+  background: #fff;
+  margin-bottom: 50px; }
+  .gridSepetStok th, .gridSepetStok td {
+    padding: 5px;
+    border: 1px solid #e2e8ef;
+    text-align: center; }
+
+@media screen and (max-width: 960px) {
+  .ems-page-cart-wrapper > div {
+    margin-left: -20px;
+    margin-right: -20px; }
+  .ems-page-cart .page-top-title {
+    margin-bottom: 15px;
+    padding: 0 20px; }
+  .ems-page-cart-wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column; }
+    .ems-page-cart-wrapper > div {
+      width: auto; }
+    .ems-page-cart-wrapper .ems-page-cart-colmn-2 {
+      max-width: none; }
+    .ems-page-cart-wrapper .ems-page-cart-colmn-3 {
+      max-width: none; }
+  .tabloTabBtnAdim td > span > a > span > * {
+    display: block; }
+  .tabloTabBtnAdim td > span > a > span > i {
+    margin-right: 0; }
+  .ems-cart-summary {
+    max-width: none;
+    margin-top: 30px; } }
 
 .ems-page-order-delivery {
   position: relative; }
@@ -1411,37 +1496,80 @@ a.btnAdresEkle i {
   .ems-cart-pay-type .tableTitleDefault {
     margin-bottom: 20px; }
 
-.cvc-info {
+.ems-pay-credit-cart {
   position: relative; }
-  .cvc-info > i {
-    font-size: 16px;
-    cursor: pointer; }
-  .cvc-info .desc {
+
+.tableOdemeBilgiKrediKarti {
+  width: 100%;
+  max-width: 340px; }
+  .tableOdemeBilgiKrediKarti tr {
+    position: relative; }
+  .tableOdemeBilgiKrediKarti th {
     position: absolute;
-    top: -104px;
-    left: 25px;
-    width: 220px;
-    display: none;
-    background: #fff;
-    padding: 20px;
-    border: 1px solid #e2e8ef;
-    -webkit-box-shadow: 0 20px 25px 0 rgba(0, 0, 0, 0.2);
-    box-shadow: 0 20px 25px 0 rgba(0, 0, 0, 0.2); }
-    .cvc-info .desc:before {
-      content: "";
+    z-index: 1;
+    font-family: "AvenirNext-Regular";
+    font-size: 12px;
+    color: #8d9098;
+    padding: 7px 10px 0 10px; }
+  .tableOdemeBilgiKrediKarti td {
+    position: relative;
+    padding-bottom: 20px; }
+    .tableOdemeBilgiKrediKarti td input {
+      width: 100% !important; }
+    .tableOdemeBilgiKrediKarti td select {
+      width: 48% !important; }
+      .tableOdemeBilgiKrediKarti td select:first-child {
+        margin-right: 4%; }
+  .tableOdemeBilgiKrediKarti .tableOdemeBilgiKrediKarti_tdtxtKKARTCVCNO {
+    font-size: 0; }
+  .tableOdemeBilgiKrediKarti .tableOdemeBilgiKrediKarti_thlbfbtnOdemeTaksit {
+    display: none; }
+  .tableOdemeBilgiKrediKarti .divtxtKKARTNO .div-cc-carttype {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%); }
+  .tableOdemeBilgiKrediKarti .cvc-info {
+    position: absolute;
+    right: 20px;
+    top: 15px; }
+    .tableOdemeBilgiKrediKarti .cvc-info > i {
+      display: block;
+      font-size: 20px;
+      cursor: pointer;
+      -webkit-transform: rotateY(-180deg);
+      transform: rotateY(-180deg); }
+    .tableOdemeBilgiKrediKarti .cvc-info .desc {
       position: absolute;
-      top: 50%;
-      margin-top: -6px;
-      left: -12px;
-      border-width: 6px;
-      border-style: solid;
-      border-color: transparent #fff transparent transparent; }
-    .cvc-info .desc > .k {
-      font-family: "AvenirNext-Regular";
-      font-size: 12px;
-      color: #8d9098;
-      margin-top: 4px;
-      margin-bottom: 13px; }
+      top: -100px;
+      left: 32px;
+      z-index: 5;
+      width: 220px;
+      display: none;
+      background: #fff;
+      padding: 20px;
+      border: 1px solid #e2e8ef;
+      -webkit-box-shadow: 0 20px 25px 0 rgba(0, 0, 0, 0.2);
+      box-shadow: 0 20px 25px 0 rgba(0, 0, 0, 0.2); }
+      .tableOdemeBilgiKrediKarti .cvc-info .desc:before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        margin-top: -6px;
+        left: -12px;
+        border-width: 6px;
+        border-style: solid;
+        border-color: transparent #fff transparent transparent; }
+      .tableOdemeBilgiKrediKarti .cvc-info .desc > b {
+        font-size: 14px; }
+      .tableOdemeBilgiKrediKarti .cvc-info .desc > .k {
+        font-family: "AvenirNext-Regular";
+        font-size: 12px;
+        color: #8d9098;
+        margin-top: 4px;
+        margin-bottom: 13px; }
 
 .ems-pay-transfer .pageDecOdemeBilgi {
   display: none; }
@@ -1482,6 +1610,42 @@ a.btnAdresEkle i {
         color: #3f444d;
         display: block;
         margin-top: 5px; }
+
+.ems-pay-other [id$="lbfSIP_ODEMENOTU"] {
+  display: block;
+  margin-bottom: 5px; }
+  .ems-pay-other [id$="lbfSIP_ODEMENOTU"] + br {
+    display: none; }
+
+.ems-pay-other textarea {
+  width: 100% !important;
+  max-width: 360px;
+  height: 87px; }
+
+.pageOdemeBilgi_odemeTaksit {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+  max-width: 350px;
+  padding: 30px 0 0 30px;
+  height: calc(100% + 30px);
+  border-left: 1px solid #e2e8ef; }
+  .pageOdemeBilgi_odemeTaksit #imgBANKALOGO {
+    display: none; }
+  .pageOdemeBilgi_odemeTaksit .tableOdemeTaksit {
+    table-layout: fixed;
+    width: 100%; }
+    .pageOdemeBilgi_odemeTaksit .tableOdemeTaksit td {
+      padding: 5px;
+      vertical-align: top; }
+      .pageOdemeBilgi_odemeTaksit .tableOdemeTaksit td:nth-child(1) {
+        width: 30px; }
+    .pageOdemeBilgi_odemeTaksit .tableOdemeTaksit .tableTitleOdemeTaksit {
+      font-family: "AvenirNext-Regular";
+      font-size: 12px;
+      color: #3f444d;
+      font-weight: normal; }
 
 .ems-pay-type-desc > span {
   display: block;
@@ -1542,15 +1706,43 @@ a.btnAdresEkle i {
   margin-top: 20px; }
   .onBilgilendirmeForm .tableTitleDefault,
   .siparisOnaySozlesme .tableTitleDefault {
-    padding: 25px; }
+    position: relative;
+    padding: 25px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none; }
+    .onBilgilendirmeForm .tableTitleDefault i,
+    .siparisOnaySozlesme .tableTitleDefault i {
+      font-size: 16px;
+      position: absolute;
+      top: 50%;
+      right: 20px;
+      margin-top: -8px;
+      -webkit-transition: -webkit-transform 0.4s cubic-bezier(0.8, 0, 0.5, 1);
+      transition: -webkit-transform 0.4s cubic-bezier(0.8, 0, 0.5, 1);
+      -o-transition: transform 0.4s cubic-bezier(0.8, 0, 0.5, 1);
+      transition: transform 0.4s cubic-bezier(0.8, 0, 0.5, 1);
+      transition: transform 0.4s cubic-bezier(0.8, 0, 0.5, 1), -webkit-transform 0.4s cubic-bezier(0.8, 0, 0.5, 1); }
+  .onBilgilendirmeForm.selected .tableTitleDefault i,
+  .siparisOnaySozlesme.selected .tableTitleDefault i {
+    -webkit-transform: rotate(-180deg);
+    -ms-transform: rotate(-180deg);
+    transform: rotate(-180deg); }
+  .onBilgilendirmeForm.selected .tableTitleDefault ~ div,
+  .siparisOnaySozlesme.selected .tableTitleDefault ~ div {
+    display: none; }
 
 .siparisOnaySozlesme {
   margin-bottom: 100px; }
 
-.onBilgilendirmeFormMetin > span,
-.siparisOnaySozlesmeMetin > span {
-  padding: 0 25px;
-  overflow: auto !important; }
+.onBilgilendirmeFormMetin,
+.siparisOnaySozlesmeMetin {
+  padding: 0 25px; }
+  .onBilgilendirmeFormMetin > span,
+  .siparisOnaySozlesmeMetin > span {
+    overflow: auto !important; }
 
 .pageSiparisOnay_lbfOnBilgilendirmeForm,
 .pageSiparisOnay_lbfSatisSozlesme {
