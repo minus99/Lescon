@@ -126,3 +126,33 @@
         }
     }
 }
+
+@media screen and (max-width: $breakpoint-large) {
+    $gridgap: 10px;
+    $gridcolgap: 10px;
+    .ems-grid-default {
+        > div {
+            padding: 10px;
+        }
+        //custom grid fields mobile-large
+        //teslimat
+        .ems-grid-address-info {
+            padding-right: $gridcolgap;
+        }
+        .ems-grid-address-buttons {
+            flex-basis: auto;
+            display: flex;
+            align-items: center;
+            > a {
+                margin-top: 0;
+                margin-left: 25px;
+                padding-left: 0;
+                padding-right: 0;
+                &:first-child {
+                    margin-top: 0;
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+}

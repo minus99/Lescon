@@ -216,15 +216,18 @@
         td {
             padding: 5px;
             vertical-align: top;
+            font-family: $regular;
+            color: $text-1;
             &:nth-child(1) {
                 width: 30px;
             }
         }
-        .tableTitleOdemeTaksit {
-            font-family: $regular;
-            font-size: 12px;
-            color: $text-1;
-            font-weight: normal;
+        .tableTitleDefault {
+            td {
+                font-size: 12px;
+                color: $text-2;
+                font-weight: normal;
+            }
         }
     }
 }
@@ -271,6 +274,7 @@
         .ems-grid-price-total {
             text-align: right;
             padding-right: 0;
+            white-space: nowrap;
         }
         .ems-grid-price,
         .ems-grid-piece,
@@ -339,7 +343,9 @@
 .siparisOnaySozlesmeMetin {
     padding: 0 25px;
     > span {
+        height: 150px !important;
         overflow: auto !important;
+        padding-right: 20px;
         @extend %scrollbar-green;
     }
 }
@@ -375,5 +381,86 @@
     u {
         text-decoration: underline;
         text-decoration-skip: ink;
+    }
+}
+
+
+@media screen and (max-width: $breakpoint-large) {
+    //odeme tipi tab
+    .ems-cart-pay-tab {
+        > ul {
+            > li {
+                flex: 1;
+                > a {
+                    padding: 17px 5px;;
+                    text-align: center;
+                }
+            }
+        }
+    }
+    //kredi karti mobile-large
+    .tableOdemeBilgiKrediKarti {
+        max-width: $maxWidthMobile;
+        .cvc-info {
+            .desc {
+                left: auto;
+                right: 32px;
+                &:before {
+                    left: auto;
+                    right: -12px;
+                    border-right-color: transparent;
+                    border-left-color: #fff;
+                }
+            }
+        }
+    }
+    //havale mobile-large
+    .tableOdemeBilgiHavale {
+        .tableOdemeBilgiHavale_tddrpBNK_KOD_HV {
+            table {
+                td {
+                    display: table !important;
+                    width: 100%;
+                    padding: 5px;
+                    &.logo {
+                        padding-left: 5px;
+                        padding-top: 20px;
+                    }
+                    &:not(.link) {
+                        border-bottom: none;
+                    }
+                    &.link {
+                        text-align: left;
+                        padding-bottom: 20px;
+                    }
+                }
+            }            
+        }
+    }
+
+    //taksitler mobile-large
+    .pageOdemeBilgi_odemeTaksit {
+        position: static;
+        max-width: $maxWidthMobile;
+        border-left: 0;
+        padding: 0;
+    }
+
+    //sepetteki urun & secilen adres mobile-large
+    .payment-bottom {
+        flex-direction: column;
+        margin-top: 20px;
+        margin-bottom: 40px;
+        > div + div {
+            margin-top: 20px;
+        }
+        .ems-cart-pay-products {
+            margin-right: 0;
+        }
+    }
+
+    //sozlesmeler mobile-large
+    .siparisOnaySozlesme {
+        margin-bottom: 0;
     }
 }

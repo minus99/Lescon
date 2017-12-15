@@ -1232,6 +1232,29 @@ input[type="checkbox"]:checked {
         .ems-grid-default .ems-grid-address-buttons > a.emos_selected:hover {
           color: inherit; }
 
+@media screen and (max-width: 960px) {
+  .ems-grid-default > div {
+    padding: 10px; }
+  .ems-grid-default .ems-grid-address-info {
+    padding-right: 10px; }
+  .ems-grid-default .ems-grid-address-buttons {
+    -ms-flex-preferred-size: auto;
+    flex-basis: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+    .ems-grid-default .ems-grid-address-buttons > a {
+      margin-top: 0;
+      margin-left: 25px;
+      padding-left: 0;
+      padding-right: 0; }
+      .ems-grid-default .ems-grid-address-buttons > a:first-child {
+        margin-top: 0;
+        margin-left: 0; } }
+
 .ems-page-cart {
   background: #eef3f8; }
   .ems-page-cart .page-top-title {
@@ -1420,13 +1443,30 @@ input[type="checkbox"]:checked {
       max-width: none; }
     .ems-page-cart-wrapper .ems-page-cart-colmn-3 {
       max-width: none; }
-  .tabloTabBtnAdim td > span > a > span > * {
-    display: block; }
-  .tabloTabBtnAdim td > span > a > span > i {
-    margin-right: 0; }
+  .tabloTabBtnAdim {
+    margin-top: 65px; }
+    .tabloTabBtnAdim > tbody {
+      width: 320px;
+      margin: 0 auto;
+      display: table; }
+    .tabloTabBtnAdim td > span {
+      width: 33.33333%; }
+      .tabloTabBtnAdim td > span > a {
+        line-height: 25px; }
+        .tabloTabBtnAdim td > span > a > span > * {
+          display: block; }
+        .tabloTabBtnAdim td > span > a > span > i {
+          margin-right: 0; }
+        .tabloTabBtnAdim td > span > a > span:after {
+          position: absolute;
+          left: 50%;
+          top: 10px;
+          width: 55px; }
   .ems-cart-summary {
     max-width: none;
-    margin-top: 30px; } }
+    margin-top: 30px;
+    padding-left: 20px;
+    padding-right: 20px; } }
 
 .ems-page-order-delivery {
   position: relative; }
@@ -1448,7 +1488,9 @@ a.btnAdresEkle i {
   padding-bottom: 30px;
   border-bottom: 1px solid #e2e8ef; }
   .ems-delivery-tabs .ems-delivery-tab-header {
-    margin: 15px 0; }
+    padding: 15px 0; }
+  .ems-delivery-tabs .ems-delivery-tab-content {
+    position: relative; }
 
 .divTeslimatKargo ul > li {
   position: relative;
@@ -1476,6 +1518,50 @@ a.btnAdresEkle i {
     margin-bottom: 5px; }
   .divTeslimatKargo ul > li .kargoBilgi {
     display: none; }
+
+@media screen and (max-width: 960px) {
+  .ems-grid-address .ems-grid-row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column; }
+  .address-bottom {
+    margin-top: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start; }
+    .address-bottom > div {
+      width: 100%; }
+      .address-bottom > div + div {
+        border-top: 1px solid #e2e8ef; }
+  a.btnAdresEkle, .dvFarkliFatAdrSec {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 20px;
+    text-align: left; }
+  .ems-delivery-tabs {
+    margin-top: 0;
+    margin-bottom: 0; }
+    .ems-delivery-tabs .ems-delivery-tab-header {
+      padding: 20px; }
+    .ems-delivery-tabs .ems-delivery-tab-content {
+      padding: 0 20px; }
+  .divTeslimatKargo ul {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between; }
+    .divTeslimatKargo ul > li {
+      -ms-flex-preferred-size: 49%;
+      flex-basis: 49%;
+      margin-left: 0;
+      margin-bottom: 10px; } }
 
 .ems-page-order-payment {
   position: relative; }
@@ -1638,13 +1724,14 @@ a.btnAdresEkle i {
     width: 100%; }
     .pageOdemeBilgi_odemeTaksit .tableOdemeTaksit td {
       padding: 5px;
-      vertical-align: top; }
+      vertical-align: top;
+      font-family: "AvenirNext-Regular";
+      color: #3f444d; }
       .pageOdemeBilgi_odemeTaksit .tableOdemeTaksit td:nth-child(1) {
         width: 30px; }
-    .pageOdemeBilgi_odemeTaksit .tableOdemeTaksit .tableTitleOdemeTaksit {
-      font-family: "AvenirNext-Regular";
+    .pageOdemeBilgi_odemeTaksit .tableOdemeTaksit .tableTitleDefault td {
       font-size: 12px;
-      color: #3f444d;
+      color: #8d9098;
       font-weight: normal; }
 
 .ems-pay-type-desc > span {
@@ -1678,7 +1765,8 @@ a.btnAdresEkle i {
       padding-left: 0; }
     .ems-cart-pay-products .ems-grid-cart .ems-grid-price-total {
       text-align: right;
-      padding-right: 0; }
+      padding-right: 0;
+      white-space: nowrap; }
     .ems-cart-pay-products .ems-grid-cart .ems-grid-price,
     .ems-cart-pay-products .ems-grid-cart .ems-grid-piece,
     .ems-cart-pay-products .ems-grid-cart .ems-grid-delete {
@@ -1742,7 +1830,9 @@ a.btnAdresEkle i {
   padding: 0 25px; }
   .onBilgilendirmeFormMetin > span,
   .siparisOnaySozlesmeMetin > span {
-    overflow: auto !important; }
+    height: 150px !important;
+    overflow: auto !important;
+    padding-right: 20px; }
 
 .pageSiparisOnay_lbfOnBilgilendirmeForm,
 .pageSiparisOnay_lbfSatisSozlesme {
@@ -1778,6 +1868,55 @@ a.btnAdresEkle i {
   text-decoration: underline;
   -webkit-text-decoration-skip: ink;
   text-decoration-skip: ink; }
+
+@media screen and (max-width: 960px) {
+  .ems-cart-pay-tab > ul > li {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1; }
+    .ems-cart-pay-tab > ul > li > a {
+      padding: 17px 5px;
+      text-align: center; }
+  .tableOdemeBilgiKrediKarti {
+    max-width: none; }
+    .tableOdemeBilgiKrediKarti .cvc-info .desc {
+      left: auto;
+      right: 32px; }
+      .tableOdemeBilgiKrediKarti .cvc-info .desc:before {
+        left: auto;
+        right: -12px;
+        border-right-color: transparent;
+        border-left-color: #fff; }
+  .tableOdemeBilgiHavale .tableOdemeBilgiHavale_tddrpBNK_KOD_HV table td {
+    display: table !important;
+    width: 100%;
+    padding: 5px; }
+    .tableOdemeBilgiHavale .tableOdemeBilgiHavale_tddrpBNK_KOD_HV table td.logo {
+      padding-left: 5px;
+      padding-top: 20px; }
+    .tableOdemeBilgiHavale .tableOdemeBilgiHavale_tddrpBNK_KOD_HV table td:not(.link) {
+      border-bottom: none; }
+    .tableOdemeBilgiHavale .tableOdemeBilgiHavale_tddrpBNK_KOD_HV table td.link {
+      text-align: left;
+      padding-bottom: 20px; }
+  .pageOdemeBilgi_odemeTaksit {
+    position: static;
+    max-width: none;
+    border-left: 0;
+    padding: 0; }
+  .payment-bottom {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    margin-top: 20px;
+    margin-bottom: 40px; }
+    .payment-bottom > div + div {
+      margin-top: 20px; }
+    .payment-bottom .ems-cart-pay-products {
+      margin-right: 0; }
+  .siparisOnaySozlesme {
+    margin-bottom: 0; } }
 
 .ems-page-order-result .page-top-title, .ems-page-order-result .pageSiparisSonuc_lbfSiparisBasarili {
   display: none; }
