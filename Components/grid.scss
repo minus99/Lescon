@@ -38,6 +38,7 @@
     .ems-grid-price {
         @extend .flex;
         @extend .flex-column;
+        white-space: nowrap;
         [id$="INDIRIMLIFIYAT"] {
             order: 1;
         }
@@ -47,15 +48,21 @@
             color: $text-2;
             text-decoration: line-through;
         }
+        &-total {
+            white-space: nowrap;
+        }
     }
     .ems-grid-piece {
         .piece-wrapper {
             @extend .flex;
             > a {
                 font-size: 10px;
-                padding: 3px 5px;
+                line-height: 30px;
+                padding: 0 10px;
             }
             > input {
+                padding-top: 6px;
+                height: 30px;
                 border: 1px solid $lines;
                 text-align: center;
             }
@@ -92,7 +99,7 @@
         > a {
             position: relative;
             display: block;
-            margin-top: 20px;
+            margin-top: 5px;
             color: $text-1;
             &:first-child {
                 margin-top: 15px;
@@ -118,6 +125,44 @@
                 }
                 &:hover {
                     color: inherit;
+                }
+            }
+            &.btnAdresListeSil {
+                color: $error;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $breakpoint-large) {
+    $gridgap: 10px;
+    $gridcolgap: 10px;
+    .ems-grid-default {
+        > div {
+            padding: 10px;
+        }
+        //custom grid fields mobile-large
+        //sepet
+        .ems-grid-img {
+            flex-grow: 0;
+            flex-basis: 60px;
+        }
+        //teslimat
+        .ems-grid-address-info {
+            padding-right: $gridcolgap;
+        }
+        .ems-grid-address-buttons {
+            flex-basis: auto;
+            display: flex;
+            align-items: center;
+            > a {
+                margin-top: 0;
+                margin-left: 25px;
+                padding-left: 0;
+                padding-right: 0;
+                &:first-child {
+                    margin-top: 0;
+                    margin-left: 0;
                 }
             }
         }

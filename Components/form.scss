@@ -181,6 +181,7 @@ input[type="radio"]:checked{
         padding: 22px;
         color: $primary;
         cursor: pointer;
+        @include user-select(none);
         i {
             $size: 16px;
             font-size: $size;
