@@ -129,9 +129,12 @@ a.btnArama,
 a.btnKiyaslamaListemeDon,
 a.btnSepetGuncelle,
 a.btnSepetBosalt,
-
 a.btnBultenGonder,
 a.btnFiyatDus,
-a.btnKutuLogout {
+a.btnKutuLogout,
+a.btnAdresEkle,
+a.btnOnBilgilendirmeFormOnizle,
+a.btnSatisSozlesmeOnizle,
+a.btnAlisverisDevam {
     @extend .btn-reset;
 }

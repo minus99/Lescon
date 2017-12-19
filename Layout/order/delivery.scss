@@ -2,6 +2,17 @@
     position: relative;
 }
 
+//adres yoksa
+.empty-order {
+    .ems-page-cart-wrapper {
+        @extend .flex-wrap;
+    }
+    .ems-page-new-address {
+        margin: 30px auto 0;
+        max-width: 500px;
+    }
+}
+
 //yeni adres & fatura adresi
 .address-bottom {
     margin-top: 20px;
@@ -13,6 +24,13 @@ a.btnAdresEkle {
         vertical-align: 2px;
     }
 }
+.dvFarkliFatAdrSec {
+    @extend .flex;
+    @extend .flex-middle;
+    > input {
+        margin-right: 10px;
+    }
+}
 
 //teslimat tab
 .ems-delivery-tabs {
@@ -21,7 +39,10 @@ a.btnAdresEkle {
     padding-bottom: 30px;
     border-bottom: 1px solid $lines;
     .ems-delivery-tab-header {
-        margin: 15px 0;
+        padding: 15px 0;
+    }
+    .ems-delivery-tab-content {
+        position: relative;
     }
 }
 //kargo
@@ -56,6 +77,58 @@ a.btnAdresEkle {
             }
             .kargoBilgi {
                 display: none;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $breakpoint-large) {
+    //teslimat grid mobile-large
+    .ems-grid-address {
+        .ems-grid-row {
+            flex-direction: column;
+        }
+    }
+
+    //yeni adres & fatura adresi mobile-large
+    .address-bottom {
+        margin-top: 0;
+        flex-direction: column;
+        align-items: flex-start;
+        > div {
+            width: 100%;
+            & + div {
+                border-top: 1px solid $lines;
+            }
+        }
+    }
+    a.btnAdresEkle, .dvFarkliFatAdrSec {
+        display: flex;
+        padding: 20px;
+        text-align: left;
+    }
+
+    //teslimat tab mobile-large
+    .ems-delivery-tabs {
+        margin-top: 0;
+        margin-bottom: 0;
+        .ems-delivery-tab-header {
+            padding: $gap1;
+        }
+        .ems-delivery-tab-content {
+            padding: 0 $gap1;
+        }
+    }
+
+    //kargo mobile-large
+    .divTeslimatKargo {
+        ul {
+            flex-wrap: wrap;
+            justify-content: space-between;
+            > li {
+                flex-basis: 49%;
+                margin-left: 0;
+                margin-bottom: 10px;
             }
         }
     }

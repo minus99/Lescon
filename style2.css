@@ -59,18 +59,20 @@ input {
   box-shadow: none; }
 
 textarea {
-  resize: vertical !important; }
+  resize: vertical; }
 
 img {
   max-width: 100%; }
 
 .ems-container {
+  width: 100%;
   max-width: 1200px;
   margin: 0 auto; }
 
 @media screen and (max-width: 960px) {
-  .container {
-    margin: 0 20px; } }
+  .ems-container {
+    margin: 0 20px;
+    width: calc(100% - 40px); } }
 
 .ems-hidden {
   display: none; }
@@ -90,63 +92,55 @@ img {
 .visibility-hidden {
   visibility: hidden !important; }
 
-.flex, .ems-grid-default > div, .ems-grid-default .ems-grid-price, .ems-grid-default .ems-grid-piece .piece-wrapper, .ems-grid-default .ems-grid-address-buttons > a > span, .ems-page-cart-wrapper, .divTeslimatKargo ul, .divTeslimatKargo ul > li, .ems-cart-pay-tab > ul, .cvc-info:hover .desc {
+.flex, .ems-grid-default > div, .ems-grid-default .ems-grid-price, .ems-grid-default .ems-grid-piece .piece-wrapper, .ems-grid-default .ems-grid-address-buttons > a > span, .ems-page-cart-wrapper, .cart-cfg a.btnDefault > span, .continue-shopping a.btnAlisverisDevam > span, .dvFarkliFatAdrSec, .divTeslimatKargo ul, .divTeslimatKargo ul > li, .ems-cart-pay-tab > ul, .tableOdemeBilgiKrediKarti .cvc-info:hover .desc, .pageSiparisOnay_chkOnBilgilendirmeForm,
+.pageSiparisOnay_chkSatisSozlesme {
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex; }
 
-.flex-wrap {
-  -webkit-flex-wrap: wrap;
+.flex-wrap, .empty-order .ems-page-cart-wrapper {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap; }
 
 .flex-left {
   -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
   justify-content: flex-start; }
 
 .flex-center {
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center; }
 
 .flex-right {
   -webkit-box-pack: end;
-  -webkit-justify-content: flex-end;
   -ms-flex-pack: end;
   justify-content: flex-end; }
 
 .flex-between, .ems-page-cart-wrapper {
   -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between; }
 
-.flex-top, .cvc-info .desc {
+.flex-top, .tableOdemeBilgiKrediKarti .cvc-info .desc {
   -webkit-box-align: start;
-  -webkit-align-items: flex-start;
   -ms-flex-align: start;
   align-items: flex-start; }
 
-.flex-middle, .ems-grid-default .ems-grid-address-buttons > a > span, .divTeslimatKargo ul > li {
+.flex-middle, .ems-grid-default .ems-grid-address-buttons > a > span, .cart-cfg a.btnDefault > span, .continue-shopping a.btnAlisverisDevam > span, .dvFarkliFatAdrSec, .divTeslimatKargo ul > li, .pageSiparisOnay_chkOnBilgilendirmeForm,
+.pageSiparisOnay_chkSatisSozlesme {
   -webkit-box-align: center;
-  -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center; }
 
 .flex-bottom {
   -webkit-box-align: end;
-  -webkit-align-items: flex-end;
   -ms-flex-align: end;
   align-items: flex-end; }
 
-.flex-column, .ems-grid-default .ems-grid-price, .divTeslimatKargo ul > li, .cvc-info .desc {
+.flex-column, .ems-grid-default .ems-grid-price, .divTeslimatKargo ul > li, .tableOdemeBilgiKrediKarti .cvc-info .desc {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column; }
 
@@ -222,12 +216,12 @@ h3, .h3, .page-top-title {
   h3.cl-white, .h3.cl-white, .cl-white.page-top-title {
     color: #fff; }
 
-h4, .h4 {
+h4, .h4, .ems-page-cart .page-top-title.obj-step0 {
   font-family: "AvenirNext-Bold";
   font-size: 24px;
   font-weight: 700;
   color: #0c2048; }
-  h4.cl-white, .h4.cl-white {
+  h4.cl-white, .h4.cl-white, .ems-page-cart .cl-white.page-top-title.obj-step0 {
     color: #fff; }
 
 h5, .h5, .ems-cart-pay-type .tableTitleDefault {
@@ -241,7 +235,7 @@ h5, .h5, .ems-cart-pay-type .tableTitleDefault {
 .theme-light h1, .theme-light .h1,
 .theme-light h2, .theme-light .h2,
 .theme-light h3, .theme-light .h3, .theme-light .page-top-title,
-.theme-light h4, .theme-light .h4,
+.theme-light h4, .theme-light .h4, .theme-light .ems-page-cart .page-top-title.obj-step0, .ems-page-cart .theme-light .page-top-title.obj-step0,
 .theme-light h5, .theme-light .h5, .theme-light .ems-cart-pay-type .tableTitleDefault, .ems-cart-pay-type .theme-light .tableTitleDefault {
   color: #fff; }
 
@@ -282,6 +276,10 @@ p {
 .page-top-title {
   display: block; }
 
+@media screen and (min-width: 960px) {
+  .mobile-element {
+    display: none !important; } }
+
 @media screen and (max-width: 960px) {
   h1, .h1 {
     font-size: 24px;
@@ -293,7 +291,7 @@ p {
     font-size: 18px;
     line-height: initial;
     letter-spacing: initial; }
-  h4, .h4 {
+  h4, .h4, .ems-page-cart .page-top-title.obj-step0 {
     font-family: "AvenirNext-DemiBold";
     font-size: 16px;
     font-weight: 600; }
@@ -309,9 +307,11 @@ p {
     font-weight: 600; }
   .p-secondary {
     font-size: 12px;
-    color: #8d9098; } }
+    color: #8d9098; }
+  .mobile-element {
+    display: block; } }
 
-[class^="icon-"], [class*=" icon-"] {
+[class^="icon-"], .urunNavigasyon .nav-home:after, [class*=" icon-"] {
   font-family: 'icomoon' !important;
   speak: none;
   font-style: normal;
@@ -322,15 +322,26 @@ p {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
+.icon-basket-null:before {
+  content: "\e930"; }
+
+.icon-filter:before {
+  content: "\e92e"; }
+
+.icon-cargo-bus:before {
+  content: "\e92f"; }
+
+.icon-trash:before {
+  content: "\e902"; }
+
+.icon-home:before {
+  content: "\e91e"; }
+
 .icon-gunluk:before {
   content: "\e900"; }
 
 .icon-heart:before {
   content: "\e901"; }
-
-.icon-home:before {
-  content: "\e902";
-  color: #000; }
 
 .icon-hyphen:before {
   content: "\e903"; }
@@ -353,7 +364,7 @@ p {
 .icon-tri-right1:before {
   content: "\e909"; }
 
-.icon-tri-right2:before {
+.icon-tri-right2:before, .urunNavigasyon .nav-home:after {
   content: "\e90a"; }
 
 .icon-tri-top:before {
@@ -413,10 +424,6 @@ p {
 .icon-success-cut:before, .tabloTabBtnAdim td > span:not(.btnDisable):not(.tabBtnSelectedDefault) > a > span i:before {
   content: "\e91d"; }
 
-.icon-trash:before {
-  content: "\e91e";
-  color: #000; }
-
 .icon-trash-cut:before {
   content: "\e91f"; }
 
@@ -462,30 +469,6 @@ p {
 .icon-cargo:before {
   content: "\e92d"; }
 
-.icon-cargo-bus .path1:before {
-  content: "\e92e";
-  color: black; }
-
-.icon-cargo-bus .path2:before {
-  content: "\e92f";
-  margin-left: -1em;
-  color: black; }
-
-.icon-cargo-bus .path3:before {
-  content: "\e930";
-  margin-left: -1em;
-  color: white; }
-
-.icon-cargo-bus .path4:before {
-  content: "\e931";
-  margin-left: -1em;
-  color: black; }
-
-.icon-cargo-bus .path5:before {
-  content: "\e932";
-  margin-left: -1em;
-  color: white; }
-
 .icon-check:before {
   content: "\e933"; }
 
@@ -494,30 +477,6 @@ p {
 
 .icon-facebook:before {
   content: "\e935"; }
-
-.icon-filter .path1:before {
-  content: "\e936";
-  color: black; }
-
-.icon-filter .path2:before {
-  content: "\e937";
-  margin-left: -1em;
-  color: black; }
-
-.icon-filter .path3:before {
-  content: "\e938";
-  margin-left: -1em;
-  color: white; }
-
-.icon-filter .path4:before {
-  content: "\e939";
-  margin-left: -1em;
-  color: white; }
-
-.icon-filter .path5:before {
-  content: "\e93a";
-  margin-left: -1em;
-  color: white; }
 
 .icon-googleplus:before {
   content: "\e93b"; }
@@ -539,6 +498,30 @@ p {
     transition: all 0.4s cubic-bezier(0.8, 0, 0.5, 1); }
   .bottom-border-hover:hover:after {
     background: #0c2048; }
+
+.onBilgilendirmeFormMetin > span::-webkit-scrollbar,
+.siparisOnaySozlesmeMetin > span::-webkit-scrollbar {
+  width: 6px; }
+
+.onBilgilendirmeFormMetin > span::-webkit-scrollbar-track,
+.siparisOnaySozlesmeMetin > span::-webkit-scrollbar-track {
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  background: #f2f2ff;
+  -webkit-box-shadow: inset 0 0 6px rgba(242, 242, 255, 0.9);
+  box-shadow: inset 0 0 6px rgba(242, 242, 255, 0.9); }
+
+.onBilgilendirmeFormMetin > span::-webkit-scrollbar-thumb,
+.siparisOnaySozlesmeMetin > span::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  background: #26df2e;
+  -webkit-box-shadow: inset 0 0 6px #26df2e;
+  box-shadow: inset 0 0 6px #26df2e; }
+
+.onBilgilendirmeFormMetin > span::-webkit-scrollbar-thumb:window-inactive,
+.siparisOnaySozlesmeMetin > span::-webkit-scrollbar-thumb:window-inactive {
+  background: #f2f2ff; }
 
 .toast-title {
   font-weight: 700; }
@@ -749,7 +732,7 @@ button.toast-close-button {
   #toast-container > div.rtl {
     padding: 15px 50px 15px 15px; } }
 
-.btn {
+.btn, a.btnDefault {
   display: inline-block;
   border-radius: 2px;
   min-width: 174px;
@@ -758,16 +741,20 @@ button.toast-close-button {
   padding-bottom: 12px;
   -webkit-transition: all 0.3s cubic-bezier(0.8, 0, 0.5, 1);
   -o-transition: all 0.3s cubic-bezier(0.8, 0, 0.5, 1);
-  transition: all 0.3s cubic-bezier(0.8, 0, 0.5, 1); }
+  transition: all 0.3s cubic-bezier(0.8, 0, 0.5, 1);
+  outline: 0; }
 
-.btn-primary {
+.btn-primary, a.btnDefault {
   background: #26df2e;
   color: #fff; }
 
-.btn-primary:focus,
+.btn-primary:focus, a.btnDefault:focus,
 .btn-primary:hover,
+a.btnDefault:hover,
 .btn-primary:visited,
-.btn-primary:active {
+a.btnDefault:visited,
+.btn-primary:active,
+a.btnDefault:active {
   background: #24ce2b;
   color: #fff; }
 
@@ -820,22 +807,192 @@ button.toast-close-button {
   background: #eef3f8;
   color: #0c2048; }
 
+.btn-reset, a.btnFavoriEkle,
+.lnkTaksitSecenek,
+a.btnClear,
+a.btnKiyaslamaRemove,
+a.btnAdresListeGuncelle,
+a.btnAdresListeSil,
+a.btnTesAdrSec,
+a.btnFatAdrSec,
+span.lnkSifremiUnuttum,
+span.lnkUyeOlmak,
+a.btnUyelikIptalEt,
+a.btnIptalTalep,
+a.btnFavoriListeSil,
+a.btnTakipListeStokSil,
+a.btnSepeteAtFavori,
+a.btnArama,
+a.btnKiyaslamaListemeDon,
+a.btnSepetGuncelle,
+a.btnSepetBosalt,
+a.btnBultenGonder,
+a.btnFiyatDus,
+a.btnKutuLogout,
+a.btnAdresEkle,
+a.btnOnBilgilendirmeFormOnizle,
+a.btnSatisSozlesmeOnizle,
+a.btnAlisverisDevam, .btn-reset:focus, a.btnFavoriEkle:focus,
+.lnkTaksitSecenek:focus,
+a.btnClear:focus,
+a.btnKiyaslamaRemove:focus,
+a.btnAdresListeGuncelle:focus,
+a.btnAdresListeSil:focus,
+a.btnTesAdrSec:focus,
+a.btnFatAdrSec:focus,
+span.lnkSifremiUnuttum:focus,
+span.lnkUyeOlmak:focus,
+a.btnUyelikIptalEt:focus,
+a.btnIptalTalep:focus,
+a.btnFavoriListeSil:focus,
+a.btnTakipListeStokSil:focus,
+a.btnSepeteAtFavori:focus,
+a.btnArama:focus,
+a.btnKiyaslamaListemeDon:focus,
+a.btnSepetGuncelle:focus,
+a.btnSepetBosalt:focus,
+a.btnBultenGonder:focus,
+a.btnFiyatDus:focus,
+a.btnKutuLogout:focus,
+a.btnAdresEkle:focus,
+a.btnOnBilgilendirmeFormOnizle:focus,
+a.btnSatisSozlesmeOnizle:focus,
+a.btnAlisverisDevam:focus, .btn-reset:hover, a.btnFavoriEkle:hover,
+.lnkTaksitSecenek:hover,
+a.btnClear:hover,
+a.btnKiyaslamaRemove:hover,
+a.btnAdresListeGuncelle:hover,
+a.btnAdresListeSil:hover,
+a.btnTesAdrSec:hover,
+a.btnFatAdrSec:hover,
+span.lnkSifremiUnuttum:hover,
+span.lnkUyeOlmak:hover,
+a.btnUyelikIptalEt:hover,
+a.btnIptalTalep:hover,
+a.btnFavoriListeSil:hover,
+a.btnTakipListeStokSil:hover,
+a.btnSepeteAtFavori:hover,
+a.btnArama:hover,
+a.btnKiyaslamaListemeDon:hover,
+a.btnSepetGuncelle:hover,
+a.btnSepetBosalt:hover,
+a.btnBultenGonder:hover,
+a.btnFiyatDus:hover,
+a.btnKutuLogout:hover,
+a.btnAdresEkle:hover,
+a.btnOnBilgilendirmeFormOnizle:hover,
+a.btnSatisSozlesmeOnizle:hover,
+a.btnAlisverisDevam:hover, .btn-reset:visited, a.btnFavoriEkle:visited,
+.lnkTaksitSecenek:visited,
+a.btnClear:visited,
+a.btnKiyaslamaRemove:visited,
+a.btnAdresListeGuncelle:visited,
+a.btnAdresListeSil:visited,
+a.btnTesAdrSec:visited,
+a.btnFatAdrSec:visited,
+span.lnkSifremiUnuttum:visited,
+span.lnkUyeOlmak:visited,
+a.btnUyelikIptalEt:visited,
+a.btnIptalTalep:visited,
+a.btnFavoriListeSil:visited,
+a.btnTakipListeStokSil:visited,
+a.btnSepeteAtFavori:visited,
+a.btnArama:visited,
+a.btnKiyaslamaListemeDon:visited,
+a.btnSepetGuncelle:visited,
+a.btnSepetBosalt:visited,
+a.btnBultenGonder:visited,
+a.btnFiyatDus:visited,
+a.btnKutuLogout:visited,
+a.btnAdresEkle:visited,
+a.btnOnBilgilendirmeFormOnizle:visited,
+a.btnSatisSozlesmeOnizle:visited,
+a.btnAlisverisDevam:visited, .btn-reset:active, a.btnFavoriEkle:active,
+.lnkTaksitSecenek:active,
+a.btnClear:active,
+a.btnKiyaslamaRemove:active,
+a.btnAdresListeGuncelle:active,
+a.btnAdresListeSil:active,
+a.btnTesAdrSec:active,
+a.btnFatAdrSec:active,
+span.lnkSifremiUnuttum:active,
+span.lnkUyeOlmak:active,
+a.btnUyelikIptalEt:active,
+a.btnIptalTalep:active,
+a.btnFavoriListeSil:active,
+a.btnTakipListeStokSil:active,
+a.btnSepeteAtFavori:active,
+a.btnArama:active,
+a.btnKiyaslamaListemeDon:active,
+a.btnSepetGuncelle:active,
+a.btnSepetBosalt:active,
+a.btnBultenGonder:active,
+a.btnFiyatDus:active,
+a.btnKutuLogout:active,
+a.btnAdresEkle:active,
+a.btnOnBilgilendirmeFormOnizle:active,
+a.btnSatisSozlesmeOnizle:active,
+a.btnAlisverisDevam:active {
+  color: inherit;
+  background-color: inherit;
+  padding: inherit;
+  border: inherit;
+  min-width: auto; }
+
+.ems-prd-navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 43px; }
+
+.urunNavigasyon > span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+.urunNavigasyon a {
+  font-family: "AvenirNext-Regular";
+  font-size: 14px;
+  text-align: left;
+  color: #3f444d; }
+
+.urunNavigasyon i {
+  display: inline-block;
+  margin: 0 9px 0 5px;
+  font-size: 0;
+  vertical-align: middle; }
+  .urunNavigasyon i:before {
+    font-size: 7px;
+    color: #8d9098; }
+
+.urunNavigasyon .nav-home i:before {
+  font-size: 15px;
+  font-weight: 900;
+  color: #0c2048; }
+
+.urunNavigasyon .nav-home:after {
+  display: inline-block;
+  margin: 0 8px 0 5px;
+  font-size: 7px;
+  color: #8d9098;
+  vertical-align: middle; }
+
 .navbar-container {
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex; }
-  .navbar-container.navbar {
-    padding: 0 30px;
-    background: #fff; }
   .navbar-container .navbar-left,
   .navbar-container .navbar-right {
     display: -webkit-box;
-    display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-align: center;
-    -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center; }
   .navbar-container .navbar-right {
@@ -843,6 +1000,23 @@ button.toast-close-button {
 
 .swiper-container {
   width: 100%; }
+  .swiper-container .swiper-inner {
+    overflow: hidden; }
+  .swiper-container .swiper-button-prev,
+  .swiper-container .swiper-button-next {
+    background: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+  .swiper-container .swiper-button-disabled {
+    visibility: hidden; }
+  .swiper-container .swiper-pagination > span {
+    background-color: #8d9098; }
+    .swiper-container .swiper-pagination > span.swiper-pagination-bullet-active {
+      background-color: #0d2048; }
 
 .ems-form .ems-form-inner .ems-field {
   position: relative; }
@@ -860,12 +1034,12 @@ button.toast-close-button {
     -o-transition: all .2s ease-in-out;
     transition: all .2s ease-in-out;
     pointer-events: none; }
-  .ems-form .ems-form-inner .ems-field .ems-form-obj input {
+  .ems-form .ems-form-inner .ems-field .ems-form-obj input:not([type="checkbox"]):not([type="radio"]) {
     width: 100%;
     height: 50px;
     padding: 25px 10px 6px;
     background: #eef3f8;
-    border: 0;
+    border: 1px solid #eef3f8;
     border-radius: 2px;
     outline: 0 !important;
     -webkit-box-shadow: 0 !important;
@@ -873,6 +1047,27 @@ button.toast-close-button {
     font-family: "AvenirNext-Regular";
     font-size: 14px;
     color: #3f444d; }
+  .ems-form .ems-form-inner .ems-field .ems-form-obj .checkbox {
+    display: inline-block;
+    font-size: 0;
+    float: left;
+    margin-top: -1px;
+    margin-right: 10px; }
+    .ems-form .ems-form-inner .ems-field .ems-form-obj .checkbox + span {
+      font-family: "AvenirNext-Regular";
+      font-size: 13px;
+      color: #3f444d; }
+      .ems-form .ems-form-inner .ems-field .ems-form-obj .checkbox + span a {
+        font-family: "AvenirNext-Regular";
+        font-size: 13px;
+        color: #3f444d;
+        text-decoration: underline;
+        -webkit-text-decoration-skip: ink;
+        text-decoration-skip: ink; }
+  .ems-form .ems-form-inner .ems-field.ems-form-err .ems-form-label {
+    color: #fc2d55; }
+  .ems-form .ems-form-inner .ems-field.ems-form-err .ems-form-obj input:not([type="checkbox"]):not([type="radio"]) {
+    border: 1px solid #fc2d55; }
   .ems-form .ems-form-inner .ems-field a {
     display: inline-block; }
   .ems-form .ems-form-inner .ems-field.is-active .ems-form-label {
@@ -883,13 +1078,27 @@ button.toast-close-button {
   .ems-form .ems-form-inner .ems-field + .ems-field {
     margin-top: 20px; }
 
+input[type="checkbox"] {
+  -webkit-appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 1px solid #dde2e7; }
+
+input[type="checkbox"]:checked {
+  background: #26df2e;
+  border-color: #24ce2b; }
+
 .ddWrapper .ddTitle {
   position: relative;
   display: block;
   background: #fff;
   padding: 22px;
   color: #0c2048;
-  cursor: pointer; }
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
   .ddWrapper .ddTitle i {
     font-size: 16px;
     position: absolute;
@@ -913,6 +1122,20 @@ button.toast-close-button {
 .ddWrapper.opened .ddContent {
   display: block; }
 
+.ems-message {
+  padding: 6px 0;
+  width: 100%;
+  border-radius: 2px;
+  font-family: "AvenirNext-DemiBold";
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+  color: #fff; }
+  .ems-message.ems-message-error {
+    background: #fc2d55; }
+  .ems-message.ems-message-success {
+    background: #26df2e; }
+
 /*-----------------------*/
 .ems-grid-default {
   position: relative; }
@@ -920,7 +1143,6 @@ button.toast-close-button {
     padding: 20px; }
     .ems-grid-default > div > div {
       -webkit-box-flex: 1;
-      -webkit-flex: 1;
       -ms-flex: 1;
       flex: 1;
       font-family: "AvenirNext-Regular";
@@ -935,10 +1157,8 @@ button.toast-close-button {
     border-bottom: 1px solid #e2e8ef; }
   .ems-grid-default .ems-grid-img {
     -webkit-box-flex: 0;
-    -webkit-flex-grow: 0;
     -ms-flex-positive: 0;
     flex-grow: 0;
-    -webkit-flex-basis: 120px;
     -ms-flex-preferred-size: 120px;
     flex-basis: 120px; }
     .ems-grid-default .ems-grid-img img {
@@ -948,34 +1168,36 @@ button.toast-close-button {
       max-width: 80px; }
   .ems-grid-default .ems-grid-name {
     -webkit-box-flex: 2.5;
-    -webkit-flex: 2.5;
     -ms-flex: 2.5;
     flex: 2.5; }
-  .ems-grid-default .ems-grid-price [id$="INDIRIMLIFIYAT"] {
-    -webkit-box-ordinal-group: 2;
-    -webkit-order: 1;
-    -ms-flex-order: 1;
-    order: 1; }
-  .ems-grid-default .ems-grid-price .gridSepetListe_gercekFiyat {
-    -webkit-box-ordinal-group: 3;
-    -webkit-order: 2;
-    -ms-flex-order: 2;
-    order: 2;
-    font-size: 12px;
-    color: #8d9098;
-    text-decoration: line-through; }
+  .ems-grid-default .ems-grid-price {
+    white-space: nowrap; }
+    .ems-grid-default .ems-grid-price [id$="INDIRIMLIFIYAT"] {
+      -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+      order: 1; }
+    .ems-grid-default .ems-grid-price .gridSepetListe_gercekFiyat {
+      -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+      order: 2;
+      font-size: 12px;
+      color: #8d9098;
+      text-decoration: line-through; }
+    .ems-grid-default .ems-grid-price-total {
+      white-space: nowrap; }
   .ems-grid-default .ems-grid-piece .piece-wrapper > a {
     font-size: 10px;
-    padding: 3px 5px; }
+    line-height: 30px;
+    padding: 0 10px; }
   .ems-grid-default .ems-grid-piece .piece-wrapper > input {
+    padding-top: 6px;
+    height: 30px;
     border: 1px solid #e2e8ef;
     text-align: center; }
   .ems-grid-default .ems-grid-delete {
     -webkit-box-flex: 0;
-    -webkit-flex-grow: 0;
     -ms-flex-positive: 0;
     flex-grow: 0;
-    -webkit-flex-basis: auto;
     -ms-flex-preferred-size: auto;
     flex-basis: auto; }
     .ems-grid-default .ems-grid-delete i {
@@ -995,16 +1217,14 @@ button.toast-close-button {
       margin-top: 12px; }
   .ems-grid-default .ems-grid-address-buttons {
     -webkit-box-flex: 0;
-    -webkit-flex-grow: 0;
     -ms-flex-positive: 0;
     flex-grow: 0;
-    -webkit-flex-basis: 170px;
     -ms-flex-preferred-size: 170px;
     flex-basis: 170px; }
     .ems-grid-default .ems-grid-address-buttons > a {
       position: relative;
       display: block;
-      margin-top: 20px;
+      margin-top: 5px;
       color: #3f444d; }
       .ems-grid-default .ems-grid-address-buttons > a:first-child {
         margin-top: 15px; }
@@ -1021,11 +1241,44 @@ button.toast-close-button {
           border-color: #26df2e; }
         .ems-grid-default .ems-grid-address-buttons > a.emos_selected:hover {
           color: inherit; }
+      .ems-grid-default .ems-grid-address-buttons > a.btnAdresListeSil {
+        color: #fc2d55; }
+
+@media screen and (max-width: 960px) {
+  .ems-grid-default > div {
+    padding: 10px; }
+  .ems-grid-default .ems-grid-img {
+    -webkit-box-flex: 0;
+    -ms-flex-positive: 0;
+    flex-grow: 0;
+    -ms-flex-preferred-size: 60px;
+    flex-basis: 60px; }
+  .ems-grid-default .ems-grid-address-info {
+    padding-right: 10px; }
+  .ems-grid-default .ems-grid-address-buttons {
+    -ms-flex-preferred-size: auto;
+    flex-basis: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+    .ems-grid-default .ems-grid-address-buttons > a {
+      margin-top: 0;
+      margin-left: 25px;
+      padding-left: 0;
+      padding-right: 0; }
+      .ems-grid-default .ems-grid-address-buttons > a:first-child {
+        margin-top: 0;
+        margin-left: 0; } }
 
 .ems-page-cart {
   background: #eef3f8; }
   .ems-page-cart .page-top-title {
     margin-bottom: 35px; }
+    .ems-page-cart .page-top-title.obj-step0 {
+      margin-bottom: 12px; }
   .ems-page-cart-step1 .obj-step0 {
     display: none; }
 
@@ -1044,17 +1297,50 @@ button.toast-close-button {
   .ems-page-cart-wrapper .bottom-step {
     display: none; }
 
+.compact-order-pages {
+  background: #eef3f8; }
+  .compact-order-pages .navbar-item-menu,
+  .compact-order-pages .navbar-right,
+  .compact-order-pages .footer-ebulten,
+  .compact-order-pages .footer-navbar,
+  .compact-order-pages .footer-copyright {
+    display: none !important; }
+  .compact-order-pages .navbar-container {
+    height: 80px; }
+  .compact-order-pages footer {
+    margin-top: 60px; }
+  .compact-order-pages .footer-information {
+    border-top: none;
+    background: #fff; }
+
+.basket-empty .ems-page-cart-colmn-2,
+.order-single-col-body .ems-page-cart-colmn-2 {
+  max-width: none; }
+
+.basket-empty .ems-page-cart-colmn-3,
+.order-single-col-body .ems-page-cart-colmn-3 {
+  display: none !important; }
+
+.basket-empty .cart-section-left {
+  display: none !important; }
+
 .tabloTabBtnAdim {
-  position: relative;
-  margin-left: auto;
-  margin-right: auto;
-  background: #fff;
-  width: 100%; }
+  position: fixed;
+  top: 0;
+  left: 50%;
+  z-index: 2001;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 600px;
+  background: #fff; }
   .tabloTabBtnAdim td > span {
-    display: inline-block; }
+    display: inline-block;
+    vertical-align: top; }
     .tabloTabBtnAdim td > span > a {
       display: block;
-      line-height: 80px;
+      line-height: 78px;
       font-family: "AvenirNext-DemiBold";
       font-size: 14px;
       color: #26df2e; }
@@ -1083,14 +1369,45 @@ button.toast-close-button {
       .tabloTabBtnAdim td > span.btnDisable > a > span:after {
         border-color: #ecf0f3; }
 
+.notification-wrapper {
+  margin-bottom: 30px; }
+  .notification-wrapper h3 {
+    margin-bottom: 36px; }
+  .notification-wrapper .notification {
+    position: relative;
+    background: #fff;
+    border: 2px solid #2fa3ff;
+    border-radius: 10px;
+    padding: 15px;
+    font-family: "AvenirNext-Regular";
+    font-size: 14px;
+    line-height: 1.8;
+    color: #3f444d; }
+    .notification-wrapper .notification .icon-notify {
+      float: left;
+      margin-right: 15px;
+      font-size: 24px; }
+
 .ems-grid-cart .ems-grid-header {
   display: none; }
 
 .cart-cfg {
-  margin-top: 3px;
-  background: #fff; }
-  .cart-cfg > a {
-    padding: 15px; }
+  margin-top: 5px; }
+  .cart-cfg a.btnDefault {
+    padding: 10px 20px; }
+    .cart-cfg a.btnDefault i {
+      font-size: 18px;
+      margin-right: 10px; }
+
+.continue-shopping {
+  margin-top: 20px; }
+  .continue-shopping a.btnAlisverisDevam {
+    font-family: "AvenirNext-Bold";
+    font-size: 18px;
+    color: #0c2048; }
+    .continue-shopping a.btnAlisverisDevam i {
+      font-size: 24px;
+      margin-right: 10px; }
 
 .ems-cart-summary {
   position: relative !important;
@@ -1099,15 +1416,17 @@ button.toast-close-button {
   padding: 25px 30px;
   width: 100%;
   max-width: 380px; }
-  .ems-cart-summary .h4 {
+  .ems-cart-summary .h4, .ems-cart-summary .ems-page-cart .page-top-title.obj-step0, .ems-page-cart .ems-cart-summary .page-top-title.obj-step0 {
     display: block;
     margin-bottom: 15px; }
   .ems-cart-summary .bottom-step {
-    display: block; }
+    display: block;
+    position: relative; }
 
 .pnlDipToplamTable {
   font-family: "AvenirNext-Regular";
-  font-size: 14px; }
+  font-size: 14px;
+  margin: 20px 0; }
   .pnlDipToplamTable th {
     text-align: left;
     font-weight: normal;
@@ -1119,7 +1438,6 @@ button.toast-close-button {
       font-size: 18px; }
 
 .ems-cart-summary-coupon {
-  margin-top: 25px;
   padding: 15px;
   border-top: 1px solid #e2e8ef; }
   .ems-cart-summary-coupon .code-title {
@@ -1132,14 +1450,156 @@ button.toast-close-button {
     text-decoration: underline;
     cursor: pointer; }
   .ems-cart-summary-coupon .ems-cart-summary-coupon-body {
-    display: none; }
+    display: none;
+    position: relative; }
+    .ems-cart-summary-coupon .ems-cart-summary-coupon-body input {
+      width: 100% !important;
+      padding-top: 6px !important;
+      padding-right: 110px !important; }
+    .ems-cart-summary-coupon .ems-cart-summary-coupon-body table {
+      position: absolute;
+      right: 3px;
+      top: 3px; }
+      .ems-cart-summary-coupon .ems-cart-summary-coupon-body table a.btnDefault {
+        padding-left: 10px;
+        padding-right: 10px;
+        min-width: 100px; }
+    .ems-cart-summary-coupon .ems-cart-summary-coupon-body [id$="lblHCK_HATA"] {
+      display: block;
+      padding: 10px; }
+      .ems-cart-summary-coupon .ems-cart-summary-coupon-body [id$="lblHCK_HATA"]:empty {
+        display: none; }
   .ems-cart-summary-coupon.opened {
-    background: red; }
+    margin-bottom: 20px; }
     .ems-cart-summary-coupon.opened .ems-cart-summary-coupon-body {
       display: block; }
 
+.ems-cart-summary-bottom > div:not(.ems-none) + div,
+.bottom-step > div:not(.ems-none) + div {
+  margin-top: 15px; }
+
+.ems-cart-summary-bottom a.btnDefault,
+.bottom-step a.btnDefault {
+  display: block;
+  font-size: 18px;
+  line-height: 1.25;
+  padding-top: 19px;
+  padding-bottom: 19px;
+  margin-top: 10px; }
+  .ems-cart-summary-bottom a.btnDefault:first-child,
+  .bottom-step a.btnDefault:first-child {
+    margin-top: 0; }
+
+.ems-cart-summary-bottom [id$="lbfSIP_ONAYLA_DEC"],
+.bottom-step [id$="lbfSIP_ONAYLA_DEC"] {
+  display: block;
+  padding: 15px;
+  margin-top: 20px;
+  border: 1px dashed #e2e8ef;
+  font-family: "AvenirNext-Regular";
+  font-size: 14px;
+  line-height: 1.4;
+  color: #26df2e; }
+
+.pageErrorStokKontrol {
+  margin-bottom: 10px; }
+
+.gridSepetStok {
+  table-layout: fixed;
+  width: 100%;
+  background: #fff;
+  margin-bottom: 50px; }
+  .gridSepetStok th, .gridSepetStok td {
+    padding: 5px;
+    border: 1px solid #e2e8ef;
+    text-align: center; }
+
+.ems-page-cart .widget-appreciate {
+  margin-top: 50px;
+  margin-bottom: 0; }
+  .ems-page-cart .widget-appreciate .swiper-title {
+    text-align: left;
+    padding: 20px 0; }
+  .ems-page-cart .widget-appreciate .swiper-inner {
+    background: #fff;
+    padding: 0; }
+
+@media screen and (max-width: 960px) {
+  .ems-page-cart-wrapper > div {
+    margin-left: -20px;
+    margin-right: -20px; }
+  .ems-page-cart .page-top-title {
+    margin-bottom: 15px;
+    padding: 0 20px; }
+  .ems-page-cart-wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column; }
+    .ems-page-cart-wrapper > div {
+      width: auto; }
+    .ems-page-cart-wrapper .ems-page-cart-colmn-2 {
+      max-width: none; }
+    .ems-page-cart-wrapper .ems-page-cart-colmn-3 {
+      max-width: none; }
+  .compact-order-pages .navbar-container {
+    height: auto; }
+  .compact-order-pages .mobile-header .mbHeader .mBurger,
+  .compact-order-pages .mobile-header .mbHeader .mbSearch,
+  .compact-order-pages .mobile-header .mbHeader .mbCart {
+    display: none !important; }
+  .tabloTabBtnAdim {
+    position: relative;
+    left: 0;
+    top: 0;
+    z-index: auto;
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none;
+    max-width: none; }
+  .notification-wrapper h3 {
+    margin-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px; }
+  .notification-wrapper .notification {
+    margin-left: 10px;
+    margin-right: 10px; }
+  .ems-grid-cart .ems-grid-row {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap; }
+  .continue-shopping {
+    display: none; }
+  .ems-cart-summary {
+    max-width: none;
+    margin-top: 30px;
+    padding-left: 20px;
+    padding-right: 20px; }
+  .ems-page-cart .widget-appreciate {
+    display: none !important; } }
+
+@media screen and (max-width: 480px) {
+  .tabloTabBtnAdim {
+    padding-top: 10px; }
+    .tabloTabBtnAdim td > span {
+      width: 33.33333%; }
+      .tabloTabBtnAdim td > span > a {
+        line-height: 30px; }
+        .tabloTabBtnAdim td > span > a > span > * {
+          display: block; }
+        .tabloTabBtnAdim td > span > a > span > i {
+          margin-right: 0; }
+        .tabloTabBtnAdim td > span > a > span:after {
+          position: absolute;
+          right: -50%;
+          top: 10px;
+          width: 50%; } }
+
 .ems-page-order-delivery {
   position: relative; }
+
+.empty-order .ems-page-new-address {
+  margin: 30px auto 0;
+  max-width: 500px; }
 
 .address-bottom {
   margin-top: 20px; }
@@ -1149,19 +1609,23 @@ a.btnAdresEkle i {
   margin-right: 3px;
   vertical-align: 2px; }
 
+.dvFarkliFatAdrSec > input {
+  margin-right: 10px; }
+
 .ems-delivery-tabs {
   margin: 30px 0;
   border-top: 1px solid #e2e8ef;
   padding-bottom: 30px;
   border-bottom: 1px solid #e2e8ef; }
   .ems-delivery-tabs .ems-delivery-tab-header {
-    margin: 15px 0; }
+    padding: 15px 0; }
+  .ems-delivery-tabs .ems-delivery-tab-content {
+    position: relative; }
 
 .divTeslimatKargo ul > li {
   position: relative;
   background: #fff;
   border: 1px solid #e2e8ef;
-  -webkit-flex-basis: 140px;
   -ms-flex-preferred-size: 140px;
   flex-basis: 140px;
   margin-left: 30px;
@@ -1172,8 +1636,8 @@ a.btnAdresEkle i {
     margin-left: 0; }
   .divTeslimatKargo ul > li input {
     position: absolute;
-    left: 0;
     top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     opacity: 0;
@@ -1184,6 +1648,50 @@ a.btnAdresEkle i {
     margin-bottom: 5px; }
   .divTeslimatKargo ul > li .kargoBilgi {
     display: none; }
+
+@media screen and (max-width: 960px) {
+  .ems-grid-address .ems-grid-row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column; }
+  .address-bottom {
+    margin-top: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start; }
+    .address-bottom > div {
+      width: 100%; }
+      .address-bottom > div + div {
+        border-top: 1px solid #e2e8ef; }
+  a.btnAdresEkle, .dvFarkliFatAdrSec {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 20px;
+    text-align: left; }
+  .ems-delivery-tabs {
+    margin-top: 0;
+    margin-bottom: 0; }
+    .ems-delivery-tabs .ems-delivery-tab-header {
+      padding: 20px; }
+    .ems-delivery-tabs .ems-delivery-tab-content {
+      padding: 0 20px; }
+  .divTeslimatKargo ul {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between; }
+    .divTeslimatKargo ul > li {
+      -ms-flex-preferred-size: 49%;
+      flex-basis: 49%;
+      margin-left: 0;
+      margin-bottom: 10px; } }
 
 .ems-page-order-payment {
   position: relative; }
@@ -1199,42 +1707,124 @@ a.btnAdresEkle i {
     color: #26df2e; }
 
 .ems-cart-pay-type {
+  position: relative;
   background: #fff;
   padding: 30px; }
   .ems-cart-pay-type .tableTitleDefault {
     margin-bottom: 20px; }
 
-.cvc-info {
+.ems-pay-credit-cart {
   position: relative; }
-  .cvc-info > i {
-    font-size: 16px;
-    cursor: pointer; }
-  .cvc-info .desc {
+
+.tableOdemeBilgiKrediKarti {
+  width: 100%;
+  max-width: 340px; }
+  .tableOdemeBilgiKrediKarti tr {
+    position: relative; }
+  .tableOdemeBilgiKrediKarti th {
     position: absolute;
-    top: -104px;
-    left: 25px;
-    width: 220px;
-    display: none;
-    background: #fff;
-    padding: 20px;
-    border: 1px solid #e2e8ef;
-    -webkit-box-shadow: 0 20px 25px 0 rgba(0, 0, 0, 0.2);
-    box-shadow: 0 20px 25px 0 rgba(0, 0, 0, 0.2); }
-    .cvc-info .desc:before {
-      content: "";
+    z-index: 1;
+    font-family: "AvenirNext-Regular";
+    font-size: 12px;
+    color: #8d9098;
+    padding: 7px 10px 0 10px; }
+  .tableOdemeBilgiKrediKarti td {
+    position: relative;
+    padding-bottom: 20px; }
+    .tableOdemeBilgiKrediKarti td input {
+      width: 100% !important; }
+    .tableOdemeBilgiKrediKarti td select {
+      width: 48% !important; }
+      .tableOdemeBilgiKrediKarti td select:first-child {
+        margin-right: 4%; }
+  .tableOdemeBilgiKrediKarti .tableOdemeBilgiKrediKarti_tdtxtKKARTCVCNO {
+    font-size: 0; }
+  .tableOdemeBilgiKrediKarti .tableOdemeBilgiKrediKarti_thlbfbtnOdemeTaksit {
+    display: none; }
+  .tableOdemeBilgiKrediKarti .divtxtKKARTNO .div-cc-carttype {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%); }
+  .tableOdemeBilgiKrediKarti .cvc-info {
+    position: absolute;
+    right: 20px;
+    top: 15px; }
+    .tableOdemeBilgiKrediKarti .cvc-info > i {
+      display: block;
+      font-size: 10px;
+      color: #8d9098;
+      font-style: normal;
+      cursor: pointer;
+      width: 16px;
+      line-height: 12px;
+      text-align: center;
+      border: 2px solid;
+      border-radius: 100%; }
+    .tableOdemeBilgiKrediKarti .cvc-info .desc {
       position: absolute;
-      top: 50%;
-      margin-top: -6px;
-      left: -12px;
-      border-width: 6px;
-      border-style: solid;
-      border-color: transparent #fff transparent transparent; }
-    .cvc-info .desc > .k {
+      top: -100px;
+      left: 32px;
+      z-index: 5;
+      width: 220px;
+      display: none;
+      background: #fff;
+      padding: 20px;
+      border: 1px solid #e2e8ef;
+      -webkit-box-shadow: 0 20px 25px 0 rgba(0, 0, 0, 0.2);
+      box-shadow: 0 20px 25px 0 rgba(0, 0, 0, 0.2); }
+      .tableOdemeBilgiKrediKarti .cvc-info .desc:before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        margin-top: -6px;
+        left: -12px;
+        border-width: 6px;
+        border-style: solid;
+        border-color: transparent #fff transparent transparent; }
+      .tableOdemeBilgiKrediKarti .cvc-info .desc > b {
+        font-size: 14px; }
+      .tableOdemeBilgiKrediKarti .cvc-info .desc > .k {
+        font-family: "AvenirNext-Regular";
+        font-size: 12px;
+        color: #8d9098;
+        margin-top: 4px;
+        margin-bottom: 13px; }
+
+.ems-card-wrapper {
+  margin-bottom: 30px; }
+  .ems-card-wrapper .jp-card-container {
+    margin-left: 0;
+    margin-right: 0;
+    max-width: 334px; }
+
+.pageOdemeBilgi_odemeTaksit {
+  position: absolute;
+  right: 0;
+  top: -30px;
+  width: 100%;
+  max-width: 350px;
+  padding: 30px 0 0 30px;
+  height: calc(100% + 60px);
+  border-left: 1px solid #e2e8ef; }
+  .pageOdemeBilgi_odemeTaksit #imgBANKALOGO {
+    display: none; }
+  .pageOdemeBilgi_odemeTaksit .tableOdemeTaksit {
+    table-layout: fixed;
+    width: 100%; }
+    .pageOdemeBilgi_odemeTaksit .tableOdemeTaksit td {
+      padding: 5px;
+      vertical-align: top;
       font-family: "AvenirNext-Regular";
+      color: #3f444d; }
+      .pageOdemeBilgi_odemeTaksit .tableOdemeTaksit td:nth-child(1) {
+        width: 30px; }
+    .pageOdemeBilgi_odemeTaksit .tableOdemeTaksit .tableTitleDefault td {
       font-size: 12px;
       color: #8d9098;
-      margin-top: 4px;
-      margin-bottom: 13px; }
+      font-weight: normal; }
 
 .ems-pay-transfer .pageDecOdemeBilgi {
   display: none; }
@@ -1259,15 +1849,33 @@ a.btnAdresEkle i {
         text-align: right; }
         .tableOdemeBilgiHavale .tableOdemeBilgiHavale_tddrpBNK_KOD_HV table td.link a {
           min-width: 114px;
-          border: 3px solid #e2e8ef;
-          color: #0c2048; }
+          border: 3px solid #0c2048;
+          color: #0c2048;
+          background: none;
+          line-height: 1.2;
+          font-size: 12px;
+          padding-top: 5px;
+          padding-bottom: 5px; }
           .tableOdemeBilgiHavale .tableOdemeBilgiHavale_tddrpBNK_KOD_HV table td.link a.emos_selected {
-            border-color: #26df2e; }
+            border-color: #26df2e;
+            background: #26df2e;
+            color: #fff; }
       .tableOdemeBilgiHavale .tableOdemeBilgiHavale_tddrpBNK_KOD_HV table td .hesapNo {
         font-family: "AvenirNext-Regular";
         color: #3f444d;
         display: block;
         margin-top: 5px; }
+
+.ems-pay-other [id$="lbfSIP_ODEMENOTU"] {
+  display: block;
+  margin-bottom: 5px; }
+  .ems-pay-other [id$="lbfSIP_ODEMENOTU"] + br {
+    display: none; }
+
+.ems-pay-other textarea {
+  width: 100% !important;
+  max-width: 360px;
+  height: 87px; }
 
 .ems-pay-type-desc > span {
   display: block;
@@ -1280,10 +1888,10 @@ a.btnAdresEkle i {
     margin-top: 10px; }
 
 .payment-bottom {
-  margin-top: 20px; }
+  margin-top: 20px;
+  margin-bottom: 40px; }
   .payment-bottom > div {
     -webkit-box-flex: 1;
-    -webkit-flex: 1;
     -ms-flex: 1;
     flex: 1; }
 
@@ -1295,13 +1903,13 @@ a.btnAdresEkle i {
     .ems-cart-pay-products .ems-grid-cart .ems-grid-row:last-child {
       border-bottom: none; }
     .ems-cart-pay-products .ems-grid-cart .ems-grid-img {
-      -webkit-flex-basis: 50px;
       -ms-flex-preferred-size: 50px;
       flex-basis: 50px;
       padding-left: 0; }
     .ems-cart-pay-products .ems-grid-cart .ems-grid-price-total {
       text-align: right;
-      padding-right: 0; }
+      padding-right: 0;
+      white-space: nowrap; }
     .ems-cart-pay-products .ems-grid-cart .ems-grid-price,
     .ems-cart-pay-products .ems-grid-cart .ems-grid-piece,
     .ems-cart-pay-products .ems-grid-cart .ems-grid-delete {
@@ -1325,27 +1933,63 @@ a.btnAdresEkle i {
 
 .onBilgilendirmeForm,
 .siparisOnaySozlesme {
-  margin-top: 25px; }
+  background: #fff;
+  margin-top: 20px; }
+  .onBilgilendirmeForm .tableTitleDefault,
+  .siparisOnaySozlesme .tableTitleDefault {
+    position: relative;
+    padding: 25px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none; }
+    .onBilgilendirmeForm .tableTitleDefault i,
+    .siparisOnaySozlesme .tableTitleDefault i {
+      font-size: 16px;
+      position: absolute;
+      top: 50%;
+      right: 20px;
+      margin-top: -8px;
+      -webkit-transition: -webkit-transform 0.4s cubic-bezier(0.8, 0, 0.5, 1);
+      transition: -webkit-transform 0.4s cubic-bezier(0.8, 0, 0.5, 1);
+      -o-transition: transform 0.4s cubic-bezier(0.8, 0, 0.5, 1);
+      transition: transform 0.4s cubic-bezier(0.8, 0, 0.5, 1);
+      transition: transform 0.4s cubic-bezier(0.8, 0, 0.5, 1), -webkit-transform 0.4s cubic-bezier(0.8, 0, 0.5, 1); }
+  .onBilgilendirmeForm.selected .tableTitleDefault i,
+  .siparisOnaySozlesme.selected .tableTitleDefault i {
+    -webkit-transform: rotate(-180deg);
+    -ms-transform: rotate(-180deg);
+    transform: rotate(-180deg); }
+  .onBilgilendirmeForm.selected .tableTitleDefault ~ div,
+  .siparisOnaySozlesme.selected .tableTitleDefault ~ div {
+    display: none; }
 
-.onBilgilendirmeForm {
-  padding-top: 25px;
-  border-top: 1px solid #e2e8ef; }
+.siparisOnaySozlesme {
+  margin-bottom: 100px; }
 
-.tableTitleSiparisOnBilgilendirmeForm, .onBilgilendirmeFormMetin,
-.tableTitleSiparisOnaySatisSozlesme, .siparisOnaySozlesmeMetin {
-  display: none; }
+.onBilgilendirmeFormMetin,
+.siparisOnaySozlesmeMetin {
+  padding: 0 25px; }
+  .onBilgilendirmeFormMetin > span,
+  .siparisOnaySozlesmeMetin > span {
+    height: 150px !important;
+    overflow: auto !important;
+    padding-right: 20px; }
 
 .pageSiparisOnay_lbfOnBilgilendirmeForm,
 .pageSiparisOnay_lbfSatisSozlesme {
-  position: relative; }
+  position: relative;
+  padding: 25px; }
 
 .pageSiparisOnay_btnOnBilgilendirmeFormOnizle,
 .pageSiparisOnay_btnSatisSozlesmeOnizle {
   position: absolute;
-  left: 0;
   top: 0;
+  left: 0;
   width: 100%;
-  height: 100%; }
+  height: 100%;
+  display: none; }
   .pageSiparisOnay_btnOnBilgilendirmeFormOnizle > table,
   .pageSiparisOnay_btnSatisSozlesmeOnizle > table {
     display: table !important;
@@ -1359,12 +2003,104 @@ a.btnAdresEkle i {
 .pageSiparisOnay_chkOnBilgilendirmeForm input,
 .pageSiparisOnay_chkSatisSozlesme input {
   position: relative;
-  z-index: 7; }
+  z-index: 7;
+  margin-right: 10px; }
 
 .pageSiparisOnay_chkOnBilgilendirmeForm u,
 .pageSiparisOnay_chkSatisSozlesme u {
   text-decoration: underline;
   -webkit-text-decoration-skip: ink;
   text-decoration-skip: ink; }
+
+@media screen and (max-width: 960px) {
+  .ems-cart-pay-tab > ul > li {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1; }
+    .ems-cart-pay-tab > ul > li > a {
+      padding: 17px 5px;
+      text-align: center; }
+  .tableOdemeBilgiKrediKarti {
+    max-width: none; }
+    .tableOdemeBilgiKrediKarti .cvc-info .desc {
+      left: auto;
+      right: 32px; }
+      .tableOdemeBilgiKrediKarti .cvc-info .desc:before {
+        left: auto;
+        right: -12px;
+        border-right-color: transparent;
+        border-left-color: #fff; }
+  .tableOdemeBilgiHavale .tableOdemeBilgiHavale_tddrpBNK_KOD_HV table td {
+    display: table !important;
+    width: 100%;
+    padding: 5px; }
+    .tableOdemeBilgiHavale .tableOdemeBilgiHavale_tddrpBNK_KOD_HV table td.logo {
+      padding-left: 5px;
+      padding-top: 20px; }
+    .tableOdemeBilgiHavale .tableOdemeBilgiHavale_tddrpBNK_KOD_HV table td:not(.link) {
+      border-bottom: none; }
+    .tableOdemeBilgiHavale .tableOdemeBilgiHavale_tddrpBNK_KOD_HV table td.link {
+      text-align: left;
+      padding-bottom: 20px; }
+  .pageOdemeBilgi_odemeTaksit {
+    position: static;
+    max-width: none;
+    border-left: 0;
+    padding: 0; }
+  .payment-bottom {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    margin-top: 20px;
+    margin-bottom: 40px; }
+    .payment-bottom > div + div {
+      margin-top: 20px; }
+    .payment-bottom .ems-cart-pay-products {
+      margin-right: 0; }
+  .siparisOnaySozlesme {
+    margin-bottom: 0; } }
+
+.ems-page-order-result .page-top-title, .ems-page-order-result .pageSiparisSonuc_lbfSiparisBasarili {
+  display: none; }
+
+.order-result {
+  text-align: center;
+  margin: 100px 0; }
+  .order-result .icon-check, .order-result .icon-close, .order-result .icon-basket-null {
+    display: inline-block;
+    vertical-align: top;
+    width: 96px;
+    line-height: 96px;
+    color: #fff;
+    border-radius: 100%;
+    margin-bottom: 30px; }
+  .order-result .icon-check {
+    background: #26df2e;
+    font-size: 38px; }
+  .order-result .icon-close {
+    background: #fc2d55;
+    font-size: 28px; }
+  .order-result .icon-basket-null {
+    background: #fff;
+    font-size: 57px;
+    color: #0c2048; }
+  .order-result .h3, .order-result .page-top-title {
+    margin-bottom: 40px; }
+    .order-result .h3 + .note, .order-result .page-top-title + .note {
+      margin-top: -20px; }
+  .order-result .note {
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 30px; }
+  .order-result a.btn, .order-result a.btnDefault {
+    font-size: 18px;
+    line-height: 1.25;
+    padding: 19px 25px;
+    min-width: 220px; }
+
+@media screen and (max-width: 960px) {
+  .order-result {
+    margin: 20px; } }
 
 /*# sourceMappingURL=style2.css.map */
