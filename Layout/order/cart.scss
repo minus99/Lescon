@@ -14,6 +14,10 @@ $gap1: 20px;
     background: $linkBg;
     .page-top-title {
         margin-bottom: 35px;
+        &.obj-step0 {
+            margin-bottom: 12px;
+            @extend .h4;
+        }
     }
 
     //sepet sonrasi adimlarda gosterme
@@ -47,6 +51,30 @@ $gap1: 20px;
     }
 }
 
+//compact order pages
+.compact-order-pages {
+    background: $linkBg;
+    //compact header
+    .navbar-item-menu,
+    .navbar-right,
+    //compact footer
+    .footer-ebulten,
+    .footer-navbar,
+    .footer-copyright {
+        display: none !important;
+    }
+    .navbar-container {
+        height: 80px;
+    }
+    footer {
+        margin-top: 60px;
+    }
+    .footer-information {
+        border-top: none;
+        background: $white;
+    }
+}
+
 //sag tarafi gizlemek
 .basket-empty,
 .order-single-col-body {
@@ -67,18 +95,21 @@ $gap1: 20px;
 
 //siparis adimlar
 .tabloTabBtnAdim {
-    position: relative;
-    margin-left: auto;
-    margin-right: auto;
-    background: #fff;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    z-index: 2001;
+    transform: translateX(-50%);
     width: 100%;
+    max-width: 600px;
+    background: #fff;
     td {
         > span {
             display: inline-block;
             vertical-align: top;
             > a {
                 display: block;
-                line-height: $header-height;
+                line-height: $header-height - 2px;
                 font-family: $demiBold;
                 font-size: 14px;
                 color: $secondary;
@@ -145,6 +176,30 @@ $gap1: 20px;
     }
 }
 
+//bildiri
+.notification-wrapper {
+    margin-bottom: 30px;
+    h3 {
+        margin-bottom: 36px;
+    }
+    .notification {
+        position: relative;
+        background: #fff;
+        border: 2px solid $alternative;
+        border-radius: 10px;
+        padding: 15px;
+        font-family: $regular;
+        font-size: 14px;
+        line-height: 1.8;
+        color: $text-1;
+        .icon-notify {
+            float: left;
+            margin-right: 15px;
+            font-size: 24px;
+        }
+    }
+}
+
 //sepet grid
 .ems-grid-cart {
     .ems-grid-header {
@@ -152,10 +207,33 @@ $gap1: 20px;
     }
 }
 .cart-cfg {
-    margin-top: 3px;
-    background: $white;
-    > a.btnDefault {
-        padding: 15px;
+    margin-top: 5px;
+    a.btnDefault {
+        padding: 10px 20px;
+        > span {
+            @extend .flex;
+            @extend .flex-middle;
+        }
+        i {
+            font-size: 18px;
+            margin-right: 10px;
+        }
+    }
+}
+.continue-shopping {
+    margin-top: 20px;
+    a.btnAlisverisDevam {
+        font-family: $bold;
+        font-size: 18px;
+        color: $primary;
+        > span {
+            @extend .flex;
+            @extend .flex-middle;
+        }
+        i {
+            font-size: 24px;
+            margin-right: 10px;
+        }
     }
 }
 
@@ -209,9 +287,31 @@ $gap1: 20px;
     }
     .ems-cart-summary-coupon-body {
         display: none;
+        position: relative;
+        input {
+            width: 100% !important;
+            padding-top: 6px !important;
+            padding-right: 110px !important;
+        }
+        table {
+            position: absolute;
+            right: 3px;
+            top: 3px;
+            a.btnDefault {
+                padding-left: 10px;
+                padding-right: 10px;
+                min-width: 100px;
+            }
+        }
+        [id$="lblHCK_HATA"] {
+            display: block;
+            padding: 10px;
+            &:empty {
+                display: none;
+            }
+        }
     }
     &.opened {
-        background: red;
         margin-bottom: 20px;
         .ems-cart-summary-coupon-body {
             display: block;
@@ -263,6 +363,22 @@ $gap1: 20px;
     }
 }
 
+//widgets
+.ems-page-cart {
+    .widget-appreciate {
+        margin-top: 50px;
+        margin-bottom: 0;
+        .swiper-title {
+            text-align: left;
+            padding: 20px 0;
+        }
+        .swiper-inner {
+            background: #fff;
+            padding: 0;
+        }
+    }
+}
+
 @media screen and (max-width: $breakpoint-large) {
     %singleColFix {//.ems-container fix
         margin-left: -20px;
@@ -289,20 +405,81 @@ $gap1: 20px;
             max-width: $rightColMobile;
         }
     }
+    
+    //compact order pages mobile-large
+    .compact-order-pages {
+        .navbar-container {
+            height: auto;
+        }
+        .mobile-header {
+            .mbHeader {
+                .mBurger,
+                .mbSearch,
+                .mbCart {
+                    display: none !important;
+                }
+            }
+        }
+    }
 
     //siparis adimlar mobile-large
     .tabloTabBtnAdim {
-        margin-top: 65px;
-        > tbody {
-            width: 320px;
-            margin: 0 auto;
-            display: table;
+        position: relative;
+        left: 0;
+        top: 0;
+        z-index: auto;
+        transform: none;
+        max-width: none;
+    }
+
+    //bildiri mobile-large
+    .notification-wrapper {
+        h3 {
+            margin-bottom: 10px;
+            padding-left: $gap1;
+            padding-right: $gap1;
         }
+        .notification {
+            margin-left: $gap1 / 2;
+            margin-right: $gap1 / 2;
+        }
+    }
+
+    //sepet grid mobile-large
+    .ems-grid-cart {
+        .ems-grid-row {
+            flex-wrap: wrap;
+        }
+    }
+    .continue-shopping {
+        display: none;
+    }
+
+    //sepet ozet mobile-large
+    .ems-cart-summary {
+        max-width: $rightColMobile;
+        margin-top: 30px;
+        padding-left: $gap1;
+        padding-right: $gap1;
+    }
+
+    //widgets mobile-large
+    .ems-page-cart {
+        .widget-appreciate {
+            display: none !important;
+        }
+    }
+}
+
+@media screen and (max-width: $breakpoint-small) {
+    //siparis adimlar mobile small
+    .tabloTabBtnAdim {
+        padding-top: 10px;
         td {
             > span {
                 width: #{100% / 3};
                 > a {
-                    line-height: 25px;
+                    line-height: 30px;
                     > span {
                         > * {
                             display: block;
@@ -312,21 +489,13 @@ $gap1: 20px;
                         }
                         &:after {
                             position: absolute;
-                            left: 50%;
+                            right: -50%;
                             top: 10px;
-                            width: 55px;
+                            width: 50%;
                         }
                     }
                 }
             }
         }
-    }
-
-    //sepet ozet mobile-large
-    .ems-cart-summary {
-        max-width: $rightColMobile;
-        margin-top: 30px;
-        padding-left: $gap1;
-        padding-right: $gap1;
     }
 }

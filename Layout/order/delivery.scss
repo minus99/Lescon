@@ -2,6 +2,17 @@
     position: relative;
 }
 
+//adres yoksa
+.empty-order {
+    .ems-page-cart-wrapper {
+        @extend .flex-wrap;
+    }
+    .ems-page-new-address {
+        margin: 30px auto 0;
+        max-width: 500px;
+    }
+}
+
 //yeni adres & fatura adresi
 .address-bottom {
     margin-top: 20px;
