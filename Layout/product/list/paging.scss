@@ -62,3 +62,21 @@
         }
     }
 }
+
+@media screen and (max-width: $breakpoint-large){
+    .ems-prd-list-paging-bottom{
+        padding: 30px 30px 55px;
+        .urunPaging_pageNavigation{
+            max-width: 300px;
+            overflow: hidden;
+
+            flex-wrap: wrap;
+            [id$="ascPagingDataAlt_lblPaging"]{
+            }
+            .tumunuGoster{
+                margin-top: 24px;
+                width: 100%;
+            }
+        }
+    }
+}

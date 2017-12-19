@@ -31,13 +31,13 @@
                 width: 50px;
                 z-index: 5;
                 .thumb-pager{
-                    height: 300px;
-                    overflow: hidden;
                     .swiper-inner{
                         width: 100% !important;
                     }
         
                     ul.thumb-wrp {
+                        height: 300px;
+                        overflow: hidden;
                         li {    
                             width: 50px;
                             height: 52px;

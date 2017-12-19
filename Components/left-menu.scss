@@ -1,0 +1,122 @@
+// emos sol menü
+.kutuSolMenuTree{
+    padding-right: 30px;
+    .kutuHeaderSolMenuTree, .kutuFooterSolMenuTree{
+        display: none;
+    }
+    .kutuBodySolMenuTree{
+        > ul{
+            .sev1{
+                display: none;
+                &.sel{
+                    display: block;
+                    > a{
+                        display: inline-block;
+                        width: 100%;
+                        font-family: $bold;
+                        font-size: 36px;
+                        font-weight: bold;
+                        line-height: 1.08;
+                        letter-spacing: -1.2px;
+                        color: $primary;
+                        margin-bottom: 15px;
+                        pointer-events: none;
+                    }
+                }
+            }
+            .sev2{
+                > a{
+                    font-family: $regular;
+                    font-size: 14px;
+                    line-height: 2.57;
+                    color: $text-1;
+                }
+                &.act{
+                    > a{
+                        font-family: $demiBold;
+                        font-weight: 600;
+                    }
+                }
+
+                &.extra-menu-start{
+                    padding-top: 15px;
+                    margin-top: 15px;
+                    position: relative;
+                    &:before{
+                        content: "";
+                        display: inline-block;
+                        width: calc(80%);
+                        height: 1px;
+                        background: #dde2e7;
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                    }
+                }
+
+                &.linkout{
+                    > a{
+                        &:after{
+                            @extend [class^="icon-"];
+                            @extend .icon-linkout:before;
+                            margin-left: 5px;
+                            color: $text-2;
+                        }
+                    }
+                }
+            }
+        }
+    }    
+}
+
+.member-menu-selecbox,
+.kutu-body-sol-menu-selecbox{
+    display: none;
+    position: relative;
+    .sStyler{
+        display: inline-block;
+        position: relative;
+        width: 100%;
+        height: 50px;
+        padding: 25px 20px 6px;
+        font-family: $demiBold;
+        font-size: 14px;
+        font-weight: 600;
+        color: $primary;
+        clear: both;
+        &:after{
+            @extend [class^="icon-"];
+            @extend .icon-tri-bottom:before;
+            display: inline-block;
+            font-size: 10px;
+            float: right;
+            margin-top: -2px;
+        }
+    }
+    .minusSelectBox{
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 50px;
+        padding: 20px;
+    }
+}
+
+@media screen and (max-width: $breakpoint-large){
+    // emos sol menü
+    .kutuSolMenuTree{
+        padding-right: 0;
+        .kutuBodySolMenuTree{
+            display: none;
+        }
+    }
+    
+    .member-menu-selecbox,
+    .kutu-body-sol-menu-selecbox{
+        display: block;
+    }
+
+    .member-menu-selecbox + .member-menu{
+        display: none;
+    }
+}

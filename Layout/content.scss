@@ -1,0 +1,24 @@
+// Hakkimizda
+.page-in-content{
+    display: block;
+    margin-bottom: 30px;
+    h3{
+        font-family: $bold;
+        font-size: 18px;
+        font-weight: bold;
+        color: $primary;
+        margin-top: 25px;
+        margin-bottom: 15px;
+    }
+    span, p{
+        font-family: $regular;
+        font-size: 16px;
+        line-height: 1.81;
+        color: $text-1;
+    }
+}
+
+
+@media screen and (max-width: $breakpoint-large){
+    
+}

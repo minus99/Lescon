@@ -40,3 +40,9 @@
         display: none;
     }
 }
+
+@media screen and (max-width: $breakpoint-large){
+    .ems-prd-list-prop{
+        display: none;
+    }
+}

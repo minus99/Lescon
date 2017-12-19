@@ -9,6 +9,10 @@
         .ems-prd{
             width: 20%;
             margin-bottom: 40px;
+            border: 1px solid $white;
+            &:hover{
+                border: 1px solid #dde2e7;
+            }
         }
         
         /*Ürün arası banner*/
@@ -46,8 +50,6 @@
         .ems-prd-inner{
             position: relative;
             overflow: hidden;
-            margin-right: 10px;
-            margin-left: 10px;
             //margin-bottom: 10px;
         }
 
@@ -242,7 +244,7 @@
             
             /*Ürün arası banner*/
             .ems-prd-alternate{
-                width: 100%;
+                width: calc(100% + 20px);
                 margin-left: -10px;
                 margin-right: -10px;
             }

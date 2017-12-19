@@ -18,9 +18,7 @@
 }
 
 .btn-primary:focus,
-.btn-primary:hover,
-.btn-primary:visited,
-.btn-primary:active{
+.btn-primary:hover{
     background: $secondary-hover;
     color: $white;
 }
@@ -31,9 +29,7 @@
     color: $primary;
 }
 .btn-secondary:focus,
-.btn-secondary:hover,
-.btn-secondary:visited,
-.btn-secondary:active{
+.btn-secondary:hover{
     border: 2px solid $primary-hover;
     background: $primary-hover;
     color: $white;
@@ -45,9 +41,7 @@
     color: $white;
 }
 .btn-alternative:focus,
-.btn-alternative:hover,
-.btn-alternative:visited,
-.btn-alternative:active{
+.btn-alternative:hover{
     background: $primary-hover;
     color: $white;
 }
@@ -58,9 +52,7 @@
     color: $white;
 }
 .btn-secondary-white:focus,
-.btn-secondary-white:hover,
-.btn-secondary-white:visited,
-.btn-secondary-white:active{
+.btn-secondary-white:hover{
     border: 2px solid $white;
     background: $white;
     color: $primary;
@@ -76,13 +68,10 @@
     text-align: center;
 }
 .btn-links:focus,
-.btn-links:hover,
-.btn-links:visited,
-.btn-links:active{
+.btn-links:hover{
     background: $linkBg;
     color: $primary;
 }
-
 
 
 //SYSTEM BUTTON
@@ -129,9 +118,9 @@ a.btnArama,
 a.btnKiyaslamaListemeDon,
 a.btnSepetGuncelle,
 a.btnSepetBosalt,
-
 a.btnBultenGonder,
 a.btnFiyatDus,
-a.btnKutuLogout {
+a.btnKutuLogout,
+a.btnAlisverisDevam {
     @extend .btn-reset;
 }

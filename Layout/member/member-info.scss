@@ -1,0 +1,19 @@
+.ems-page-default-info{
+    .mobile-phone{
+        .cepTelAlan{
+            width: 38px !important;
+            padding-right: 0 !important;
+        }
+        .cepTelNo{
+            width: calc(100% - 38px) !important;
+        }
+    }
+    .btnUyeBilgi{
+        width: 100%;
+        padding-top: 16px;
+        padding-bottom: 15px;
+    }
+    .ems-field:not(.bulletin):not(.sms){
+        max-width: 280px;
+    }
+}

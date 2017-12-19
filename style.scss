@@ -18,8 +18,10 @@
 @import 'Components/navbar';
 @import 'Components/slider';
 @import 'Components/form';
-
 @import 'Components/grid';
+@import 'Components/dropdown';
+@import 'Components/left-menu';
+@import 'Components/widget';
 
 //LAYOUT
 @import 'Layout/header';
@@ -29,7 +31,11 @@
 @import 'Layout/footer';
 @import 'Layout/product/z_compile';
 @import 'Layout/createStyle/z_compile';
+@import 'Layout/member/z_compile';
 @import 'Layout/login';
 @import 'Layout/404';
+@import 'Layout/stores';
+@import 'Layout/content';
+@import 'Layout/contact-form';
 
-@import 'Layout/order/z_compile';
+//@import 'Layout/order/z_compile';

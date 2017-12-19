@@ -13,7 +13,45 @@
     padding-top: 22.5px;
     border-right: 1px solid #dde2e7;
     .urunNavigasyon{
-        margin-bottom: 30px;
+        margin-bottom: 30px;    
+        [id$="lblNavigation"]{
+            align-items: initial;
+            flex-wrap: wrap;
+            > *{
+                float: left;
+            }
+        }
+        .nav-home{
+            &:after{
+                margin-right: 7px;
+            }
+        }
+        i{
+            margin: 0 7px 0 5px;
+            &.toggle-nav-btn{
+                display: flex;
+                align-items: center;
+                &:before{
+                    order: 2;
+                }
+                &:after{
+                    content: "...";
+                    display: flex;
+                    align-items: flex-end;
+                    font-family: $regular;
+                    font-size: 14px;
+                    color: $text-1;
+                    order: 1;
+                    height: 100%;
+                    margin-right: 7px;
+                    cursor: pointer;
+                    
+                }
+            }
+        }
+        .nav-hidden{
+            display: none;
+        }
     }
 }
 .ems-col-right{
@@ -30,6 +68,7 @@
     width: 100%;
     background: $lightBg;
     padding: 12px 20px;
+    margin-bottom: 40px;
     a{
         display: flex;
         align-items: center;
@@ -41,6 +80,49 @@
             font-size: 24px;
             font-weight: 400;
             margin-right: 4px;
+        }
+    }
+}
+
+//navigasyon açık
+.ems-nav-opened{
+    .ems-col-left{
+        .urunNavigasyon{
+            margin-bottom: 30px;    
+            [id$="lblNavigation"]{
+                align-items: initial;
+                flex-wrap: wrap;
+                > *{
+                    float: left;
+                }
+            }
+            a:not(.nav-home):not(.navigasyonSeviye1){
+                width: 100%;
+                &:before{
+                    content:"";
+                    display: inline-block;
+                    width: 6.6px;
+                    height: 22.6px;
+                    border-width: 0 0 1px 1px;
+                    border-style: solid;
+                    border-color: #dde2e7;
+                    margin-top: 2px;
+                    margin-right: 5px;
+                }
+                &.navigasyonSeviye2{
+                    padding-left: 50px;
+                }
+                &.navigasyonSeviye3{
+                    padding-left: 65px;
+                }
+            }
+            
+            .nav-hidden{
+                display: inline-block;
+            }
+            .icon-tri-right2{
+                display: none;
+            }
         }
     }
 }

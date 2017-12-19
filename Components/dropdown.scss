@@ -1,0 +1,36 @@
+.dropdown-menu{
+    .h3, h3{
+        display: block;
+        margin-bottom: 15px;
+    }
+    .mobile-title{
+        display: none;
+    }
+
+    > ul{
+        display: block;
+        li{
+            > a{
+                font-family: $regular;
+                font-size: 14px;
+                line-height: 2.57;
+                color: $text-1;
+            }
+            .lvl2{
+                display: none;
+            }
+            &.selected{
+                > a{
+                    font-family: $demiBold;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+}
+
+.sStylerMainWrp.sStylerWrp_select{
+    position: relative;
+    width: 100%;
+    /*display: inline-block;*/
+}

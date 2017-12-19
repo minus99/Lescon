@@ -1,3 +1,5 @@
+
+/* Banner Tekli Görünüm*/
 .banner-holder{
     position: relative;
     min-height: 300px;
@@ -19,6 +21,274 @@
                     margin-left: 0;
                 }
             }
+        }
+    }
+}
+
+.ems-hb-only-row{
+    display: flex;
+    position: relative;
+    min-height: 300px;
+    margin-bottom: 20px;
+
+    .hb-only-img{
+        img{
+            visibility: hidden;
+            height: 100%;
+        }
+    }
+
+    .hb-only-desc{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        padding: 59px;
+        .h2{ margin-bottom: 5px; }
+        .h4{}
+        .button-group{
+            margin-top: 37px;
+            a{
+                margin-left: 40px;
+                &:first-child{
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+}
+
+
+/* Homebanner 2 li görünüm */
+.ems-hb-row{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    .ems-hb-col{
+        width: calc(50% - 10px);
+    }
+
+    .ems-hb-inner{
+        position: relative;
+        margin-bottom: 20px;
+        &:after{
+            content: "";
+            position: absolute;
+            z-index: 1;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            opacity: 0.25;
+            background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), #000000);
+        }
+    }
+
+    .ems-hb-content{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        padding: 59px;
+        z-index: 2;
+
+        &.bottom-right{
+            display: flex;
+            justify-content: flex-end;
+            align-content: flex-end;
+            flex-wrap: wrap;
+            text-align: right;
+        }
+        
+        .h2{
+            margin-bottom: 18px;
+            width: 100%;
+        }
+        .h4{
+            font-size: 18px;
+            width: 100%;
+        }
+        .button-group{
+            margin-top: 23px;
+        }
+    }
+}
+
+/* Size özel ve Çok Satanlar Banner START */
+.widget-wrapper{
+    margin-top: 80px;
+}
+
+.widget-special-for, .widget-best-seller{
+    .swiper-title{
+        h4{
+            font-size: 36px;
+            line-height: 1;
+        }
+    }
+    .swiper-inner{
+        padding-top: 35px;
+    }
+    .swiper-slide{
+        margin-bottom: 50px;
+    }
+    .swiper-button-prev,
+    .swiper-button-next,
+    .swiper-pagination{
+        display: none;
+    }
+}
+
+.widget-best-seller{
+    .swiper-inner{
+        overflow: auto;
+        .swiper-wrapper{
+            flex-wrap: wrap;
+        }
+    }
+}
+/* Size özel ve Çok Satanlar Banner END */
+
+
+/* Teknolojiler START*/
+.ems-ht-wrapper{
+    margin-top: 30px;
+    margin-bottom: 80px;
+    .ems-ht-row{
+        display: flex;
+        justify-content: flex-start;
+        margin: 0 -10px;
+        .ems-ht-col{
+            width: calc((100% - 40px) / 3);
+            margin-left: 10px;
+            margin-right: 10px;
+            .ems-ht-inner{
+                position: relative;
+                overflow: hidden;
+                .ems-ht-content{
+                    position: absolute;
+                    left: 0;
+                    bottom: -90px;
+                    transition: all 0.4s cubic-bezier(0.8, 0, 0.5, 1);
+                    width: 100%;
+                    text-align: center;
+                    padding: 40px;
+                    .h2{
+                        font-family: $demiBold;
+                        line-height: 1;
+                    }
+                    .h4{
+                        line-height: 1;
+                    }
+                    .btn{
+                        margin-top: 21px;
+                    }
+                }
+            }
+            &:hover{
+                .ems-ht-inner{
+                    .ems-ht-content{
+                        bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+/* Teknolojiler END*/
+
+
+@media screen and (max-width: $breakpoint-large){
+    /* Banner Tekli Görünüm*/
+    .banner-holder{
+        margin: 0 -20px;
+        //background: none !important;
+        background-size: auto 220px;
+        background-position: top right;
+
+        .content-image{
+            .img-responsive{
+                height: 220px;
+            }
+        }
+        .content-holder{
+            position: initial;
+            padding: 23px 20px 30px;
+            align-items: center;
+            .h2{ 
+                font-size: 24px;
+                color: $primary;
+             }
+            .h4{
+                color: $primary;
+            }
+            .button-group{
+                display: flex;
+                a{
+                    min-width: auto;
+                    padding: 6px 15px;
+                    margin: 0 4.5px;
+                    color: $primary;
+                }
+                .btn-secondary-white{
+                    border: 2px solid $primary;
+                    color: $primary;
+
+                    &:hover{
+                        border: 2px solid $primary-hover;
+                        background: $primary-hover;
+                        color: $white;
+                    }
+                }
+            }
+        }
+    }
+
+    .ems-hb-only-row{
+        margin: 0 -20px;
+        min-height: auto;
+        flex-wrap: wrap;
+        .hb-only-img{
+            min-height: 220px;
+            width: 100%;
+            background-position: center right;
+        }
+    
+        .hb-only-desc{
+            position: initial;
+            padding: 23px 20px 30px;
+            align-items: center;
+            .h2{ 
+                color: $primary;
+            }
+            .h4{
+                color: $primary;
+            }
+            .button-group{
+                display: flex;
+                margin-top: 27px;
+                a{
+                    min-width: auto;
+                    padding: 6px 15px;
+                    margin: 0 4.5px;
+                    color: $primary;
+                }
+                .btn-secondary-white{
+                    border: 2px solid $primary;
+                    color: $primary;
+
+                    &:hover{
+                        border: 2px solid $primary-hover;
+                        background: $primary-hover;
+                        color: $white;
+                    }
+                }
+            }
+        }
+        &:not(.hb-cover){
+            background: $lightBg;
         }
     }
 }

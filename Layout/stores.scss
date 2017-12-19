@@ -1,0 +1,249 @@
+.mod-service-list-header{
+    margin-bottom: 49px;
+    .ems-form-inner{
+        display: flex;
+        .ems-field{
+            width: 24%;
+            max-width: 180px;
+            &.ulke, .keyword{
+                display: none;
+            }
+            margin-top: 0 !important;
+            margin-left: 20px;
+            &.sehir{
+                margin-left: 0;
+            }
+            select{
+                width: 100%;
+                height: 50px;
+                padding: 6px 10px;
+            }
+            .btnSrvArama{
+                padding-top: 15px;
+                padding-bottom: 15px;
+            }
+            .select{
+                width: 38%;
+                max-width: 280px;
+            }
+        }
+    }
+}
+
+.mod-service-list-body{
+    .servis_bilgi{
+        display: none;
+    }
+}
+
+.service-list-group{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 45px;
+    margin-bottom: 45px;
+    .pServisListe{
+        display: flex;
+        flex-wrap: wrap;
+        flex-basis: 50%;
+        align-content: flex-start;
+        max-width: 340px;
+        font-family: $regular;
+        font-size: 16px;
+        color: $text-1;
+
+        > div{
+            width: 100%;
+        }
+
+        + .pServisListe{
+            margin-left: 100px;
+        }
+
+        .divServisListe_{
+            &FirmaAdi{
+                font-family: $bold;
+                font-size: 18px;
+                font-weight: bold;
+                color: $primary;  
+                margin-bottom: 15px;  
+
+                order: 1;
+            }
+            &Adres{
+                margin-bottom: 20px;
+                order: 2;
+            }
+            &Telefon{
+                order: 3;
+                a{
+                    span:before{
+                        content: $lbf_Telefon;
+                        display: inline-block;
+                        margin-right: 3px;
+                    }
+                }
+            }
+            &Fax{
+                order: 4;
+                a{
+                    span:before{
+                        content: $lbf_Fax;
+                        display: inline-block;
+                        margin-right: 3px;
+                    }
+                }
+            }
+            
+            &Email{
+                order: 5;
+                a{
+                    span:before{
+                        content: $lbf_Eposta;
+                        display: inline-block;
+                        margin-right: 3px;
+                    }
+                }
+            }
+            &Koordinat{
+                order: 6;
+                margin-top: 15px;
+                > a{
+                    font-family: $demiBold;
+                    font-size: 14px;
+                    font-weight: 600;
+                    color: $primary;
+                    .gs1, .gs2{
+                        align-items: center;
+                    }
+                    .gs2{
+                        display: none;
+                        i{
+                            margin-right: 7px;
+                        }
+                    }
+                }
+            }
+
+            &DepoSec, &Yetkili, &ServisTur, &WebAdresi, &tdResim, &UlkeSehirSemt{
+                display: none;
+            }
+        }
+
+        &.selected{
+            .divServisListe_{
+                &Koordinat{
+                    > a{
+                        .gs1{
+                            display: none;
+                        }
+                        .gs2{
+                            display: flex;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+.address-detail{
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+    transition: height .4s cubic-bezier(0.8,0,0.5,1);
+    
+    .map{
+        height: 340px;
+    }
+
+    .back-btn, .left-column{
+        display: none;
+    }
+    &.opened{
+        height: 340px;
+        visibility: visible;
+    }
+    
+}
+
+@media screen and (max-width: $breakpoint-large){
+    .mod-service-list-header{
+        margin-bottom: 0px;
+        .page-top-title{
+            display: none;
+        }
+        .ems-form-inner{
+            flex-wrap: wrap;
+            .ems-field{
+                width: 100%;
+                max-width: 100%;
+                margin-left: 0;
+                + .ems-field{
+                    margin-top: 10px !important;
+                }
+                select{
+                    width: 100%;
+                    height: 50px;
+                    padding: 6px 10px;
+                }
+                .btnSrvArama{
+                    width: 100%;
+                    margin-top: 10px;
+                }
+                .select{
+                    width: 100%;
+                    max-width: 100%;
+                }
+            }
+        }
+    }
+    
+    .mod-service-list-body{
+        .servis_bilgi{
+            display: none;
+        }
+    }
+    
+    .service-list-group{
+        margin: 35px 0 0;
+        .pServisListe{
+            flex-basis: 100%;
+            max-width: 100%;
+            font-size: 14px;
+            
+            + .pServisListe{
+                margin-left: 0;
+                margin-top: 35px;
+            }
+    
+            &.selected{
+                .divServisListe_{
+                    &Koordinat{
+                        > a{
+                            .gs1{
+                                display: none;
+                            }
+                            .gs2{
+                                display: flex;
+                            }
+                        }
+                    }
+                }
+            }
+    
+        }
+    }
+    
+    .address-detail{
+        margin-top: 25px;
+        .map{
+            height: 192px;
+        }
+        &.opened{
+            height: 192px;
+        }
+        
+    }
+}

@@ -1,0 +1,85 @@
+.pageSifremiUnuttum{
+    .pageHeaderSifremiUnuttum{
+        font-family: $bold;
+        font-size: 24px;
+        font-weight: bold;
+        color: $primary;
+        margin-bottom: 30px;
+    }
+    .pageDescSifremiUnuttum{
+        font-family: $regular;
+        font-size: 14px;
+        color: $text-1;
+        margin-bottom: 20px;
+    }
+    table{
+        display: table !important;
+    }
+    .tableSifremiUnuttum{
+        > tbody{
+            > tr{
+                th{
+                    font-family: $regular;
+                    font-size: 12px;
+                    font-weight: 400;
+                    color: $text-2;
+                }
+            }
+        }
+        [id$="divCaptcha"]{
+            display: flex;
+            position: relative;
+            margin-bottom: 20px;
+            #imgCaptcha,
+            [id$="txtUYE_KONTROLKODU"]{
+                width: 50%;
+            }
+
+            [id$="lbfUYE_KONTROLKODU"]{
+                position: absolute;
+                left: calc(50% + 10px);
+                top: 6px;
+
+                font-family: $regular;
+                font-size: 12px;
+                color: $text-2;
+
+                transition: all .2s ease-in-out;
+                pointer-events: none;
+            }
+            
+            .captchaYenile,
+            br{
+                display: none;
+            }
+        }
+        .ems-field-forgot{
+            position: relative;
+            margin-bottom: 20px;
+            [id$="lbfUYE_EMAIL"]{
+                position: absolute;
+                left: 10px;
+                top: 6px;
+                
+                font-family: $regular;
+                font-size: 12px;
+                color: $text-2;
+
+                transition: all .2s ease-in-out;
+                pointer-events: none;
+            }
+        }
+    }
+    .pageLogin_btnUyeSifreGonder{
+        *{
+            width: 100%;
+        }
+    }
+}
+
+@media screen and (max-width: $breakpoint-large){
+    .pageSifremiUnuttum{
+        margin: 0;
+        width: 100%;
+    }
+}
