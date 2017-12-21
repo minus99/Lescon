@@ -209,7 +209,7 @@ $gap1: 20px;
 .cart-cfg {
     margin-top: 5px;
     a.btnDefault {
-        padding: 10px 20px;
+        padding: 10px 20px !important;
         > span {
             @extend .flex;
             @extend .flex-middle;
@@ -451,8 +451,9 @@ $gap1: 20px;
             flex-wrap: wrap;
         }
     }
+    .cart-cfg,
     .continue-shopping {
-        display: none;
+        display: none !important;
     }
 
     //sepet ozet mobile-large

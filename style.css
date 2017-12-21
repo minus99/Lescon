@@ -4685,6 +4685,9 @@ a.btnSepetBosalt,
 a.btnBultenGonder,
 a.btnFiyatDus,
 a.btnKutuLogout,
+a.btnAdresEkle,
+a.btnOnBilgilendirmeFormOnizle,
+a.btnSatisSozlesmeOnizle,
 a.btnAlisverisDevam, .btn-reset:focus, a.btnFavoriEkle:focus,
 .lnkTaksitSecenek:focus,
 a.btnClear:focus,
@@ -4707,6 +4710,9 @@ a.btnSepetBosalt:focus,
 a.btnBultenGonder:focus,
 a.btnFiyatDus:focus,
 a.btnKutuLogout:focus,
+a.btnAdresEkle:focus,
+a.btnOnBilgilendirmeFormOnizle:focus,
+a.btnSatisSozlesmeOnizle:focus,
 a.btnAlisverisDevam:focus, .btn-reset:hover, a.btnFavoriEkle:hover,
 .lnkTaksitSecenek:hover,
 a.btnClear:hover,
@@ -4729,6 +4735,9 @@ a.btnSepetBosalt:hover,
 a.btnBultenGonder:hover,
 a.btnFiyatDus:hover,
 a.btnKutuLogout:hover,
+a.btnAdresEkle:hover,
+a.btnOnBilgilendirmeFormOnizle:hover,
+a.btnSatisSozlesmeOnizle:hover,
 a.btnAlisverisDevam:hover, .btn-reset:visited, a.btnFavoriEkle:visited,
 .lnkTaksitSecenek:visited,
 a.btnClear:visited,
@@ -4751,6 +4760,9 @@ a.btnSepetBosalt:visited,
 a.btnBultenGonder:visited,
 a.btnFiyatDus:visited,
 a.btnKutuLogout:visited,
+a.btnAdresEkle:visited,
+a.btnOnBilgilendirmeFormOnizle:visited,
+a.btnSatisSozlesmeOnizle:visited,
 a.btnAlisverisDevam:visited, .btn-reset:active, a.btnFavoriEkle:active,
 .lnkTaksitSecenek:active,
 a.btnClear:active,
@@ -4773,6 +4785,9 @@ a.btnSepetBosalt:active,
 a.btnBultenGonder:active,
 a.btnFiyatDus:active,
 a.btnKutuLogout:active,
+a.btnAdresEkle:active,
+a.btnOnBilgilendirmeFormOnizle:active,
+a.btnSatisSozlesmeOnizle:active,
 a.btnAlisverisDevam:active {
   color: inherit;
   background-color: inherit;
@@ -5003,7 +5018,11 @@ input[type="radio"]:checked {
   background: #fff;
   padding: 22px;
   color: #0c2048;
-  cursor: pointer; }
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
   .ddWrapper .ddTitle i {
     font-size: 16px;
     position: absolute;
@@ -5077,21 +5096,28 @@ input[type="radio"]:checked {
     -webkit-box-flex: 2.5;
     -ms-flex: 2.5;
     flex: 2.5; }
-  .ems-grid-default .ems-grid-price [id$="INDIRIMLIFIYAT"] {
-    -webkit-box-ordinal-group: 2;
-    -ms-flex-order: 1;
-    order: 1; }
-  .ems-grid-default .ems-grid-price .gridSepetListe_gercekFiyat {
-    -webkit-box-ordinal-group: 3;
-    -ms-flex-order: 2;
-    order: 2;
-    font-size: 12px;
-    color: #8d9098;
-    text-decoration: line-through; }
+  .ems-grid-default .ems-grid-price {
+    white-space: nowrap; }
+    .ems-grid-default .ems-grid-price [id$="INDIRIMLIFIYAT"] {
+      -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+      order: 1; }
+    .ems-grid-default .ems-grid-price .gridSepetListe_gercekFiyat {
+      -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+      order: 2;
+      font-size: 12px;
+      color: #8d9098;
+      text-decoration: line-through; }
+    .ems-grid-default .ems-grid-price-total {
+      white-space: nowrap; }
   .ems-grid-default .ems-grid-piece .piece-wrapper > a {
     font-size: 10px;
-    padding: 3px 5px; }
+    line-height: 30px;
+    padding: 0 10px; }
   .ems-grid-default .ems-grid-piece .piece-wrapper > input {
+    padding-top: 6px;
+    height: 30px;
     border: 1px solid #e2e8ef;
     text-align: center; }
   .ems-grid-default .ems-grid-delete {
@@ -5124,7 +5150,7 @@ input[type="radio"]:checked {
     .ems-grid-default .ems-grid-address-buttons > a {
       position: relative;
       display: block;
-      margin-top: 20px;
+      margin-top: 5px;
       color: #3f444d; }
       .ems-grid-default .ems-grid-address-buttons > a:first-child {
         margin-top: 15px; }
@@ -5141,6 +5167,37 @@ input[type="radio"]:checked {
           border-color: #26df2e; }
         .ems-grid-default .ems-grid-address-buttons > a.emos_selected:hover {
           color: inherit; }
+      .ems-grid-default .ems-grid-address-buttons > a.btnAdresListeSil {
+        color: #fc2d55; }
+
+@media screen and (max-width: 960px) {
+  .ems-grid-default > div {
+    padding: 10px; }
+  .ems-grid-default .ems-grid-img {
+    -webkit-box-flex: 0;
+    -ms-flex-positive: 0;
+    flex-grow: 0;
+    -ms-flex-preferred-size: 60px;
+    flex-basis: 60px; }
+  .ems-grid-default .ems-grid-address-info {
+    padding-right: 10px; }
+  .ems-grid-default .ems-grid-address-buttons {
+    -ms-flex-preferred-size: auto;
+    flex-basis: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+    .ems-grid-default .ems-grid-address-buttons > a {
+      margin-top: 0;
+      margin-left: 25px;
+      padding-left: 0;
+      padding-right: 0; }
+      .ems-grid-default .ems-grid-address-buttons > a:first-child {
+        margin-top: 0;
+        margin-left: 0; } }
 
 .ems-pm-row {
   display: -webkit-box;

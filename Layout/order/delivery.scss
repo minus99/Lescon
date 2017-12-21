@@ -16,19 +16,19 @@
 //yeni adres & fatura adresi
 .address-bottom {
     margin-top: 20px;
-}
-a.btnAdresEkle {
-    i {
-        font-size: 8px;
-        margin-right: 3px;
-        vertical-align: 2px;
+    a.btnAdresEkle {
+        i {
+            font-size: 8px;
+            margin-right: 3px;
+            vertical-align: 2px;
+        }
     }
-}
-.dvFarkliFatAdrSec {
-    @extend .flex;
-    @extend .flex-middle;
-    > input {
-        margin-right: 10px;
+    .dvFarkliFatAdrSec {
+        @extend .flex;
+        @extend .flex-middle;
+        > input {
+            margin-right: 10px;
+        }
     }
 }
 
@@ -82,6 +82,82 @@ a.btnAdresEkle {
     }
 }
 
+//yeni adres
+.add-new-address-body {
+    .ems-page-cart-colmn-2 {
+        max-width: 580px;
+        margin: 0 auto;
+    }
+}
+.ems-page-new-address {
+    .page-top-title {
+        position: relative;
+        text-align: center;
+    }
+    a.btnAdresIptal {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        @extend .btn-reset;
+        font-size: 18px;
+        > span {
+            @extend .flex;
+            @extend .flex-middle;
+        }
+        i {
+            font-size: 24px;
+            margin-right: 10px;
+        }
+    }
+    .ems-form {
+        background: #fff;
+        margin: 30px auto 0;
+        padding-bottom: 20px;
+        .ems-form-inner {
+            .ems-field {
+                &:not(.adresTip) {
+                    max-width: 280px;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+                &.adresTip {
+                    .ems-form-label {
+                        display: none;
+                    }
+                    .ems-form-obj {
+                        @extend .flex;
+                        > a {
+                            flex: 1;
+                            text-align: center;
+                            padding: 15px 5px;
+                            background: $linkBg;
+                            &.emos_selected {
+                                background: $white;
+                                color: $secondary;
+                            }
+                        }
+                    }
+                }
+                &.not-TC {
+                    @extend .flex;
+                    @extend .flex-middle;
+                    .ems-form-label {
+                        position: static;
+                        order: 2;
+                    }
+                    .ems-form-obj {
+                        order: 1;
+                    }
+                }
+                a.btnAdresKaydet {
+                    display: block;
+                }
+            }
+        }
+    }
+}
+
 @media screen and (max-width: $breakpoint-large) {
     //teslimat grid mobile-large
     .ems-grid-address {
@@ -101,11 +177,11 @@ a.btnAdresEkle {
                 border-top: 1px solid $lines;
             }
         }
-    }
-    a.btnAdresEkle, .dvFarkliFatAdrSec {
-        display: flex;
-        padding: 20px;
-        text-align: left;
+        a.btnAdresEkle, .dvFarkliFatAdrSec {
+            display: flex;
+            padding: 20px !important;
+            text-align: left;
+        }
     }
 
     //teslimat tab mobile-large

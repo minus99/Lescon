@@ -402,6 +402,11 @@
     }
 }
 
+//odeme butonu
+a.btnSiparisOnay {
+    background: $alternative;
+}
+
 @media screen and (max-width: $breakpoint-large) {
     //odeme tipi tab
     .ems-cart-pay-tab {
@@ -455,6 +460,11 @@
         }
     }
 
+    //kart gorunumu
+    .ems-card-wrapper {
+        display: none !important;
+    }
+
     //taksitler mobile-large
     .pageOdemeBilgi_odemeTaksit {
         position: static;
@@ -479,5 +489,13 @@
     //sozlesmeler mobile-large
     .siparisOnaySozlesme {
         margin-bottom: 0;
+    }
+    .onBilgilendirmeFormMetin,
+    .siparisOnaySozlesmeMetin {
+        > span {
+            > * {
+                transform: scale(.9);
+            }
+        }
     }
 }
