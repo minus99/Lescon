@@ -11,6 +11,12 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-ruler:before {
+  content: "\e931";
+}
+.icon-football:before {
+  content: "\e932";
+}
 .icon-basket-null:before {
   content: "\e930";
 }

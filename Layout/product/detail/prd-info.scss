@@ -20,7 +20,9 @@
 
         .ems-prd-info{
             display: inline-block;
+            width: 100%;
             > div{
+                display: inline-block;
                 margin-right: 10px;
                 &:last-child{
                     margin-right: 0;
@@ -40,6 +42,10 @@
                     color: #ffffff;
                     margin-bottom: 14px;
                 }
+            }
+            .ems-prm-cargo-free{
+                display: none;
+                margin-right: 0;
             }
         }
 
@@ -192,9 +198,6 @@
         }
 
         .ems-prd-flex-controller{
-            .ems-prd-size-chart{
-                display: none;
-            }
             .ems-prd-size{
                 .sStylerMainWrp{
                     display: none;
@@ -434,6 +437,30 @@
             margin-top: 24px;
             display: flex;
             justify-content: space-evenly;
+            
+            .ems-prd-size-chart{
+                > a{
+                    display: inline-block;
+                    max-width: 100px;
+                    text-align: center;
+                    outline: 0;
+                    i{
+                        color: $primary;
+                        display: block;
+                        text-align: center;
+                        margin-bottom: 4px;
+                        font-size: 0;
+                        &:before{
+                            font-size: 24px;
+                        }
+                    }
+                    span{
+                        font-family: $regular;
+                        font-size: 14px;
+                        color: #3f444d;
+                    }
+                }
+            }
             .ems-prd-give-me-discount,
             .ems-prd-add-to-cart-favorites{
                 > a{
@@ -487,6 +514,26 @@
     }
 }
 
+.spr1{
+    .ems-prm-cargo-free{
+        display: inline-block !important;
+        border-radius: 2px;
+        background-color: #26d5df;
+        padding: 0 8px 0 9px;
+        font-family: $demiBold;
+        font-size: 14px;
+        font-weight: 600;
+        text-align: center;
+        color: #ffffff;
+        margin-bottom: 14px;
+        margin-right: 10px;
+        &:before{
+            content: $kargoBedava;
+        }
+    }
+}
+
+
 @media screen and (max-width: $breakpoint-large){
 
     .ems-prd-detail-inner {
@@ -500,20 +547,6 @@
                     margin-right: 10px;
                     &:last-child{
                         margin-right: 0;
-                    }
-                }
-                .ems-prm-cargo-info,
-                .ems-prm-stock-info{
-                    > span:not(empty){
-                        display: inline-block;
-                        border-radius: 2px;
-                        background-color: #26d5df;
-                        padding: 0 8px 0 9px;
-                        font-family: $demiBold;
-                        font-size: 14px;
-                        font-weight: 600;
-                        text-align: center;
-                        color: #ffffff;
                     }
                 }
             }

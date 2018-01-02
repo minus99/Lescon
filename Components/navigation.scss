@@ -5,44 +5,150 @@
     height: 43px;
 }
 
-.urunNavigasyon{
-    >span{
-        display: flex;
-        align-items: center;
-    }
-    a{
-        font-family: $regular;
-        font-size: 14px;
-        text-align: left;
-        color: #3f444d;
-    }
-    i{
-        display: inline-block;
-        margin: 0 9px 0 5px;
-        font-size: 0;
-        vertical-align: middle;
-        &:before{
-            font-size:7px;
-            color: #8d9098;
+// ürün detay navigasyon
+.ems-product-detail{
+    .urunNavigasyon{
+        display: block !important;
+        >span{
+            display: flex;
+            align-items: center;
         }
-    }
-    .nav-home{
+        a{
+            font-family: $regular;
+            font-size: 14px;
+            text-align: left;
+            color: #3f444d;
+        }
         i{
+            display: inline-block;
+            margin: 0 9px 0 5px;
+            font-size: 0;
+            vertical-align: middle;
             &:before{
-                font-size: 15px;
-                font-weight: 900;
-                color: $primary;
+                font-size:7px;
+                color: #8d9098;
             }
         }
-        &:after{
-            @extend [class^="icon-"];
-            @extend .icon-tri-right2:before;
+        .nav-home{
+            i{
+                &:before{
+                    font-size: 15px;
+                    font-weight: 900;
+                    color: $primary;
+                }
+            }
+            &:after{
+                @extend [class^="icon-"];
+                @extend .icon-tri-right2:before;
+    
+                display: inline-block;
+                margin: 0 8px 0 5px;
+                font-size:7px;
+                color: #8d9098;
+                vertical-align: middle;
+            }
+        }
+    }
+}
 
-            display: inline-block;
-            margin: 0 8px 0 5px;
-            font-size:7px;
-            color: #8d9098;
-            vertical-align: middle;
+//ürün liste navigasyon
+.ems-page-list{
+    .urunNavigasyon{
+        margin-bottom: 30px;
+        [id$="lblNavigation"]{
+            > *{
+                float: left;
+            }
+        }
+        i{
+            margin: 0 7px 0 5px;
+            &.toggle-nav-btn{
+                display: flex;
+                align-items: center;
+                &:before{
+                    order: 2;
+                }
+                &:after{
+                    content: "...";
+                    display: flex;
+                    align-items: flex-end;
+                    font-family: $regular;
+                    font-size: 14px;
+                    color: $text-1;
+                    order: 1;
+                    height: 100%;
+                    margin-right: 7px;
+                    cursor: pointer;
+                    
+                }
+            }
+        }
+        .nav-hidden{
+            display: none;
+        }
+    }
+}
+
+// ürün liste navigasyon açık hali
+.ems-nav-opened{
+    .ems-page-list{
+        .urunNavigasyon{
+            .nav-home{
+                &:after{
+                    display: none;
+                }
+            }
+            [id$="lblNavigation"]{
+                align-items: flex-start;
+            }
+            i{
+                &.icon-tri-right2{
+                    display: none;
+                }
+                &.toggle-nav-btn{
+                    display: flex;
+                    height: 19px;
+                    &:after{
+                        display: none;
+                    }
+                }
+            }
+            
+            .nav-hidden{
+                display: inline-block;
+            }
+
+            .olNavigasyon{
+                padding-top: 2px;
+                > li:not(.nav-home):not(.navigasyonSeviye1){
+                    display: block;
+                    &:before{
+                        content:"";
+                        display: inline-block;
+                        width: 6.6px;
+                        height: 22.6px;
+                        border-width: 0 0 1px 1px;
+                        border-style: solid;
+                        border-color: #dde2e7;
+                        margin-top: 2px;
+                        margin-right: 5px;
+                    }
+                    &.navigasyonSeviye2{
+                        padding-left: 4px;
+                    }
+                    &.navigasyonSeviye3{
+                        padding-left: 19px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $breakpoint-large){
+    .ems-page-list{
+        .urunNavigasyon{
+            margin-bottom: 0px;
         }
     }
 }

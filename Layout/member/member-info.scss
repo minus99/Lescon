@@ -16,4 +16,15 @@
     .ems-field:not(.bulletin):not(.sms){
         max-width: 280px;
     }
+    
+}
+
+.member-menu{
+    > ul {
+        li {
+            &.selected{
+                color: $primary;
+            }
+        }
+    }
 }

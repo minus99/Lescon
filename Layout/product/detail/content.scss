@@ -69,6 +69,45 @@
                         width: 100%;
                         margin-top: 54px;
                         margin-bottom: 20px;
+                        &:empty{
+                            + .popupTaksit{
+                                margin-top: -40px;
+                            }
+                        }
+                    }
+                    .payment-info__detail{
+                        display: flex;
+                        border: 1px solid #dde2e7;
+                        margin-bottom: 20px;
+                        background: $linkBg;
+                        .row{
+                            width: 33.3%;
+                            padding: 10px;
+                            display: flex;
+                            flex-wrap: wrap;
+                            border-right: 1px solid #dde2e7;
+                            &:last-child{
+                                border-right: 0px solid #dde2e7;
+                            }
+                            .header{
+                                width: 100%;
+                                font-size: 14px;
+                                font-family: $demiBold;
+                                color: $primary;
+                                margin-bottom: 5px;
+                            }
+                            .price{
+                                width: 100%;
+                                font-size: 14px;
+                                font-family: $regular;
+                                color: $text-1;
+                            }
+                        }
+                        + div{
+                            font-size: 14px;
+                            font-family: $regular;
+                            color: $text-1;
+                        }
                     }
                 }
             }
@@ -113,6 +152,7 @@
                 font-weight: bold;
                 color: $primary;
                 margin-bottom: 18px;
+                border-bottom: 0px solid #fff;
             }
             .popupTaksit_lbfAciklama{
                 margin-bottom: 50px;
@@ -391,6 +431,37 @@
                     line-height: 1;
                 }
             }
+        }
+    }
+
+    .ems-tab-detail{
+        .ems-tab-inner{
+    
+            .content-js{
+                li{
+                    &[rel="tab-payment"]{
+                        .content-detail{
+                            &:empty{
+                                + .popupTaksit{
+                                    margin-top: -30px;
+                                }
+                            }
+                        }
+                        .payment-info__detail{
+                            flex-wrap: wrap;
+                            .row{
+                                width: 100%;
+                                border-right: 0px solid #dde2e7;
+                                border-bottom: 1px solid #dde2e7;
+                                &:last-child{
+                                    border-bottom: 0px solid #dde2e7;
+                                } 
+                            }
+                        }
+                    }
+                }
+            }
+    
         }
     }
     

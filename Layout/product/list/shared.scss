@@ -1,7 +1,3 @@
-.ems-page.ems-page-list{
-
-}
-
 .ems-container-full{
     display: flex;
 }
@@ -12,47 +8,7 @@
     padding-right: 30px;
     padding-top: 22.5px;
     border-right: 1px solid #dde2e7;
-    .urunNavigasyon{
-        margin-bottom: 30px;    
-        [id$="lblNavigation"]{
-            align-items: initial;
-            flex-wrap: wrap;
-            > *{
-                float: left;
-            }
-        }
-        .nav-home{
-            &:after{
-                margin-right: 7px;
-            }
-        }
-        i{
-            margin: 0 7px 0 5px;
-            &.toggle-nav-btn{
-                display: flex;
-                align-items: center;
-                &:before{
-                    order: 2;
-                }
-                &:after{
-                    content: "...";
-                    display: flex;
-                    align-items: flex-end;
-                    font-family: $regular;
-                    font-size: 14px;
-                    color: $text-1;
-                    order: 1;
-                    height: 100%;
-                    margin-right: 7px;
-                    cursor: pointer;
-                    
-                }
-            }
-        }
-        .nav-hidden{
-            display: none;
-        }
-    }
+    
 }
 .ems-col-right{
     width: calc(100% - 250px);
@@ -84,56 +40,22 @@
     }
 }
 
-//navigasyon açık
-.ems-nav-opened{
-    .ems-col-left{
-        .urunNavigasyon{
-            margin-bottom: 30px;    
-            [id$="lblNavigation"]{
-                align-items: initial;
-                flex-wrap: wrap;
-                > *{
-                    float: left;
-                }
-            }
-            a:not(.nav-home):not(.navigasyonSeviye1){
-                width: 100%;
-                &:before{
-                    content:"";
-                    display: inline-block;
-                    width: 6.6px;
-                    height: 22.6px;
-                    border-width: 0 0 1px 1px;
-                    border-style: solid;
-                    border-color: #dde2e7;
-                    margin-top: 2px;
-                    margin-right: 5px;
-                }
-                &.navigasyonSeviye2{
-                    padding-left: 50px;
-                }
-                &.navigasyonSeviye3{
-                    padding-left: 65px;
-                }
-            }
-            
-            .nav-hidden{
-                display: inline-block;
-            }
-            .icon-tri-right2{
-                display: none;
-            }
+.active-paging{
+    .list-page-cover-wrp{
+        .seo-desc-wrp{
+            display: none !important;
         }
     }
 }
 
-
 @media screen and (max-width: $breakpoint-large){
-    .ems-page.ems-page-list{
-        
-    }
     
     .ems-container-full{
+        flex-wrap: wrap;
+    }
+
+    .ems-special-col-full{
+        width: 100%;
     }
     
     .ems-col-left{
@@ -153,9 +75,9 @@
         }
 
         .ems-col-inner{
-            height: calc(100vh - 110px);
+            height: calc(100% - 50px);
             overflow: auto;
-            padding: 20px 20px 0;
+            padding: 20px 20px 30px;
         }
 
     }
@@ -168,12 +90,4 @@
             left: 0;
         }
     }
-    
 }
-
-
-
-
-
-
-

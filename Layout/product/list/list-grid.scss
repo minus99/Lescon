@@ -219,14 +219,50 @@
     }
 }
 
-
 @media screen and (max-width: $breakpoint-large){
     
     .ems-prd-list{
         ul.emosInfinite{
+            margin-bottom: -40px;
+            .ems-prd-discount{
+                .urunListe_pnlIndirimOran{
+                    font-size: 12px;
+                }
+            }
+            
+            .ems-prd-status{
+                .urunListe_yeniUrun{
+                    font-size: 12px;
+                }
+            }
+            .urunListe_pnlIndirimOran,
+            .ems-prd-status .urunListe_yeniUrun{
+                height: 16px !important;
+            }
             .ems-prd-image{
                 height: 125px;
                 padding-top: 10px;
+            }
+            .ems-prd-content-bottom{
+                padding: 14px 10px 15px;
+            }
+            .ems-prd-price{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                .ems-prd-price-selling{
+                    .urunListe_satisFiyat{
+                        font-size: 14px;
+                    }
+                }
+                .ems-prd-price-first{
+                    .urunListe_brutFiyat{
+                        font-size: 12px;
+                    }
+                }
+                > span + span{
+                    margin-left: 6px;
+                }
             }
         }
     }
@@ -239,7 +275,7 @@
             margin-right: 10px;
             .ems-prd{
                 width: 50%;
-                margin-bottom: 40px;
+                margin-bottom: 20px;
             }
             
             /*Ürün arası banner*/
@@ -247,6 +283,25 @@
                 width: calc(100% + 20px);
                 margin-left: -10px;
                 margin-right: -10px;
+                min-height: 220px;
+            }
+
+            .ems-prd-price{
+                margin-left: -5px;
+                margin-right: -5px;
+                .ems-prd-price-selling{
+                    .urunListe_satisFiyat{
+                        font-size: 13px;
+                    }
+                }
+                .ems-prd-price-first{
+                    .urunListe_brutFiyat{
+                        font-size: 11px;
+                    }
+                }
+                > span + span{
+                    margin-left: 4px;
+                }
             }
         }
     }

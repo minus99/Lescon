@@ -6,20 +6,9 @@
     .swiper-title{
         text-align: center;
     }
-
     .swiper-inner{
-        padding-top: 20px;
-    }
-
-    .swiper-slide{
-        width: calc(25% - 1px);
-        padding: 20px 0 0;
-        margin-bottom: 50px;
-        border: solid 1px $white;
-        transition: all 0.4s cubic-bezier(0.8, 0, 0.5, 1);
-        &:hover{
-            border: solid 1px #dde2e7;
-        }
+        /*padding-top: 20px;*/
+        padding-top: 10px;
     }
 
     .ems-prd-mask{
@@ -123,7 +112,6 @@
     }
     
     .ems-prd-stock{
-        /*margin-bottom: 25px;*/
         height: 16px;
         .urunListe_urunStokUyari{
             text-align: center;
@@ -152,6 +140,22 @@
         }
     }
 
+    
+    
+}
+
+.widget-special-for,
+.widget-best-seller{
+    .swiper-slide{
+        width: calc(25% - 1px);
+        padding: 20px 0 0;
+        margin-bottom: 50px;
+        border: solid 1px $white;
+        transition: all 0.4s cubic-bezier(0.8, 0, 0.5, 1);
+        &:hover{
+            border: solid 1px #dde2e7;
+        }
+    }
     .swiper-slide{
         &:hover{
             .ems-prd-content-bottom{
@@ -162,5 +166,19 @@
             }
         }
     }
-    
+}
+
+@media screen and (max-width: $breakpoint-large){
+    .system-widget{
+        .swiper-slide{
+            width: auto;
+        }
+
+        .ems-prd-discount{
+            .urunListe_pnlIndirimOran{
+                left: 20px;
+            }
+        }
+        
+    }
 }
