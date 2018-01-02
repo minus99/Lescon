@@ -22,6 +22,7 @@
 @import 'Components/dropdown';
 @import 'Components/left-menu';
 @import 'Components/widget';
+@import 'Components/popup';
 
 //LAYOUT
 @import 'Layout/header';
@@ -37,5 +38,7 @@
 @import 'Layout/stores';
 @import 'Layout/content';
 @import 'Layout/contact-form';
+
+@import 'Layout/last.scss';
 
 //@import 'Layout/order/z_compile';

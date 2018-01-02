@@ -58,6 +58,10 @@
 }
 
 
+.suggestions-popup{
+    display: none;
+}
+
 @media screen and (max-width: $breakpoint-large){
 
     .ems-page-detail{
@@ -84,6 +88,10 @@
                     margin: 0 auto;
                 }
             }
+        }
+
+        .ems-prd-detail-bottom{
+            border-top: 1px solid rgba(0,0,0,0);
         }
 
     }

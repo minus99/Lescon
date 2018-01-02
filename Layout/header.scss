@@ -53,6 +53,9 @@
                     font-size: 20px;
                 }
             }
+            &.userLogin{
+                display: none !important;
+            }
         }
         .find-store{
             display: flex;
@@ -231,6 +234,22 @@
 }
 
 
+//
+.ems-login{
+    .nav-mobile-menu{
+        .mobile-menu-header{
+            .mbLogin{
+                &.userLogoff{
+                    display: none !important;
+                }
+                &.userLogin{
+                    display: flex !important;
+                }
+            }
+        }
+    }
+}
+
 // Desktop Header
 .navbar-container {
     position: relative;
@@ -311,6 +330,9 @@
                     }
                 }
                 .ems-mb-search-close{ display: none; }
+                .last-search-suggest-wrapper{
+                    display: none;
+                }
             }
             .searchSuggestDiv{
                 position: absolute;
@@ -498,10 +520,28 @@
                 background: rgba(0,0,0,0);
                 transition: all .4s cubic-bezier(0.8,0,0.5,1);
             }
-            > span > i{
-                margin-right: 11.2px;
-                font-size: 20px;
-                vertical-align: middle;
+            > span{
+                display: flex;
+                align-items: center;
+                height: 100%;
+                > i,
+                > a > i{
+                    margin-right: 11.2px;
+                    font-size: 20px;
+                }
+                a.btn-signin{
+                    display: flex;
+                    align-items: center;
+                    height: 100%;
+                }
+                a:not(.btn-signin){
+                    display: inline-block;
+                    position: absolute;
+                    top: 0;
+                    left:0;
+                    width: 100%;
+                    height: 100%;
+                }
             }
         }
         .mod-mini-login-body{
@@ -621,13 +661,13 @@
 }
 .ems-logoff {
     .sub.login,
-    [id$="lbfKUTU_HESABIM"]{ display: none; }
+    [id$="lbfKUTU_HESABIM"]{ display: none !important; }
     
 }
 .ems-login {
     .sub.logoff,
     .ems-user-info,
-    [id$="lbfkutuUyeGiris1"]{ display: none; }
+    [id$="lbfkutuUyeGiris1"]{ display: none !important; }
 }
 
 // CART
@@ -956,6 +996,11 @@
                         display: none;
                     }
                 }
+                [id$="lbfkutuUyeGiris1"]{
+                    span{
+                        display: none;
+                    }
+                }
             }
             .mod-mini-login-body{
                 transform: translateX(-70%);
@@ -970,7 +1015,7 @@
                     margin-right: 0;
                 }
                 [id$="lbfKUTU_SEPET"]{
-                    > span{
+                    span{
                         display: none;
                     }
                 }
@@ -1202,6 +1247,16 @@
     .search-fixed-ready{
         .navbar-item-search{
             left: 0;
+        }
+    }
+
+
+    .search-focused,
+    .mini-login-ready,
+    .mini-cart-ready,
+    .main-menu-ready{
+        &:before{
+            display: none;
         }
     }
 }

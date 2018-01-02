@@ -1,0 +1,117 @@
+// sepet sözlesme inputlar
+.pageSiparisOnay_lbfOnBilgilendirmeForm, .pageSiparisOnay_lbfSatisSozlesme{
+    
+    padding: 0;
+    font-family: $regular;
+    font-weight: 400;
+    margin-bottom: 10px;
+    u{
+        font-weight: 600;
+    }
+}
+.pageSiparisOnay_chkSatisSozlesme, .pageSiparisOnay_chkOnBilgilendirmeForm{
+    align-items: flex-start !important;
+}
+
+// sepet ödeme top
+.ems-cart-pay-tab > ul > li > a{
+    padding: 17px 20px !important;
+}
+
+//sepet ilk step sağ 
+.ems-page-cart-step0 .ems-cart-summary {
+    margin-top: 39px !important;
+}
+
+.ems-page-cart-colmn{
+    .ems-grid-default.obj-step0{
+        .ems-grid-price{
+            .satBrFiyat{ display: none !important; }
+            .satBrFiyatVrg{ display: block !important; }
+        }
+        .ems-grid-price-total{
+            .netFiyat{ display: none !important; }
+            .netFiyatVrg{ display: block !important; }
+        }
+    }
+}
+
+/****************************** Sepet masterpass***/
+/*
+.masterpassContent{
+    display: inline-block !important;
+    [id$="lbfSIP_MASTERPASSKAYDET_FL"],
+    .masterpassAciklama{
+        font-family: $regular;
+        font-size: 14px;
+        font-weight: 400;
+        color: $text-1;
+    }
+    .masterpassKaydet,
+    .masterPassForms{
+        display: inline-block !important;
+    }
+    .masterPassForms{
+        margin-top: 15px;
+    }
+}
+.masterpass_cardList{
+    display: block !important;
+}
+*/
+
+.masterpass_cardList,
+.masterpass_linkCard{
+    display: none !important;
+}
+
+
+/*sepet*/
+.ems-cart-ntf-append-wrapper{
+    .kargoBilgi{
+        margin-top: 17px;
+        display: block;
+        text-align: center;
+        font-family: $demiBold;
+        font-size: 14px;
+        font-weight: 600;
+        color: $alternative;
+        > span{
+            display: block;
+        }
+    }
+}
+
+// sepet styler
+.tableOdemeBilgiKrediKarti{
+    .sStylerWrp_select{
+        width: calc(50% - 6.5px) !important;
+        display: inline-block;
+        + .sStylerWrp_select{
+            margin-left: 13px;
+        }
+        .sStyler{
+            font-family: $regular;
+            font-size: 14px;
+            color: $text-2;
+        }
+    }
+    select{
+        position: absolute;
+        left: 0;
+        top: 0;
+        min-width: 100% !important;
+        height: 100%;
+    }
+    
+}
+@media screen and (max-width: $breakpoint-large){
+    .tableOdemeBilgiKrediKarti{
+        .sStylerWrp_select{
+            width: 50% !important;
+            + .sStylerWrp_select{
+                margin-left: 0;
+            }
+        }
+    }
+}

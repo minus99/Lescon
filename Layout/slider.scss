@@ -18,7 +18,17 @@
         justify-content: flex-end;
         padding: 45px;
         z-index: 1;
-        .prdImg{ position: absolute; z-index: -1;}
+        .prdImg{ 
+            position: absolute;
+            z-index: -1;
+            height: 240px;
+            max-height: 50%;
+            top: 50%;
+            transform: translateY(-85%);
+            img{
+                height: 100%;
+            }
+        }
         .title{
             .h1{ color: $white; }
         }
@@ -41,7 +51,7 @@
     .main-showcase{
         margin-bottom: 0px;
         .swiper-slide{
-            background-size: auto 190px;
+            background-size: 100% 190px;
             background-position: top center;
             font-size: 0;
             > img{
@@ -54,13 +64,10 @@
             padding: 23px 50px 29px;
             .prdImg{ 
                 z-index: 1;
-                width: 62.8%;
-                top: 50px;
+                top: 95px;
                 left: 50%;
-                transform: translateX(-50%);
-                > img{
-                    width: 100%;
-                }
+                transform: translate(-50%, -50%);
+                max-height: 90px;
             }
             .title{
                 .h1{ color: $primary; }

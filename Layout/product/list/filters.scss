@@ -25,10 +25,16 @@
                         font-family: $regular;
                         font-size: 14px;
                         color: $text-1;
+                        + i.filter-count{
+                            display: none !important;
+                        }
                     }
                     &.s2{
                         margin-left: 10px;
                         margin-bottom: 0;
+                        > a {
+                            display: none;
+                        }
                         &:first-child{
                             margin-top: 10px;
                         }
@@ -123,6 +129,9 @@
                                     background: $secondary;
                                     border-color: $secondary-hover;
                                 }
+                                + i.filter-count{
+                                    display: none !important;
+                                }
                             }
                         }
                     }
@@ -132,31 +141,27 @@
                 &.renk{
                     table{
                         width: 100%;
-                        tbody{
-                            tr{
-                                
-                            }
-                        }
                     }
                     .urunKiyaslamaOzellik_ozellikIcerik{
                         .urunKiyaslamaOzellik_ozellik{
                             a{
-                                display: flex;
-                                justify-content: flex-start;
-                                align-items: center;
+                                display: inline-block;
                                 margin-top: 2px;
                                 margin-bottom: 20px;
+                                padding-left: 27px;
 
                                 position: relative;
                                 &:before{
                                     content: "";
+                                    position: absolute;
+                                    left: 0;
+                                    top: 50%;
+                                    transform: translateY(-50%);
                                     display: inline-block;
                                     width: 18px; 
                                     height: 18px;
                                     background: $white;
                                     border: 1px solid #dde2e7;
-                                    margin-top: -2px;
-                                    margin-right: 9px;
                                     transition: all .4s cubic-bezier(0.8,0,0.5,1);
                                 }
                                 &.link_selected{
@@ -164,6 +169,13 @@
                                         background: $secondary;
                                         border: 1px solid $secondary-hover;
                                     }
+                                }
+                                + i.filter-count{
+                                    font-family: $regular;
+                                    font-size: 14px;
+                                    color: $text-1;
+                                    font-style: normal;
+                                    margin-left: 6px;
                                 }
                             }
                         }
@@ -185,15 +197,15 @@
     .urunKiyaslamaOzellik_ozellik{
         position: relative;
     }
+
     //temizle btn
     .urunKiyaslamaOzellik_temizle{
         display: none;
+        position: absolute;
+        top: 0;
+        right: 0;
+        font-size: 0;
         [id$="lbflnkPrmTemizle"]{
-            display: inline-block;
-            position: absolute;
-            top: 0;
-            right: 0;
-            font-size: 0;
             &:before{
                 @extend [class^="icon-"];
                 @extend .icon-trash-cut:before;
@@ -228,109 +240,95 @@
         
         // Kategoriler
         &.kutuKategori{
+            margin-bottom: 25px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #dde2e7;
+            &.kapali{
+                margin-bottom: 20px;
+                padding-bottom: 15px;
+            }
             .kutuHeaderDefault{
-                margin-bottom: 11px;
-                span{
-                    font-family: $bold;
-                    font-size: 18px;
-                    font-weight: bold;
-                    color: $primary;
-                    cursor: pointer;
+                &.kapali{
+                    margin-bottom: 0;
                 }
             }
             .kutuBodyDefault{
-                display: block;
-                margin-bottom: 20px;
+                margin-bottom: 0;
                 ul{
-                    display: inline-block;
-                    width: 100%;
                     li{
-                        display: block;
-                        margin-bottom: 10px;
                         &.s1{
                             a{
-                                display: block;
-                                font-family: $regular;
-                                font-size: 14px;
-                                color: $text-1;
                             }
                         }
                         &.s2{
-                            margin-left: 10px;
-                            margin-bottom: 0;
                             &:first-child{
-                                margin-top: 10px;
                             }
                         }
                     }
                 }
             }
             .kutuFooterDefault{
-                display: none;
             }
         }
     
         // Özellik filtre seti
         &.kutuOzellikFiltre{
             .kutuHeaderDefault{
-                display: none;
+
             }
             .kutuBodyDefault{
                 [id$="dtParametre"]{
-                    width: 100%;
                 }
                 .urunKiyaslamaOzellik_ozellik{
                     &#dvUrunKiyaslamaOzellik{
-                        display: block;
-                        margin-bottom: 34px;
                         &.kapali{
-                            margin-bottom: 11px;
                             .urunKiyaslamaOzellik_ozellikAd{
-                                margin-bottom: 0;
                             }
                         }
                     }
                     .urunKiyaslamaOzellik_ozellikAd{
-                        display: block;
-                        margin-bottom: 22px;
-                        font-family: $bold;
-                        font-size: 18px;
-                        font-weight: bold;
-                        color: $primary;
-                        cursor: pointer;
                         .mobile-element-filter-span-select{
-                            display: none;
                         }
                     }
     
                     .urunKiyaslamaOzellik_temizle{
-                        display: none;
                     }
     
                     // filtre font style
                     .urunKiyaslamaOzellik_ozellikIcerik{
                         .urunKiyaslamaOzellik_ozellik{
                             a{
-                                font-family: $regular;
-                                font-size: 14px;
-                                color: $text-1;
                             }
                         }
                     }
+
+                    //mob settings
+                    &.beden,
+                    &.renk{
+                        margin-bottom: 25px !important;
+                        padding-bottom: 10px;
+                        border-bottom: 1px solid #dde2e7;
+                        &.kapali{
+                            margin-bottom: 20px !important;
+                            padding-bottom: 15px;
+                        }
+                        
+                        .urunKiyaslamaOzellik_temizle{
+                            &:not(:empty){
+                                display: inline-block;
+                            }
+                        }
+                    }
+
                     // Beden filtre tasarım
                     &.beden{
                         table{
-                            width: 100%;
                             tbody{
-                                display: flex;
-                                flex-wrap: wrap;
-                                justify-content: flex-start;
-                                margin-bottom: -19px;
+                                margin-bottom: -5px;
                                 tr{
-                                    margin-right: 18px;
-                                    margin-bottom: 19px;
                                     &:nth-child(3n){
-                                        margin-right: 0;
+                                        margin-right: 18px;
+                                        margin-bottom: 19px;
                                     }
                                 }
                             }
@@ -338,19 +336,9 @@
                         .urunKiyaslamaOzellik_ozellikIcerik{
                             .urunKiyaslamaOzellik_ozellik{
                                 a{
-                                    width: 50px;
-                                    height: 30px;
-                                    display: flex;
-                                    justify-content: center;
-                                    align-items: center;
-                                    border: 1px solid #dde2e7;
-                                    position: relative;
-                                    
-                                    transition: all .4s cubic-bezier(0.8,0,0.5,1);
                                     &.link_selected{
-                                        color: $white;
-                                        background: $secondary;
-                                        border-color: $secondary-hover;
+                                        border-color: $primary-hover;
+                                        background: $primary;
                                     }
                                 }
                             }
@@ -359,42 +347,21 @@
     
                     // Renk filtre tasarım
                     &.renk{
-                        margin-bottom: 0 !important;
                         table{
-                            width: 100%;
                         }
                         .urunKiyaslamaOzellik_ozellikIcerik{
                             .urunKiyaslamaOzellik_ozellik{
                                 a{
-                                    display: flex;
-                                    justify-content: flex-start;
-                                    align-items: center;
-                                    margin-top: 2px;
-                                    margin-bottom: 20px;
-    
-                                    position: relative;
                                     &:before{
-                                        content: "";
-                                        display: inline-block;
-                                        width: 18px; 
-                                        height: 18px;
-                                        background: $white;
-                                        border: 1px solid #dde2e7;
-                                        margin-top: -2px;
-                                        margin-right: 9px;
-                                        transition: all .4s cubic-bezier(0.8,0,0.5,1);
                                     }
                                     &.link_selected{
-                                        &:before{
-                                            background: $secondary;
-                                            border: 1px solid $secondary-hover;
-                                        }
+                                        font-family: $demiBold;
+                                        font-size: 14px;
+                                        font-weight: 600;
+                                        color: $primary;
                                     }
                                 }
                             }
-                        }
-                        .urunKiyaslamaOzellik_temizle{
-                            display: none;
                         }
                     }
     
@@ -402,19 +369,67 @@
                 }
             }
             .kutuFooterDefault{
-                display: inline-block;
+                display: flex;
                 position: absolute;
                 left: 0;
                 bottom: 0;
                 width: 100%;
                 height: 60px;
+                padding: 10px;
                 background: $lightBg;
+                .urunKiyaslamaOzellik_tumunuTemizle{
+                    display: inline-block !important;
+                    height: 100%;
+                    width: calc(50% - 5px);
+                    a{
+                        &[id$='lnkPrmTumunuTemizle']{
+                            display: inline-block;
+                            height: 100%;
+                            width: 100%;
+                            line-height: 40px;
+                            text-align: center;
+                            
+                            border-radius: 2px;
+                            border: 2px solid $primary;
+                            > span{
+                                display: none;
+                            }
+                            &:before{
+                                content: $lbf_TumunuTemizle;
+                                font-family: $demiBold;
+                                font-size: 14px;
+                                font-weight: 600;
+                                color: $primary;
+                            }
+                            &:hover{
+                                background: $primary;
+                                &:before{
+                                    color: $white;
+                                }
+                            }
+                        }
+                    }
+                }
+                .urunKiyaslamaOzellik_uygula{
+                    display: inline-block !important;
+                    height: 100%;
+                    width: calc(50% - 5px);
+                    margin-left: 10px;
+                    a{
+                        display: inline-block;
+                        width: 100%;
+                        line-height: 40px;
+                        text-align: center;
+                        &:before{
+                            content: $lbf_Uygula;
+                            font-family: $demiBold;
+                            font-size: 14px;
+                            font-weight: 600;
+                            color: $white;
+                        }
+                    }
+                }
             }
-        }
-
-
-        .urunKiyaslamaOzellik_temizle{
-            display: inline-block !important;
         }
     }
 }

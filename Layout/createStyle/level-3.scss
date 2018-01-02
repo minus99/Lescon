@@ -338,7 +338,7 @@
                     }
                 }
                 .lvl-2{
-                    max-height: 183px;
+                    max-height: 245px;
                 }
             }
         }
@@ -388,6 +388,11 @@
                     margin-left: 7.5px;
                 }
             }
+            
+            .first-total-price{
+                display: none;
+            }
+
             .selections{
                 position: absolute;
                 left: 1px;
@@ -755,6 +760,10 @@
                     margin: 0;
                     padding: 0;
                     border: 0;
+                    text-align: center;
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
                     &:after{
                         content: none;
                     }
@@ -762,51 +771,46 @@
                         display: none;
                     }
                     .total-price{
+                        width: 100%;
                         font-family: $bold;
                         font-size: 18px;
                         font-weight: bold;
                         text-align: center;
                         color: #0d2048;
+                        order: 2;
+                    }
+                    .first-total-price{
+                        order: 1;
+                        font-family: $regular;
+                        font-size: 12px;
+                        text-align: center;
+                        color: $text-2;
+                        position: relative;
+                        display: inline-block;
+                        &:before{
+                            content: "";
+                            display: inline-block;
+                            width: 100%;
+                            height: 1px;
+                            background: $text-2;
+                            position: absolute;
+                            left: 0;
+                            top: 50%;
+                            transform: translateY(-50%);
+                        }
                     }
                 }
-    
-                .total-text{
-                }
+                
                 .total-price{
                     &:after{
                     }
                 }
                 .selections{
-                    .item-inner{
-                        .item-img{
-                        }
-                        .item-info{
-                        }
-    
-                        .item-content-left{
-                            .item-name{
-                            }
-                            .item-prc{
-                                .last-price{
-                                    
-                                }
-    
-                                .first-price{
-                                }
-                            }
-                        }
-    
-                        .item-content-right{
-                        }
-                        
-                    }
+                    display: none;
                 }
                 &.opened{
-                    > span{
-                        &:after{
-                        }
-                    }
                     .selections{
+                        display: none;
                     }
                 }
             }

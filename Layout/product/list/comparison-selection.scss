@@ -74,3 +74,31 @@
     }
 }
 
+@media screen and (max-width: $breakpoint-large){
+    .pnlUrunKiyasSecim{
+        padding: 0;
+        margin-top: -40px;
+        .urunKiyaslamaOzellik_secimler{
+            display: none;
+        }
+        .urunKiyaslamaOzellik_tumunuTemizle{
+            margin: 0;
+            width: 100%;
+            background: $primary;
+            color: $white;
+            [id$="lbflnkPrmTumunuTemizle"]{
+                justify-content: center;
+                height: 30px;
+                i{
+                    &:before{
+                        font-size: 16px;
+                    }
+                }
+                span{
+                    color: $white;
+                }
+            }
+        }
+    }
+    
+}
