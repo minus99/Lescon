@@ -40,7 +40,7 @@ select{
 }
 
 //styler select
-.sStylerWrp_select{
+.sStylerWrp_select:not(.member-menu-selecbox){
     background: $linkBg;
     border: 1px solid $linkBg;
     padding: 25px 10px 6px;
@@ -55,7 +55,7 @@ select{
     
     .sStylerWrp{
         position: relative;
-        &:before, &:after{
+        &:after{
             position: absolute;
             right: 0px;
             top:50%;

@@ -1,0 +1,107 @@
+
+
+.ems-page-member .ems-page-default-address{
+
+}
+.ems-page-default-address{
+    position: relative;
+    z-index: 5;
+    .add-new-address{
+        a.btnAdresEkle{
+            display: block;
+            position: absolute;
+            right: 0px;
+            top: 0;
+
+            font-family: $demiBold;
+            font-size: 18px;
+            font-weight: 600;
+            color: $primary;
+            border-radius: 0;
+            i{
+                font-size: 12px;
+            }
+        }
+    }
+
+    .ems-grid-address-buttons{
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding-right: 0;
+        > a{
+            display: inline-block;
+            font-family: $demiBold;
+            font-size: 18px;
+            font-weight: 600;
+            margin-top: 0 !important;
+            &.btnAdresListeGuncelle{
+                padding-right: 10px;
+            }
+        }
+    }
+    .ems-grid-address{
+        .ems-grid-row{
+            padding-left: 0;
+            padding-right: 0;
+            .ems-grid-address-info{
+                padding-left: 0;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $breakpoint-large){
+    .ems-page-default-address{
+        .add-new-address{
+            a.btnAdresEkle{
+                position: fixed;
+                right: 0px;
+                top: initial;
+                bottom: 0; 
+                z-index: 1;
+                background: $primary;
+                left: 0;
+
+                font-size: 14px;
+                color: $white;
+                text-align: center;
+                i{
+                    font-size: 9px;
+                }
+            }
+        }
+    
+        .ems-grid-address-buttons{
+            justify-content: flex-start;
+            padding: 0;
+
+            > a{
+                font-size: 14px !important;
+                margin-top: 0 !important;
+                margin-left: 0 !important;
+                padding-top: 10px;
+                padding-bottom: 15px;
+                &.btnAdresListeGuncelle{
+                    padding-right: 10px;
+                }
+            }
+        }
+        .ems-grid-address{
+            margin: 0 -20px;
+            width: auto;
+            .ems-grid-row{
+                padding: 0 20px;
+                .ems-grid-address-info{
+                    padding-left: 0;
+                }
+            }
+            + .address-bottom{
+                > div + div{
+                    border-top: none;
+                }
+            }
+        }
+        
+    }
+}

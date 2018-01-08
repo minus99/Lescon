@@ -73,7 +73,7 @@
     }
     .mobile-menu-body{
         overflow: auto;
-        height: calc(100vh - 100px);
+        height: calc(100vh - 50px);
         .navbar-nav{
             // BÜTÜN A TAGLARI
             a{
@@ -205,14 +205,21 @@
                         }
                     }
                 }
-            }
-            .sub-menu{
+                
                 > a{
                     font-size: 16px;
                     font-weight: 600;
                     color: $white;
                     padding: 17.5px 20px;
+                    i{
+                        font-size: 0;
+                        &:before{
+                            font-size: 16px;
+                        }
+                    }
                 }
+            }
+            .sub-menu{
                 .nav-content{
                     display: none;
                 }

@@ -1,6 +1,10 @@
 // emos sol menü
 .kutuSolMenuTree{
     padding-right: 30px;
+
+    .sStylerWrp_select:not(.member-menu-selecbox){
+        display: none;
+    }
     .kutuHeaderSolMenuTree, .kutuFooterSolMenuTree{
         display: none;
     }
@@ -108,6 +112,15 @@
         padding-right: 0;
         .kutuBodySolMenuTree{
             display: none;
+        }
+        .sStylerWrp_select:not(.member-menu-selecbox){
+            display: block;
+            padding: 0;
+            .sStylerWrp{
+                &:after{
+                    content: none;
+                }
+            }
         }
     }
     

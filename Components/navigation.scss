@@ -55,6 +55,7 @@
 .ems-page-list{
     .urunNavigasyon{
         margin-bottom: 30px;
+        display: inline-block;
         [id$="lblNavigation"]{
             > *{
                 float: left;
@@ -67,6 +68,8 @@
                 align-items: center;
                 &:before{
                     order: 2;
+                    font-size: 7px;
+                    color: $text-2;
                 }
                 &:after{
                     content: "...";

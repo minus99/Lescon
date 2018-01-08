@@ -9,6 +9,10 @@
         font-family: $regular;
         font-size: 14px;
         color: $text-1;
+        [id$="lblAramaText"],
+        [id$="lblKayitSayisi"]{
+            display: none;
+        }
     }
 
     .ems-prd-list-sort-desktop{

@@ -22,6 +22,15 @@
             
             pointer-events: none;
         }
+        .search-desc{
+            display: block;
+            text-align: center;
+            
+            margin-top: 13px;
+            font-family: $demiBold;
+            font-weight: 600;
+            font-size: 16px;
+        }
         img{
             visibility: hidden;
         }
@@ -208,6 +217,10 @@
     }
 }
 
+.tableTitleArama{
+    display: none;
+}
+
 .mobile-prdList-title-holder{
     display: none;
     padding: 24px 20px 23px;
@@ -296,6 +309,18 @@
             }
             .system-widget .swiper-inner{
                 padding-top: 0;
+            }
+        }
+        &.search{
+            padding: 23px 0 26px;
+            .page-title{
+                display: block;
+                font-size: 20px;
+                line-height: normal;
+                letter-spacing: normal;
+            }
+            .search-desc{
+                font-size: 12px;
             }
         }
     }
