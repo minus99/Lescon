@@ -7082,12 +7082,25 @@ input[type="radio"]:checked {
   -ms-flex-pack: justify;
   justify-content: space-between; }
   .ems-hb-row .ems-hb-col {
-    width: calc(50% - 10px); }
+    width: calc(50% - 10px);
+    overflow: hidden; }
+  .ems-hb-row .ems-hb-col:hover .ems-hb-inner {
+    background-size: 117%; }
+    .ems-hb-row .ems-hb-col:hover .ems-hb-inner:after {
+      opacity: 0.80; }
   .ems-hb-row .ems-hb-inner {
     position: relative;
-    margin-bottom: 20px; }
+    margin-bottom: 20px;
+    -webkit-transition: all 444ms cubic-bezier(0.215, 0.61, 0.355, 1);
+    -o-transition: all 444ms cubic-bezier(0.215, 0.61, 0.355, 1);
+    transition: all 444ms cubic-bezier(0.215, 0.61, 0.355, 1);
+    background-size: 110%;
+    background-position: center; }
     .ems-hb-row .ems-hb-inner:after {
       content: "";
+      -webkit-transition: all 500ms cubic-bezier(0.215, 0.61, 0.355, 1);
+      -o-transition: all 500ms cubic-bezier(0.215, 0.61, 0.355, 1);
+      transition: all 500ms cubic-bezier(0.215, 0.61, 0.355, 1);
       position: absolute;
       z-index: 1;
       width: 100%;
