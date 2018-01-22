@@ -5,8 +5,9 @@
         }
         ul.lvl-2{
             display:flex;
+            flex-wrap: wrap;
             justify-content:space-around;
-            margin: 88px 0;
+            margin: 88px 0 0px;
             li{
                 margin-left: 44px;
                 &:first-child{
@@ -76,11 +77,10 @@
             }
 
             .continue-btn{
-
-                position: absolute;
+                /*position: absolute;
                 bottom: 40px;
                 left: 50%;
-                transform: translateX(-50%);
+                transform: translateX(-50%);*/
             }
 
             &.active{
@@ -89,10 +89,9 @@
             ul.lvl-2{
                 margin: 27px 20px 0;
                 li{
-                    margin-left: 20px;
-                    &:first-child{
-                        margin-left: 0;
-                    }
+                    margin: 10px 0;
+                    width: 40%;
+                    text-align: cen ter;
                     a{
                         i{
                             padding: 25.7px;

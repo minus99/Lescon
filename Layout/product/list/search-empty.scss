@@ -1,0 +1,93 @@
+.ems-search-empty{
+    .ems-col-left,
+    .ems-prd-list,
+    .list-page-cover-wrp.search,
+    footer{
+        display: none;
+    }
+    .ems-col-right{
+        width: 100%;
+    }
+
+    .product-empty{
+        background: $linkBg;
+        min-height: calc(100vh - 81px);
+        padding: 10px 0;
+        text-align: center;
+
+        .err-h3{
+            margin-bottom: 20px;
+        }
+
+        .err-desc{
+            margin-bottom: 32px;
+            font-family: $bold;
+            font-size: 18px;
+            font-weight: bold;
+            color: $primary;
+        }
+        .err-btn{
+            margin-bottom: 48px;
+        }
+    }
+    .prominent-categories-holder{
+        margin-bottom: 80px;
+        > .title{
+            margin-bottom: 22px;
+            font-family: $bold;
+            font-size: 24px;
+            font-weight: bold;
+            color: $primary-hover;
+        }
+        .nav-menu-holder{
+            display: inline-block;
+            margin: 0 auto;
+            ul{
+                display: flex;
+                margin-left: 20px;
+                margin-right: 20px;
+                li{
+                    max-width: 180px;
+                    position: relative;
+                    margin: 0 10px;
+                    .cat-name{
+                        margin-top: 14px;
+                        font-family: $demiBold;
+                        font-size: 14px;
+                        font-weight: 600;
+                        color: $primary-hover;
+                    }
+                    a{
+                        font-size: 0;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $breakpoint-large){
+    .ems-search-empty{
+        .mobile-element-sort-btns{
+            display: none;
+        }
+        .prominent-categories-holder{
+            > .title{
+            }
+            .nav-menu-holder{
+                ul{
+                    flex-wrap: wrap;
+                    li{
+                        width: calc( 50% - 20px);
+                        margin-bottom: 20px;
+                    }
+                }
+            }
+        }
+    }
+}

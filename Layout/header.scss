@@ -339,6 +339,31 @@
                 .ems-mb-search-close{ display: none; }
                 .last-search-suggest-wrapper{
                     display: none;
+                    position: absolute;
+                    width: 100%;
+                    left: 0;
+                    top: calc(100% + 21px);
+                    background: #fff;
+                    padding: 16px;
+                    .last-search-suggest-inner{
+                        h3{
+                            font-size: 18px;
+                            letter-spacing: initial;
+                        }
+                        ul{
+                            &:not(:empty){
+                                margin-top: 17px;
+                            }
+                            li{
+                                a{
+                                    font-family: $regular;
+                                    font-size: 14px;
+                                    color: $text-1;
+                                    margin-bottom: 10px;
+                                }
+                            }
+                        }
+                    }
                 }
             }
             .searchSuggestDiv{
@@ -488,8 +513,13 @@
 }
 
 //search focus
-.search-focused .navbar-item-search {
-    width: 300px;
+.search-focused{
+    .last-search-suggest-wrapper{
+        display: block !important;
+    }
+    .navbar-item-search {
+        width: 300px;
+    }
     .mod-mini-search{
         &:after{
             background: $primary;
@@ -500,8 +530,13 @@
         border-color: #dde2e7;
         border-radius: 3px !important;
     }
+}
+.search-focused.search-keyup .navbar-item-search {
     .searchSuggestDiv{
         width: 500px;
+    }
+    .last-search-suggest-wrapper{
+        display: none !important;
     }
 }
 
@@ -1203,6 +1238,10 @@
                         transform: translateY(-50%);
                         font-size: 16px;
                         color: $text-2;
+                    }
+                    
+                    .last-search-suggest-wrapper{
+                        display: block;
                     }
                 }
                 .searchSuggestDiv{

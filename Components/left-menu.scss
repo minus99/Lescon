@@ -130,6 +130,18 @@
     }
 
     .member-menu-selecbox + .member-menu{
-        display: none;
+        > h3,
+        > ul{
+            display: none;
+        }
+        .mobile-title{
+            display: inline-block;
+            position: absolute;
+            top: 5px;
+            left: 20px;
+            font-size: 12px;
+            font-family: $regular;
+            color: #8d9098;
+        }
     }
 }

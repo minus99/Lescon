@@ -12,7 +12,7 @@
         > li {
             > a {
                 display: block;
-                padding: 17px 50px;
+                padding: 17px 20px;
                 color: $primary;
                 height: 100%;
                 &.emos_selected {
@@ -655,15 +655,24 @@ a.btnSiparisOnay {
     background: $alternative;
 }
 
+//masterpass nedir
+.mp-what{
+    color: $primary;
+    font-family: $demiBold;
+    font-weight: 600;
+}
+
 @media screen and (max-width: $breakpoint-large) {
     //odeme tipi tab
     .ems-cart-pay-tab {
         > ul {
+            flex-wrap: wrap;
             > li {
-                flex: 1;
+                flex: none;
                 > a {
-                    padding: 17px 5px;;
+                    padding: 17px 10px;
                     text-align: center;
+                    font-size: 13px;
                 }
             }
         }

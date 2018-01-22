@@ -1,7 +1,20 @@
 
 
 .ems-page-member .ems-page-default-address{
-
+    .ems-none.address-none{
+        &:not(:empty){
+            display: block !important;
+        }
+        .no-address{
+            .info-text{
+                color: $primary;
+                margin-top: 26px;
+                font-size: 18px;
+                font-family: $bold;
+                font-weight: 700;
+            }
+        }
+    }
 }
 .ems-page-default-address{
     position: relative;

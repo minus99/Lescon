@@ -118,11 +118,13 @@
                     font-family: $regular;
                     font-size: 14px;
                     color: #3f444d;
+                    order: 1;
                 }
 
                 .ems-prd-price{
                     display: flex;
                     flex-direction: column;
+                    order: 3;
                     > span{
                         text-align: center;
                     }
@@ -157,11 +159,16 @@
                 }
 
                 .ems-prd-add{
+                    order: 2;
                     .urunListe_secenek{
                         position: relative;
                          .sStylerWrp_select{
                             display: inline-block;
                             position: relative;
+
+                            background: none;
+                            border: 0px solid #eef3f8;
+                            padding: 0;
                             
                             .sStylerWrp{
                                 display: flex;
@@ -211,13 +218,14 @@
                             display: flex;
                             justify-content: space-between;
                             background-color: #eef3f8;
-                            padding: 6px 19px 5px 10px;
+                            padding: 0px 19px 0px 10px;
                             @include user-select(none);
                             position: relative;                            
                             
                             &:before{
                                 content:"Adet";
-                                display: inline-block;
+                                display: flex;
+                                align-items: center;
                                 font-family: $regular;
                                 font-size: 14px;
                                 font-weight: 400;
@@ -241,6 +249,7 @@
                                 font-size: 14px;
                                 color: #0c2048;
                                 text-align: right;
+                                height: 30px;
                             }
 
                             select{
@@ -259,9 +268,14 @@
                     .ems-prd-price-stockBtn{
                         display: none;
                     }
+                    .ems-prd-price-cartBtn{
+                        margin: initial;
+                        margin-left: auto;
+                    }
                 }
 
                 .btn-item-remove{
+                    order: 4;
                     > span{
                         display: none;
                     }
@@ -310,3 +324,137 @@
         }
     }
 }
+
+@media screen and (max-width: $breakpoint-large){
+    .wizard-add-to-cart{
+        .jconfirm-box{
+            margin-top: 0 !important;
+            margin-bottom: 0 !important;
+            max-height: 100vh !important;
+        }
+        &.jconfirm{
+            .jconfirm-box{
+                .jconfirm-closeIcon{
+                    top:15px;
+                    right: 14px;
+                    .btnMinPpCl:before {
+                        font-size: 20px;
+                    }
+                }
+                .jconfirm-title-c{
+                    padding: 16px 0;
+                    text-align: center;
+                    line-height: 16px;
+                    height: 50px;
+                    .jconfirm-title{
+                        font-size: 16px;
+                    }
+                }
+
+                .jconfirm-content-pane{
+                    height: calc(100vh - 50px) !important;
+                }
+            }
+        }
+
+        //Product List
+        .emosInfinite{
+            flex: 1;
+            overflow: auto;
+            li{
+                padding: 10px 20px 20px;
+                &:last-child{
+                }
+                .ems-prd-inner{
+                }
+
+                .ems-prd-mask{
+                    width: 18%;
+                    padding-right: 10px;
+                }
+                .ems-prd-content{
+                }
+
+                .ems-prd-image{
+                    align-items: flex-start;
+                }
+
+                .ems-prd-content-bottom, .ems-prd-add{
+                }
+
+                .ems-prd-content-bottom{
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+                    .ems-prd-name{
+                        width: 70%;
+                        padding-right: 10px;
+                    }
+
+                    .ems-prd-price{
+                        order: 2;
+                        width: 30%;
+                        text-align: right;
+                    }
+
+                    .ems-prd-stock{
+                    }
+
+                    .ems-prd-add{
+                        order:3;
+                        margin-top: 16px;
+                        width: 90%;
+                        .urunListe_secenek{
+                            
+                        }
+                        .urunListe_sepetGrup{
+                            
+                        }
+                        .ems-prd-price-cartBtn{
+                        }
+                    }
+
+                    .btn-item-remove{
+                        margin-top: 16px;
+                        > span{
+                        }
+                    }
+
+
+
+                }
+            }
+        }
+
+        .popup-bottom-bar{
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 50px;
+            padding: 0;
+            .price-wrp{
+                width: 40%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                .h4{
+                    display: none;
+                }
+                .total-price{
+                    font-size: 18px;
+                }
+            }
+            .btn-all-add-to-cart{
+                border-radius: 0;
+                width: 60%;
+                height: 100%;
+                
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+    }
+}
+

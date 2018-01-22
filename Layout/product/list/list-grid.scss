@@ -179,6 +179,37 @@
                 }
             }
         }
+
+        .ems-prd-group{
+            //display: none;
+            height: 30px;
+            margin-bottom: 10px;
+            .swiper-inner{
+                > ul{
+                    justify-content: center;
+                    text-align: center;
+                    > li{
+                        width: 40px !important;
+                        padding: 0 5px;
+                        display: inline-block;
+                        > a{
+                            display: inline-block;
+                            width: 30px;
+                            height: 30px;
+                            overflow: hidden;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            img{
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+    
+            }
+        }
+
     }
 }
 

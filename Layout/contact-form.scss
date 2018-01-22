@@ -1,18 +1,20 @@
 .ems-page-contact{
-    .xmlForm{
-        [id$="xmlFormBody"]{
-            max-width: 280px;
+    #mesajGonder{
+        .page-top-title,
+        .page-top-desc {
+            display: none;
+        }
+        .ems-form{
+            max-width: 340px;
+            .geneltelefon,
+            .site_textarea,
+            [id$="ascSoruSor_pnlMst"] > select{
+                width: 100% !important;
+            }
         }
     }
-    .xmlFormCaptcha{
-        margin-top:20px;
-    }
-    .xmlForm_btnGonder{
-        display: flex;
-        margin-top: 20px;
-    }
-
 }
+
 
 .contact-info-holder{
     margin-top: 50px;
@@ -35,6 +37,51 @@
             font-family: $regular;
             font-size: 16px;
             color: $text-1;
+        }
+    }
+}
+
+
+// mesajlarım -> mesaj gonder
+.pageMesajGonder{
+    .pageHeaderMesaj,
+    .page-top-desc{
+        display: none;
+    }
+
+    .ems-form{
+        max-width: 340px;
+        .geneltelefon,
+        .site_textarea,
+        [id$="ascSoruSor_pnlMst"] > select{
+            width: 100% !important;
+        }
+    }
+}
+
+
+@media screen and (max-width: $breakpoint-large){
+    .ems-page-contact{
+        #mesajGonder{
+            .ems-form{
+                width: 100%;
+                max-width: 100%;
+            }
+        }
+    }
+    .pageMesajGonder{
+        margin-top: -20px;
+        .pageHeaderMesaj,
+        .page-top-desc{
+            display: none;
+        }
+    
+        .ems-form{
+            width: 100%;
+            max-width: 100%;
+        }
+        .btnMesajGonder{
+            width: 100%;
         }
     }
 }

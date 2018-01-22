@@ -50,6 +50,8 @@
         }
         &-total {
             white-space: nowrap;
+            .topFiyat{ display: none !important; }
+            .topFiyatVrg{ display: block !important;}
         }
     }
     .ems-grid-piece {
@@ -194,7 +196,7 @@
 }
 
 .ems-pm-col-right{
-    padding-top: 54px;
+    padding-top: 46px;
     padding-left: 40px;
     padding-bottom: 50px;
     width: calc(100% - 282px);

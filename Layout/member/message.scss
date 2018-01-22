@@ -1,0 +1,245 @@
+// mesaj listesi
+.ems-page-default-message{
+    position: relative;
+    .page-top-desc{
+        display: none;
+    }
+
+
+    .kutuMesaj{
+        margin-bottom: 44px;
+        .kutuHeaderMesaj{
+            display: none;
+        }
+        .kutuBodyMesaj{
+            display: flex;
+            > div{
+                margin-right: 45px;
+                > a{
+                    font-family: $demiBold;
+                    font-size: 14px;
+                    font-weight: 600;
+                    color: $primary;
+                }
+                
+                &.active{
+                    > a{
+                        color: $secondary;
+                    }
+                }
+                [id$="lbfUYM_SORULAR"],
+                [id$="lbfMSJ_UYEMESAJ_GELENKUTUSU"]{
+                    margin-right: 5px;
+                }
+            }
+            .kutuMesaj_yeni{
+                position: absolute;
+                right: 0;
+                top: 0;
+                margin-right: 0;
+                a{
+                    font-size: 18px;
+                    i{
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+    }
+
+    .ems-grid-message{
+        > div:not(:first-child){
+            border-left: 1px solid #e2e8ef;
+            border-right: 1px solid #e2e8ef;
+            &:nth-child(2){
+                border-top: 1px solid #e2e8ef;
+            }
+        }
+        .ems-grid-header,
+        .ems-grid-row{
+            justify-content: space-between;
+            > div {
+                flex: none;
+            }
+            .col-1{
+                width: 5%;
+            }
+            .col-2{
+                width: 50%;
+            }
+            .col-3{
+                display: none;
+            }
+            .col-4{
+                width: 20%;
+            }
+            .col-5{
+                width: 12%;
+                text-align: center;
+            }
+        }
+        .ems-grid-header{
+            display: none;
+            > div{
+                text-align: center;
+            }
+            .col-1{
+                font-size: 0;
+            }
+
+
+        }
+        > div:first-child{
+            display: flex;
+            padding-top: 0;
+            padding-bottom: 7px;
+            > div{
+                padding-top: 0;
+                padding-bottom: 0;
+            }
+        }
+
+        .ems-grid-row{
+            &.newMessage{
+                font-family: $demiBold;
+                font-weight: 600;
+                color: $primary;
+            }
+            .col-1{
+                padding: 7px;
+            }
+        }
+        
+    }
+}
+
+//mesaj detay
+.ems-page-default-message-detail{
+    [id$="lbfUYM_BASLIK"]{
+        display: none;
+    }
+    [id$="lblUYM_BASLIK"]{
+        font-family: $bold;
+        font-size: 18px;
+        font-weight: bold;
+        color: $primary;
+        display: block;
+        margin-bottom: 27px;
+    }
+    .ems-message-detail-form{
+        [id$="lblSistemMesaj"]{
+            > table{
+                width: 100% !important;
+                border: 1px solid #dde2e7;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $breakpoint-large){
+    .ems-page-default-message{
+        position: initial;
+        .kutuMesaj{
+            margin: -30px -20px 20px -20px;
+            .kutuBodyMesaj{
+                border-bottom: 1px solid #dde2e7;
+                > div:not(.popupKutuMesaj_yeni){
+                    margin-right: 0px;
+                    padding: 7px 15px;
+                    border-left: 1px solid #dde2e7;
+                    text-align: center;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+                .kutuMesaj_yeni{
+                    position: fixed;
+                    right: 0;
+                    left: 0;
+                    top: initial;
+                    bottom: 0;
+                    z-index: 5;
+                    height: 50px;
+                    background: $primary;
+                    border-left: 0 !important;
+                    a{
+                        font-size: 14px;
+                        color: $white;
+                        i{
+                            font-size: 12px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .ems-grid-message{
+            display: flex;
+            flex-wrap: wrap;
+
+            > div:not(:first-child){
+                border-left: 0px solid #e2e8ef;
+                border-right: 0px solid #e2e8ef;
+                &:nth-child(2){
+                    border-top: 1px solid #e2e8ef;
+                }
+            }
+            > div{
+                padding: 0;
+                &:first-child{
+                    border-top: 1px solid #e2e8ef;
+                    padding-bottom: 0;
+                }
+                > div{
+                    padding-top: 15px !important;
+                    &:not(.col-5){
+                        border-bottom: 1px solid #e2e8ef;
+                    }
+                }
+            }
+
+            .ems-grid-header{
+                width: 40%;
+                padding-bottom: 0;
+                border-bottom: 1px solid #e2e8ef;
+                border-left: 1px solid #e2e8ef !important;
+                border-right: 1px solid #e2e8ef !important;
+                > div{
+                    text-align: left;
+                }
+                .col-1{
+                    font-size: 14px;
+                }
+            }
+            .ems-grid-row{
+                width: 60%;
+                border-right: 1px solid #e2e8ef !important;
+            }
+            .ems-grid-header,
+            .ems-grid-row{
+                border-top: 1px solid #e2e8ef;
+                flex-wrap: wrap;
+                display: flex;
+                align-content: flex-start;
+                margin-bottom: 20px;
+                > div{
+                    width: 100% !important;
+                }
+                .col-1{
+                    height: 54px;
+                }
+                .col-2{
+                    height: 84px;
+                }
+                .col-4{
+                    height: 54px;
+                }
+                .col-5{
+                    height: 54px;
+                    text-align: left;
+                }
+            }
+            
+        }
+    }
+}

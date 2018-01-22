@@ -110,8 +110,10 @@
                 padding-right: 14px;
                 overflow: hidden;
                 position: relative;
-                max-height: 17px;
+                max-height: 18px;
                 transition: all .4s cubic-bezier(0.8,0,0.5,1);
+                font-family: $regular;
+                font-size: 14px;
                 &:after{
                     content: "...";
                     display: inline-block;
