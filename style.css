@@ -11062,6 +11062,8 @@ input[type="radio"]:checked {
               -webkit-transform: translate(-50%, -50%) rotate(170deg);
               -ms-transform: translate(-50%, -50%) rotate(170deg);
               transform: translate(-50%, -50%) rotate(170deg); }
+            #scene .item .item-info .item-content-left .item-prc .first-price.ems-hidden {
+              display: none !important; }
       #scene .item .item-info .item-content-right {
         margin-top: 19px; }
         #scene .item .item-info .item-content-right .item-controller ul {

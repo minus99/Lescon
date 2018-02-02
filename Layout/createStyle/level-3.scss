@@ -597,6 +597,9 @@
                                 left: 50%;
                                 transform: translate(-50%, -50%) rotate(170deg);
                             }
+                            &.ems-hidden{
+                                display: none !important;
+                            }
                         }
                     }
                 }
