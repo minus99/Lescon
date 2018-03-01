@@ -1,10 +1,12 @@
 .main-showcase{
     margin-bottom: 79px;
     .swiper-slide{
+        position: relative;
+    }
+    .slide-img{
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
-        position: relative;
     }
     .showcase-holder{
         position: absolute;
@@ -51,11 +53,14 @@
     .main-showcase{
         margin-bottom: 0px;
         .swiper-slide{
-            background-size: auto 190px;
-            background-position: top center;
             font-size: 0;
+        }
+        
+        .slide-img{
+            background-size: cover;
+            background-position: top center;
             > img{
-                height: 190px;
+                min-height: 190px;
             }
         }
         .showcase-holder{
@@ -70,6 +75,7 @@
                 max-height: 90px;
             }
             .title{
+                text-align: center;
                 .h1{ color: $primary; }
             }
             .desc{
