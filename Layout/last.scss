@@ -22,8 +22,8 @@
 .ems-page-cart-colmn{
     .ems-grid-default.obj-step0{
         .ems-grid-price{
-            .satBrFiyat{ display: none !important; }
-            .satBrFiyatVrg{ display: block !important; }
+            .satBrFiyat, .brFiyat{ display: none !important; }
+            .satBrFiyatVrg, .brFiyatVrg{ display: block !important; }
         }
         .ems-grid-price-total{
             .netFiyat{ display: none !important; }
