@@ -71,7 +71,6 @@
         }
         .ems-prd-discount{
             .urunListe_pnlIndirimOran{
-                
                 background-color: $alternative;
                 z-index: 2;
                 display: inline-block !important;
@@ -79,6 +78,9 @@
                 font-size: 14px;
                 font-weight: 600;
                 color: $white;
+            }
+            .ems-prd-promotion{
+                display: none;
             }
         }
         .ems-prd-status{

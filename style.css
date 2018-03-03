@@ -8164,6 +8164,8 @@ input[type="radio"]:checked {
     font-size: 14px;
     font-weight: 600;
     color: #fff; }
+  .ems-prd-list ul.emosInfinite .ems-prd-discount .ems-prd-promotion {
+    display: none; }
   .ems-prd-list ul.emosInfinite .ems-prd-status .urunListe_yeniUrun {
     display: inline-block !important;
     font-family: "AvenirNext-DemiBold";
