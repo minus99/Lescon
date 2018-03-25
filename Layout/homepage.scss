@@ -1,9 +1,8 @@
-
 /* Banner Tekli Görünüm*/
 .ems-hb-only-row{
     display: flex;
     position: relative;
-    min-height: 300px;
+    min-height: 410px;
     margin-bottom: 20px;
 
     .hb-only-img{
@@ -29,6 +28,28 @@
                 &:first-child{
                     margin-left: 0;
                 }
+            }
+        }
+    }
+}
+.videoType {
+    .ems-hb-only-row{
+        .hb-only-img{
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            video{
+                min-width:  100%;
+                min-height:  100%;
+                height:  auto;
+                width:  auto;
+                position:  absolute;
+                top: 50%;
+                left:  50%;
+                transform: translate(-50%, -50%);
             }
         }
     }
@@ -217,7 +238,7 @@
         margin: 0 -20px;
         min-height: auto;
         flex-wrap: wrap;
-        .hb-only-img{
+        .hb-only-img:not(:empty){
             min-height: 220px;
             width: 100%;
             background-position: center right;
@@ -255,6 +276,16 @@
         }
         &:not(.hb-cover){
             background: $lightBg;
+        }
+    }
+    .videoType {
+        .ems-hb-only-row{
+            .hb-only-img{
+                position: relative;
+                video{
+                    display: none;
+                }
+            }
         }
     }
 
