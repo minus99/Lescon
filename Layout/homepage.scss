@@ -10,6 +10,12 @@
             visibility: hidden;
             height: 100%;
         }
+        .desktop{
+
+        }
+        .mobile{
+          display: none;
+        }
     }
 
     .hb-only-desc{
@@ -103,7 +109,7 @@
         padding: 59px;
         z-index: 2;
 
-        
+
         display: flex;
         flex-wrap: wrap;
         justify-content: flex-start;
@@ -127,7 +133,7 @@
             align-content: flex-start;
             text-align: right;
         }
-        
+
         .h2{
             margin-bottom: 18px;
             width: 100%;
@@ -192,7 +198,7 @@
             margin-left: 10px;
             margin-right: 10px;
             .ems-ht-inner{
-                
+
                 background-size: 100%;
                 transition: all 0.4s cubic-bezier(0.8, 0, 0.5, 1);
                 position: relative;
@@ -238,17 +244,29 @@
         margin: 0 -20px;
         min-height: auto;
         flex-wrap: wrap;
-        .hb-only-img:not(:empty){
-            min-height: 220px;
+        .hb-only-img{
+            background: none;
             width: 100%;
-            background-position: center right;
+            height: auto;
+            &:not(:empty){
+                //min-height: 220px;
+                width: 100%;
+                background-position: center right;
+            }
+            .desktop{
+                display: none;
+            }
+            .mobile{
+                display: block;
+                visibility: visible;
+            }
         }
-    
+
         .hb-only-desc{
             position: initial;
             padding: 23px 20px 30px;
             align-items: center;
-            .h2{ 
+            .h2{
                 color: $primary;
             }
             .h4{
@@ -313,7 +331,7 @@
             padding-top: 0;
         }
         .swiper-slide{
-            margin-bottom: 0;           
+            margin-bottom: 0;
             max-width: 60%;
             margin-right: 25px;
             padding-bottom: 0;
@@ -324,7 +342,7 @@
             display: none;
         }
     }
-    
+
 
     .widget-best-seller{
         .swiper-inner{
