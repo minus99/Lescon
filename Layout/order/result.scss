@@ -50,6 +50,24 @@
     }
 }
 
+.pageDescSiparisSonucErr{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    > *{
+        width: 100%;
+    }
+    br{
+        display: none;
+    }
+    [id$="lblSIP_BELIRLIERROR"]{
+        order: -1;
+        text-align: center;
+        font-weight: 700;
+        font-size: 16px;
+    }
+}
+
 @media screen and (max-width: $breakpoint-large) {
     .order-result {
         margin: $gap1;

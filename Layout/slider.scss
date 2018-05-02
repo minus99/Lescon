@@ -7,6 +7,14 @@
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
+        > img{
+            &.desktop{
+
+            }
+            &.mobile{
+                display: none;
+            }
+        }
     }
     .showcase-holder{
         position: absolute;
@@ -61,6 +69,13 @@
             background-position: top center;
             > img{
                 min-height: 190px;
+                &.desktop{
+                    display: none;
+                }
+                &.mobile{
+                    display: block;
+                    width: 100%;
+                }
             }
         }
         .showcase-holder{
