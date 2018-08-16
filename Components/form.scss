@@ -20,6 +20,18 @@ input:not([type="checkbox"]):not([type="radio"]){
     border: 1px solid $linkBg;
     border-radius: 2px;
 }
+input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    font-size: 0 !important;
+}
+input::-moz-placeholder { /* Firefox 19+ */
+    font-size: 0 !important;
+}
+input:-ms-input-placeholder { /* IE 10+ */
+    font-size: 0 !important;
+}
+input:-moz-placeholder { /* Firefox 18- */
+    font-size: 0 !important;
+}
 
 //Textarea 
 textarea{
@@ -28,6 +40,7 @@ textarea{
     border-radius: 2px;
     padding: 25px 10px 10px;
     resize: none;
+    overflow: hidden;
 }
 
 //select
@@ -71,6 +84,7 @@ select{
         left: 0;
         top: 0;
         opacity: 0;
+        width: 100% !important;
     }
 }
 
@@ -194,6 +208,7 @@ input[type="radio"]:checked{
                 display: inline-block;
             }
 
+            &.select,
             &.is-active{
                 .ems-form-label{
                     top:6px;

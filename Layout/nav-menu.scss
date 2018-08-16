@@ -51,6 +51,9 @@
                     font-size: 14px;
                     font-weight: 600;
                     color: $primary;
+                    /*New HEADER*/
+                    color: #fff;
+                    /*New HEADER*/
                     @extend .bottom-border-hover;
                     &.cl-blue{
                         color: $alternative;

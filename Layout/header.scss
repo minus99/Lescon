@@ -267,6 +267,9 @@
         display: flex;
         width: 100%;
         border-bottom: 1px solid #dde2e7;
+        /*New HEADER*/
+        background: #000;
+        /*New HEADER*/
     }
 
     .navbar-right {
@@ -280,6 +283,12 @@
 .navbar-item-logo{
     .logo{
         margin-right: 25px;
+        /*New HEADER*/
+        font-size: 0;
+        img{
+            max-width: 180px;
+        }
+        /*New HEADER*/
     }
 }
 
@@ -575,6 +584,9 @@
                     display: flex;
                     align-items: center;
                     height: 100%;
+                    /*New HEADER*/
+                    color: #fff;
+                    /*New HEADER*/
                 }
                 a:not(.btn-signin){
                     display: inline-block;
@@ -758,7 +770,9 @@
             }
             .ems-cart-info{
                 [id$="lbfKUTU_SEPET"]{
-
+                    /*New HEADER*/
+                    color: #fff;
+                    /*New HEADER*/
                 }
                 #lblUrunAdet{ display: none; }
                 [id$="lbfKUTU_URUN"]{ display: none; }

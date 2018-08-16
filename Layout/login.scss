@@ -127,20 +127,20 @@
 
 .ems-page-login-content{
     .ems-login{
-        display: none;
+        display: inline-block;
     }
     .ems-signup{
-        display: inline-block;
+        display: none;
     }
 }
 
 .ems-signup-body{
     .ems-page-login-content{
         .ems-login{
-            display: inline-block;
+            display: none;
         }
         .ems-signup{
-            display: none;
+            display: inline-block;
         }
     }
 }

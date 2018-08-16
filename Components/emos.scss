@@ -1,0 +1,24 @@
+//-------------------------------------------//
+//----- PLH STYLES
+//-------------------------------------------//
+//?plh=true
+.anaBody > div[ondblclick][style] {
+    position: relative;
+    z-index: 9999;
+    * {
+        font-family: Arial;
+        font-size: 12px;
+        letter-spacing: 0;
+    }
+    h3 {
+        line-height: 1.5;
+        padding: 10px;
+        margin-bottom: 0;
+        border-bottom: 1px solid #000;
+        user-select: none;
+        cursor: pointer;
+    }
+    div {
+        padding: 5px 15px;
+    }
+}

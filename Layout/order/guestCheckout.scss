@@ -1,0 +1,117 @@
+#lnkGuestCheckout{
+    width: 100%;
+    @extend .btn;
+    @extend .btn-secondary;
+}
+.ems-guestCheckout-inner{
+    background: #fff;
+    padding: 30px 20px;
+
+    .ems-guestCheckout-header{
+        margin-bottom: 30px;
+    }
+    .ems-guestCheckout-title{
+        display: block;
+        margin-bottom: 30px;
+        font-family: $bold;
+        font-size: 24px;
+        font-weight: 700;
+        color: $primary;
+    }
+    .ems-guestCheckout-desc{
+        font-family: $regular;
+        font-weight: 400;
+        color: $text-1;
+    }
+
+    .ems-guestCheckout-subTitle{
+        font-size: 18px;
+        font-family: $bold;
+        margin-bottom: 10px;
+    }
+
+    .ems-field{
+        width: 70%;
+        + .ems-guestCheckout-subTitle{
+            margin-top: 30px;
+        }
+    }
+
+
+    .emailError{
+        margin-top: 10px;
+        padding: 6px 10px;
+        width: 100%;
+        border-radius: 2px;
+        font-family: $regular;
+        font-size: 12px;
+        font-weight: 600;
+        color: $white;
+        line-height: 1.5;
+        background: $error;
+        &:empty{
+            display: none;
+        }
+    }
+
+    [id$="lbf_KARGOBILGI"]{
+        font-size: 18px;
+        font-family: $bold;
+        margin-bottom: 10px;
+    }
+    .divTeslimatKargo{
+        margin-top: 20px;
+    }
+}
+
+@media screen and (max-width: $breakpoint-large) {
+    .ems-guestCheckout-inner{
+    
+        .ems-guestCheckout-header{
+            margin-bottom: 30px;
+        }
+        .ems-guestCheckout-title{
+            font-family: $demiBold;
+            font-size: 18px;
+            font-weight: 600;
+        }
+        .ems-guestCheckout-desc{
+        }
+    
+        .ems-guestCheckout-subTitle{
+            font-size: 16px;
+            font-family: $demiBold;
+            font-weight: 600;
+        }
+    
+        .ems-field{
+            width: 100%;
+            + .ems-guestCheckout-subTitle{
+                margin-top: 30px;
+            }
+        }
+    
+    
+        .emailError{
+            margin-top: 10px;
+            padding: 6px 10px;
+            width: 100%;
+            border-radius: 2px;
+            font-family: $regular;
+            font-size: 12px;
+            font-weight: 600;
+            color: $white;
+            line-height: 1.5;
+            background: $error;
+            &:empty{
+                display: none;
+            }
+        }
+
+        [id$="lbf_KARGOBILGI"]{
+            font-size: 16px;
+            font-family: $demiBold;
+            font-weight: 600;
+        }
+    }
+}

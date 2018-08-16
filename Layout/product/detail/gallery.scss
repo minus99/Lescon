@@ -6,7 +6,6 @@
                 //width: 450px;
                 //height: 360px;
                 margin: 0 auto;
-                
             }
             .slide-wrp{
                 .swiper-slide{
@@ -128,6 +127,8 @@
     flex-direction: column;
 }
 
+
+
 @media screen and (max-width: $breakpoint-large){
 
     .ems-prd-zoom{
@@ -183,4 +184,84 @@
     .swiper-container-vertical > .swiper-wrapper{
     }
 
+}
+
+
+
+@media screen and (min-width: $breakpoint-large + 1){
+    /*** URUN DETAY VERSION 2 ***/
+    .ems-page-detail-v2{
+        .ems-prd-detail-inner{
+            padding-top: 0;
+            padding-bottom: 0;
+            margin-bottom: 30px;
+            display: flex;
+            .inner-row-1{
+                padding-right: 15px;
+                padding-left: 0px;
+                padding-top: 0;
+                margin-bottom: 0px;
+            }
+            .inner-row-2{
+                position: initial;
+            }
+
+            .product-detail-slider{
+                > .swiper-left-column{
+                    display: none;
+                }
+                > .swiper-inner{
+                    .slide-wrp{
+                        display: flex;
+                        flex-wrap: wrap;
+                        width: 100%;
+                        li{
+                            width: calc((100% - 40px) / 2) !important;
+                            margin-right: 20px;
+                            margin-top: 20px;
+                            overflow: hidden;
+                            &:not(:first-child){
+                                img{
+                                    transform: scale(1.3);   
+                                }
+                            }
+                            &:first-child,
+                            &:nth-child(2){
+                                margin-top: 0;
+                            }
+                        }
+                        
+                        /*
+                        * Giyim kategorisine ait ürünler için
+                        */
+                        &.display-mode-one{
+                            li{
+                                width: 100% !important;
+                                margin-right: 0;
+                                margin-top: 0;
+                                a{
+                                    img{}
+                                }
+                            }
+                        }
+                        &.display-mode-two{
+                            li{
+                                a{
+                                    display: flex;
+                                    justify-content: center;
+                                    img{
+                                        max-width: initial;
+                                        transform: scale(1);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                
+            }
+        }
+    }
+
+    
 }
