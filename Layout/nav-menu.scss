@@ -57,6 +57,9 @@
                     @extend .bottom-border-hover;
                     &.cl-blue{
                         color: $alternative;
+                        /*New HEADER*/
+                        color: $error;
+                        /*New HEADER*/
                     }
                 }
                 &.sub-menu{

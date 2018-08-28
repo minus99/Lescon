@@ -103,6 +103,9 @@ $gap1: 20px;
     width: 100%;
     max-width: 600px;
     background: #fff;
+    /*New HEADER*/
+    background: #000;
+    /*New HEADER*/
     td {
         > span {
             display: inline-block;
@@ -155,6 +158,9 @@ $gap1: 20px;
             &.tabBtnSelectedDefault {
                 > a {
                     color: $primary;
+                    /*New HEADER*/
+                    color: $secondary;
+                    /*New HEADER*/
                     > span {
                         &:after {
                             border-color: $bg;
@@ -478,7 +484,7 @@ $gap1: 20px;
         padding-top: 10px;
         td {
             > span {
-                width: #{100% / 3};
+                width: calc(100% / 3);
                 > a {
                     line-height: 30px;
                     > span {

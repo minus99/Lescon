@@ -6261,7 +6261,8 @@ input[type="radio"]:checked {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    position: relative; }
+    position: relative;
+    color: #fff; }
     .navbar-item-mini-member .mod-mini-login .mod-mini-login-header:after {
       content: "";
       display: inline-block;
@@ -6944,7 +6945,10 @@ input[type="radio"]:checked {
       color: #fff;
       /*New HEADER*/ }
       .navbar-item-menu .navbar-nav ul.lvl-1 > li > a.cl-blue {
-        color: #2fa3ff; }
+        color: #2fa3ff;
+        /*New HEADER*/
+        color: #fc2d55;
+        /*New HEADER*/ }
     .navbar-item-menu .navbar-nav ul.lvl-1 > li.sub-menu > .nav-holder {
       -webkit-transition: all 333ms cubic-bezier(0.215, 0.61, 0.355, 1);
       -o-transition: all 333ms cubic-bezier(0.215, 0.61, 0.355, 1);
@@ -8969,9 +8973,7 @@ input[type="radio"]:checked {
   margin: 0 auto; }
 
 .ems-product-detail {
-  background-image: -webkit-linear-gradient(199deg, #e1e3e8, #f6f9fb);
-  background-image: -o-linear-gradient(199deg, #e1e3e8, #f6f9fb);
-  background-image: linear-gradient(251deg, #e1e3e8, #f6f9fb);
+  /*background-image: linear-gradient(251deg, #e1e3e8, #f6f9fb);*/
   -webkit-transition: all 0.4s cubic-bezier(0.8, 0, 0.5, 1);
   -o-transition: all 0.4s cubic-bezier(0.8, 0, 0.5, 1);
   transition: all 0.4s cubic-bezier(0.8, 0, 0.5, 1); }
@@ -12948,7 +12950,10 @@ input[type="radio"]:checked {
   transform: translateX(-50%);
   width: 100%;
   max-width: 600px;
-  background: #fff; }
+  background: #fff;
+  /*New HEADER*/
+  background: #000;
+  /*New HEADER*/ }
   .tabloTabBtnAdim td > span {
     display: inline-block;
     vertical-align: top; }
@@ -12975,7 +12980,10 @@ input[type="radio"]:checked {
     .tabloTabBtnAdim td > span:last-child > a > span:after {
       display: none; }
     .tabloTabBtnAdim td > span.tabBtnSelectedDefault > a {
-      color: #0c2048; }
+      color: #0c2048;
+      /*New HEADER*/
+      color: #26df2e;
+      /*New HEADER*/ }
       .tabloTabBtnAdim td > span.tabBtnSelectedDefault > a > span:after {
         border-color: #ecf0f3; }
     .tabloTabBtnAdim td > span.btnDisable > a {
@@ -13196,7 +13204,7 @@ input[type="radio"]:checked {
   .tabloTabBtnAdim {
     padding-top: 10px; }
     .tabloTabBtnAdim td > span {
-      width: 100%/3; }
+      width: calc(100% / 3); }
       .tabloTabBtnAdim td > span > a {
         line-height: 30px; }
         .tabloTabBtnAdim td > span > a > span > * {
