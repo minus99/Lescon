@@ -1125,12 +1125,19 @@
             left: 0;
             width: 100%;
             z-index: 200;
+            /*New HEADER*/
+            border-bottom: 0;
+            background: #000;
+            /*New HEADER*/
             .mBurger{
                 width: 20px;
                 .mbMenu{
                     display: flex;
                     font-size: 20px;
                     color: $primary;
+                    /*New HEADER*/
+                    color: $white;
+                    /*New HEADER*/
                 }
             }
             .mbLogo{
@@ -1151,6 +1158,9 @@
                     display: flex;
                     font-size: 20px;
                     color: $primary;
+                    /*New HEADER*/
+                    color: $white;
+                    /*New HEADER*/
                 }
             }
             .mbCart{
@@ -1160,6 +1170,9 @@
                     font-size: 20px;
                     color: $primary;
                     position: relative;
+                    /*New HEADER*/
+                    color: $white;
+                    /*New HEADER*/
                     b{
                         position: absolute;
                         position: absolute;

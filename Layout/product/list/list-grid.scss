@@ -91,6 +91,26 @@
                 font-weight: 600;
                 color: $primary;
             }
+            .waterProof{
+                display: flex;
+                align-items: center;
+                position: absolute;
+                top: 10px;
+                right: 10px;
+                height: 20px;
+                padding: 0 4px;
+
+                border: 1px solid $secondary-hover;
+                border-radius: 4px;
+                &:before{
+                    content: "Water-Proof";
+                    display: inline-block;
+                    font-family: $demiBold;
+                    font-size: 14px;
+                    font-weight: 600;
+                    color: $secondary-hover;
+                }
+            }
         }
 
         .ems-prd-image{
@@ -266,6 +286,17 @@
             .ems-prd-status{
                 .urunListe_yeniUrun{
                     font-size: 12px;
+                }
+
+                .waterProof{
+                    top: 126%;
+                    right: 50%;
+                    padding: 0 3px;
+                    transform: translateX(50%);
+                    z-index: 200;
+                    &:before{
+                        font-size: 12px;
+                    }
                 }
             }
             .urunListe_pnlIndirimOran,

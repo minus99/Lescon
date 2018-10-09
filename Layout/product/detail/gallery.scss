@@ -114,12 +114,40 @@
             
         }
     }
+    
     .ems-prd-icons{
         position: absolute;
         top: 0;
         right: 0;
         z-index: 1;
 
+        display: flex;
+        > * + *{
+            margin-left: 10px;
+        }
+
+        [id$="lbfYeniUrun"]{
+            border: 1px solid #2fa3ff;
+            border-radius: 4px;
+            padding: 2px 6px;
+            color: #2fa3ff;
+        }
+
+        .waterProof{
+            border: 1px solid $secondary-hover;
+            border-radius: 4px;
+            padding: 2px 6px;
+            color: $secondary-hover;
+
+            &:before{
+                content: "Water-Proof";
+                display: inline-block;
+                font-family: $demiBold;
+                font-size: 14px;
+                font-weight: 600;
+                color: $secondary-hover;
+            }
+        }
     }
 }
 
@@ -178,6 +206,9 @@
         .ems-prd-icons{
             top: 10px;
             right: 10px;
+            > * + *{
+                margin-left: 10px;
+            }
         }
     }
     
@@ -196,6 +227,8 @@
             padding-bottom: 0;
             margin-bottom: 30px;
             display: flex;
+            align-items: flex-start;
+            position: relative;
             .inner-row-1{
                 padding-right: 15px;
                 padding-left: 0px;
@@ -203,7 +236,8 @@
                 margin-bottom: 0px;
             }
             .inner-row-2{
-                position: initial;
+                position: sticky;
+                top: 60px;
             }
 
             .product-detail-slider{
