@@ -1,0 +1,65 @@
+.ems-prd-type-sales{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    span{
+        display: none;
+        border-radius: 3px;
+        padding: 2px 8px;
+        background: $secondary;
+        color: $white;
+        font-family: $demiBold;
+        font-size: 14px;
+        font-weight: 500;
+    }
+}
+
+/*Seçili Ürünlerde 2.'si %50 İndirimli*/
+.spr3{
+    .ems-prd-type-sales{
+        span{
+            display: inline-block;
+            &:before{
+                content: $spr3indirim50;
+            }
+        }
+    }
+}
+/*Seçili Ürünlerde 2.'si %30 İndirimli*/
+.spr4{
+    .ems-prd-type-sales{
+        span{
+            display: inline-block;
+            &:before{
+                content: $spr4indirim30;
+            }
+        }
+    }
+}
+
+.ems-prd-list{
+    .ems-prd-type-sales{
+        text-align: center;
+    }
+}
+
+.ems-prd-detail{
+    .ems-prd-type-sales{
+    }
+}
+
+@media screen and (max-width: $breakpoint-large){
+    .ems-prd-list{
+        .ems-prd-type-sales{
+            span{
+                font-size: 12px;
+            }
+        }
+    }
+
+    .ems-prd-detail{
+        .ems-prd-type-sales{
+            text-align: center;
+            margin-top: 0;
+        }
+    }
+}

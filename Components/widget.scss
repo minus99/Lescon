@@ -125,7 +125,7 @@
 
     .ems-prd-content-bottom{
         padding: 14px 15px 15px;
-        height: 125px;
+        height: 155px;
         position: relative;
         &:after{
             content: "";
@@ -137,6 +137,10 @@
             height: 0;
             background: #fff;
             transition: all 0.4s cubic-bezier(0.8, 0, 0.5, 1);
+        }
+
+        .ems-prd-type-sales{
+            text-align: center;
         }
     }
 

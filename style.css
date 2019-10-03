@@ -5663,7 +5663,7 @@ input[type="radio"]:checked {
 
 .system-widget .ems-prd-content-bottom {
   padding: 14px 15px 15px;
-  height: 125px;
+  height: 155px;
   position: relative; }
   .system-widget .ems-prd-content-bottom:after {
     content: "";
@@ -5677,6 +5677,8 @@ input[type="radio"]:checked {
     -webkit-transition: all 0.4s cubic-bezier(0.8, 0, 0.5, 1);
     -o-transition: all 0.4s cubic-bezier(0.8, 0, 0.5, 1);
     transition: all 0.4s cubic-bezier(0.8, 0, 0.5, 1); }
+  .system-widget .ems-prd-content-bottom .ems-prd-type-sales {
+    text-align: center; }
 
 .system-widget .ems-prd-group {
   display: none; }
@@ -7835,6 +7837,7 @@ input[type="radio"]:checked {
     padding: 0;
     width: 100%;
     height: 100vh;
+    height: -webkit-fill-available;
     background: #fff;
     border-right: none; }
     .ems-col-left .urunNavigasyon {
@@ -8220,7 +8223,8 @@ input[type="radio"]:checked {
   /*Ürün arası banner*/
   /*Ürün arası banner*/ }
   .ems-prd-list ul.emosInfinite .ems-prd {
-    width: 20%;
+    /*width: 20%;*/
+    width: calc(100% / 3);
     margin-bottom: 40px;
     border: 1px solid #fff; }
     .ems-prd-list ul.emosInfinite .ems-prd:hover {
@@ -8414,7 +8418,8 @@ input[type="radio"]:checked {
     margin-right: 30px;
     /*Ürün arası banner*/ }
     .ems-prd-list ul.emosInfinite .ems-prd {
-      width: 25%;
+      /*width: 25%;*/
+      width: calc(100% / 3);
       margin-bottom: 40px; }
     .ems-prd-list ul.emosInfinite .ems-prd-alternate {
       width: 50%; } }
@@ -8425,7 +8430,7 @@ input[type="radio"]:checked {
     margin-right: 30px;
     /*Ürün arası banner*/ }
     .ems-prd-list ul.emosInfinite .ems-prd {
-      width: 33.3%;
+      width: calc(100% / 3);
       margin-bottom: 40px; }
     .ems-prd-list ul.emosInfinite .ems-prd-alternate {
       width: 66.6%; } }
@@ -9930,10 +9935,6 @@ input[type="radio"]:checked {
         margin-right: 20px;
         margin-top: 20px;
         overflow: hidden; }
-        .ems-page-detail-v2 .ems-prd-detail-inner .product-detail-slider > .swiper-inner .slide-wrp li:not(:first-child) img {
-          -webkit-transform: scale(1.3);
-          -ms-transform: scale(1.3);
-          transform: scale(1.3); }
         .ems-page-detail-v2 .ems-prd-detail-inner .product-detail-slider > .swiper-inner .slide-wrp li:first-child, .ems-page-detail-v2 .ems-prd-detail-inner .product-detail-slider > .swiper-inner .slide-wrp li:nth-child(2) {
           margin-top: 0; }
       .ems-page-detail-v2 .ems-prd-detail-inner .product-detail-slider > .swiper-inner .slide-wrp.display-mode-one li {
@@ -10477,6 +10478,41 @@ input[type="radio"]:checked {
         margin-top: 20px; }
     .ems-size-chart-wrapper .engi-tab .engi-tab-content .content-detail .size-chart-table {
       width: 470px; } }
+
+.ems-prd-type-sales {
+  margin-top: 5px;
+  margin-bottom: 5px; }
+  .ems-prd-type-sales span {
+    display: none;
+    border-radius: 3px;
+    padding: 2px 8px;
+    background: #26df2e;
+    color: #fff;
+    font-family: "AvenirNext-DemiBold";
+    font-size: 14px;
+    font-weight: 500; }
+
+/*Seçili Ürünlerde 2.'si %50 İndirimli*/
+.spr3 .ems-prd-type-sales span {
+  display: inline-block; }
+  .spr3 .ems-prd-type-sales span:before {
+    content: "2.Ürüne %50 İndirim"; }
+
+/*Seçili Ürünlerde 2.'si %30 İndirimli*/
+.spr4 .ems-prd-type-sales span {
+  display: inline-block; }
+  .spr4 .ems-prd-type-sales span:before {
+    content: "2.Ürüne %30 İndirim"; }
+
+.ems-prd-list .ems-prd-type-sales {
+  text-align: center; }
+
+@media screen and (max-width: 960px) {
+  .ems-prd-list .ems-prd-type-sales span {
+    font-size: 12px; }
+  .ems-prd-detail .ems-prd-type-sales {
+    text-align: center;
+    margin-top: 0; } }
 
 /* wizard */
 .wizard-add-to-cart .ems-prd-add {
@@ -11499,6 +11535,7 @@ input[type="radio"]:checked {
   border-radius: 0px;
   padding: 0;
   position: relative;
+  display: -ms-grid;
   display: grid; }
   .wizard-add-to-cart.jconfirm .jconfirm-box .jconfirm-closeIcon {
     top: 23px;

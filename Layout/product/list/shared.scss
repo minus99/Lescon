@@ -68,6 +68,7 @@
         padding: 0;
         width: 100%;
         height: 100vh;
+        height: -webkit-fill-available;
         background: $white;
         border-right: none;
         .urunNavigasyon{
